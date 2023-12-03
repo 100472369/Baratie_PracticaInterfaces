@@ -1,0 +1,204 @@
+@font-face {
+    font-family: Revalia;
+    src: url(../fonts/Revalia-Regular.ttf);}
+
+@font-face {
+    font-family: Karantina;
+    src: url(../fonts/Karantina-Regular.ttf);}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-Regular.ttf);}
+
+html{font-family: Inter, Arial;}
+
+body{margin: 0;
+    margin-top: 13vh;
+    margin-bottom: 13vh;}
+
+#header_history_page{
+    position: fixed; /* Fija el encabezado en la posición especificada */
+    top: 0;
+    
+    display: grid;
+    height: 10vh;
+    width: 100%;
+    grid-template-columns: 1fr 6fr;
+}
+
+#Logo_column_history{
+    background-color: rgba(248, 248, 248, 1);
+    align-items: center;
+}
+
+.Logo_principal{
+    height: 10vh;
+    width: auto;
+}
+
+#Name_column{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(248, 248, 248, 1);
+}
+
+.Restaurant_name{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Restaurant_name h1{
+    margin-top: 0;
+    margin-bottom: 2px;
+    text-align: center;
+    font-size: 2.6vw;
+    font-family: Revalia;
+}
+
+#Pagina_nuestra_historia{
+    margin-top: 5%;
+    height: 70vh;
+    width: 100%;
+}
+
+#Pagina_nuestra_historia h1, #Pagina_visitanos h1{
+    font-size: 6em;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Karantina;
+}
+
+#cuadro_texto_historia1::-webkit-scrollbar {
+    display: none; 
+}
+#cuadro_texto_historia1{
+    width: 75%; /* Ancho del 75% de la pantalla */
+    margin: 0 auto; /* Centra el div horizontalmente */
+    height: 50vh;
+    padding: 20px; /* Ajusta según tus preferencias */
+    background-color: #f0f0f0; /* Ajusta según tus preferencias */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: scroll;
+}
+
+#cuadro_texto_historia1 p, #Pagina_visitanos p{
+    font-size: 1.5em;
+}
+
+#Pagina_info_recuadros{
+    display: grid;
+    height: 40vh;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5%;
+}
+
+.recuadro_info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1%;
+    background-color: rgba(217, 217, 217, 1);
+}
+
+.recuadro_info p{
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 1000;
+}
+
+
+/*Codigo de la parte VISITANOS*/
+
+#Pagina_visitanos{
+    height: 90vh;
+    width: 85%;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+
+}
+
+#Recuadro_info_ruta{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+}
+
+#Contenedor_mapa img{
+    height: 40vh;
+    width: auto;
+    object-fit: cover;
+}
+
+#Contenedor_mapa h2{
+    font-family: Karantina;
+    font-size: 2.5em;
+    margin-top: 1%;
+}
+
+#contenedor_ruta {
+    height: 40vh;
+    overflow: hidden;
+  }
+  
+  #contenedor_ruta ul {
+    list-style-type: none;
+    animation: desplazamiento 21s linear infinite; /* Ajusta la duración según tus necesidades */
+  }
+  
+  @keyframes desplazamiento {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  #contenedor_ruta ul li {
+    line-height: 2em; /* Ajusta la altura de línea según tus necesidades */
+  }
+
+/*Codigo del footer*/
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 97px;
+    width: 100%;
+    margin-right: 10px;
+    background-color: rgb(229,168,41);
+}
+
+#contenedor_redes_footer, #contenedor_texto_footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: Revalia;
+    font-weight: 600;
+}
+
+.Icon_footer{
+    height: 45px;
+    width: 45px;
+}
+
+.Icon_footer:hover{
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(1.1);
+}
