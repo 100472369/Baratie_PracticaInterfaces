@@ -70,8 +70,27 @@ body{margin: 0;}
 .links_page ul{
     list-style-type: none;
     text-align: center;
-    color: rgb(229,168,41);
+    color: rgb(229,168,41); 
 }
+
+.links_page li:hover{
+    transition: all 0.1s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(0.9);
+
+}
+
+.links_page a:link{
+    color: rgb(229,168,41);
+    text-decoration: none;
+}
+
+.links_page a:visited{
+    color:rgb(229,168,41);
+    text-decoration: none;
+}
+
+
+ 
 
 #Pagina_Botones{
     display: grid;

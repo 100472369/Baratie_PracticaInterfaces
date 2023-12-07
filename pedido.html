@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Baratie</title>
+    <!-- estos dos comandos son: formato de codificación y un comando para mejorar la vista del mobil  -->
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- los links a X y los diferentes css -->
+    <link rel="icon" type="images/x-icon" href="icons/icon_van.png" />
+    <link rel="stylesheet" href="style/pedido_style.css">
+</head>
+
+<body>
+    <header id="header_page">
+        <div id="Logo_column">
+            <a href="index.html">
+            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+        </div>
+
+        <div id="Name_column">
+            <div class="Restaurant_name">
+                <h1>REALIZAR PEDIDO</h1>
+            </div>
+        </div>
+    </header>
+
+    <section id="Contenedor_entrantes">
+        <h3>Entrantes</h3>
+        <div class="Contenedor_producto" data-precio="5">
+            <div class="Columna_nombre">
+                <p class="nombre_producto">Zamburriñas al horno</p>
+                <img class="Foto_comida" src="images/zamburrinas_horno.jpg  " url="">
+            </div>
+            <div class="Columna_contador">
+                <button class="Modify_button"  data-operation="1">+</button>
+                <p class="Contador_individual">0</p>
+                <button class="Modify_button"  data-operation="-1">-</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="contenedor_texto_footer">
+            <p>© 2023 Baratie</p>
+        </div>
+        <div id="contenedor_redes_footer">
+            <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
