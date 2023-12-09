@@ -24,21 +24,396 @@
             </div>
         </div>
     </header>
-
-    <section id="Contenedor_entrantes">
-        <h3>Entrantes</h3>
-        <div class="Contenedor_producto" data-precio="5">
-            <div class="Columna_nombre">
-                <p class="nombre_producto">Zamburiñas al horno</p>
-                <img class="Foto_comida" src="images/zamburrinas_horno.jpg  " url="">
-            </div>
-            <div class="Columna_contador">
-                <button class="Modify_button"  data-operation="1">+</button>
-                <p class="Contador_individual">0</p>
-                <button class="Modify_button"  data-operation="-1">-</button>
+    <div class="container-carta">
+        <!--Informacion de entrantes, principales y postres:
+            -Precio
+            -Titulo del plato
+            -Informacion nutricional del plato
+            -Botones para anadir o quitar (por defecto desactivado si hay 0 platos de ese seleccionados)-->
+        <div class="entrantes">
+            <div class="titulo_seccion_platos"><h2>Entrantes</h2></div>
+            <div class="platos-container">
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="parametros">
+                            <div class="precio">
+                                15€
+                            </div>
+                            <div class="botones">
+                                <button class="boton_producto">+</button>
+                                <div class="contador"> 0 </div>
+                                <button class="boton_producto">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/almejas.jpeg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ALMEJAS A LA MARINERA
+                        </div>
+                        <div class="descripcion_plato">
+                            Las almejas más sabrosas de los siete mares, con nuestra salsa marinera especial
+                        </div>
+                        <div class="parametros">
+                            <div class="precio">
+                                20€
+                            </div>
+                            <div class="botones">
+                                <button class="boton_producto">+</button>
+                                <div class="contador"> 0 </div>
+                                <button class="boton_producto">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/gambas.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            GAMBA BLANCA A LA PLANCHA
+                        </div>
+                        <div class="descripcion_plato">
+                            Gamba blanca recogida en los mares de nuestro recorrido, exquisitas y sabrosas
+                        </div>
+                        <div class="parametros">
+                            <div class="precio">
+                                23€
+                            </div>
+                            <div class="botones">
+                                <button class="boton_producto">+</button>
+                                <div class="contador"> 0 </div>
+                                <button class="boton_producto">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/ensalada_mixta.jpeg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ENSALADA MIXTA ESPECIAL
+                        </div>
+                        <div class="descripcion_plato">
+                            La ensalada mixta de toda la vida con nuestro toque secreto del chef
+                        </div>
+                        <div class="parametros">
+                            <div class="precio">
+                                9€
+                            </div>
+                            <div class="botones">
+                                <button class="boton_producto">+</button>
+                                <div class="contador"> 0 </div>
+                                <button class="boton_producto">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/ensalada_burrata.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ENSALADA DE BURRATA Y PESTO
+                        </div>
+                        <div class="descripcion_plato">
+                            Ensalada de canónigos con nuestra deliciosa burrata, nueces y su infaltable pesto
+                        </div>
+                        <div class="parametros">
+                            <div class="precio">
+                                15€
+                            </div>
+                            <div class="botones">
+                                <button class="boton_producto">+</button>
+                                <div class="contador"> 0 </div>
+                                <button class="boton_producto">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/ensalada_cesar.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ENSALADA CESAR
+                        </div>
+                        <div class="descripcion_plato">
+                            El crujiente pollo y la salsa césar hacen de esta ensalada una explosión de sabor
+                        </div>
+                        <div class="parametros">
+                            <div class="precio">
+                                12€
+                            </div>
+                            <div class="botones">
+                                <button class="boton_producto">+</button>
+                                <div class="contador"> 0 </div>
+                                <button class="boton_producto">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+
+        <div class="principales">
+            <div class="titulo_seccion_platos"><h2>Principales</h2></div>
+            <div class="platos-container">
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="postres">
+            <div class="titulo_seccion_platos"><h2>Postres</h2></div>
+            <div class="platos-container">
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cocteles">
+            <div class="titulo_seccion_platos"><h2>Cocteles</h2></div>
+            <div class="platos-container">
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+                <div class="plato">
+                    <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                    <div class="texto_plato">
+                        <div class="nombre_plato">
+                            ZAMBURIÑAS AL HORNO
+                        </div>
+                        <div class="descripcion_plato">
+                            Nuestras zamburiñas especiales, recogidas y elegidas manualmente por nuestros recolectores
+                        </div>
+                        <div class="botones">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div id="contenedor_texto_footer">
@@ -56,3 +431,23 @@
     <script src="scripts/script.js"></script>
 </body>
 </html>
+
+
+
+<!--
+<div id="container_carta">
+    <div id="Contenedor_entrantes">
+        <div class="titulo_seccion_platos"><h2>Entrantes</h2></div>
+        <div class="Contenedor_producto" data-precio="5">
+            <div class="Columna_nombre">
+                <p class="nombre_producto">Zamburiñas al horno</p>
+                <img class="Foto_comida" src="images/zamburrinas_horno.jpg  " url="">
+            </div>
+            <div class="Columna_contador">
+                <button class="Modify_button"  data-operation="1">+</button>
+                <p class="Contador_individual">0</p>
+                <button class="Modify_button"  data-operation="-1">-</button>
+            </div>
+        </div>
+    </div>
+</div>

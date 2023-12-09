@@ -64,6 +64,155 @@ body{margin: 0;
     font-family: Revalia;
 }
 
+.container-carta {
+    /*Contenedor de la carta*/
+    font-family: Karantina, "Trebuchet MS", "Cy Grotesk Grand Dark", 'Revans', 'Century Gothic', serif;
+    display: grid;
+    grid-template-rows: repeat(4,auto);
+    text-align: center;
+    padding: 3%;
+}
+
+.container-carta h2 {
+    font-family: Karantina;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.entrantes, .principales, .postres, .cocteles{
+    margin-bottom: 5%;
+}
+
+.titulo_seccion_platos {
+    font-family: Karantina, Revans, 'Century Gothic', sans-serif;
+    color: black;
+}
+
+.platos-container {
+    /* Contenedor de platos */
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.plato {
+    /*Atributos para cada uno de los platos*/
+    display: grid;
+    text-align: center;
+    grid-template-columns: 33% 67%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 10em;
+}
+
+.texto_plato{
+    display: grid;
+    grid-template-rows: 29% 40% 31%;
+}
+
+.nombre_plato {
+    padding-top: 2%;
+    padding-left: 5%;
+    font-size: 2em;
+    text-align: left;
+}
+
+.descripcion_plato {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    font-size: 1em;
+    text-align: left;
+    font-family: Inter;
+}
+
+.parametros {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.precio{
+    font-size: 2.25em;
+    text-align: left;
+    padding-left: 9%;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+}
+.boton_producto {
+    display: inline-block;
+    border-radius: 50%; /* Hace que el botón sea circular */
+    background-color: rgb(229,168,41); /* Puedes cambiar el color de fondo según tus preferencias */
+    color: #ffffff; /* Puedes cambiar el color del texto según tus preferencias */
+    width: 1.25em; /* Ajusta el ancho según tus necesidades */
+    height: 1.25em; /* Ajusta la altura según tus necesidades */
+    text-align: center;
+    font-size: 2em; /* Ajusta el tamaño del texto según tus necesidades */
+    text-decoration: none;
+}
+
+.contador{
+    font-size: 2.5em;
+    margin-bottom: 2%;
+}
+
+.txt_plato {
+    padding: 10px;
+    background-color: #ca8e49;
+}
+.info_plato {
+    padding: 2%;
+    font-size: 0.75em;
+    color: white;
+    overflow-y: auto;
+}
+.opciones {
+    /* Opciones de anadir o quitar del plato */
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+button {
+    /*Atributos para los botones en general*/
+    display: flex;
+    background-color: #ca8e49;
+    color: white;
+    padding: 2%;
+    margin: 1.75%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+.opciones button {
+    /*Atributos para los botones de los platos*/
+    padding: 1.65%;
+    font-family: Karantina, Revans, 'Century Gothic', sans-serif;
+}
+/* Botones deshabilitados */
+.opciones button:disabled, .button:hover:disabled {
+    /*Atributos para los botones de los platos al estar desactivados en 'quitar' por cantidad*/
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.opciones button:hover {
+    opacity: 0.75;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .Contenedor_producto{
     display: grid;
     grid-template-columns: 18vh 7vh;
