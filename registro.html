@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Registro</title>
+    <!-- estos dos comandos son: formato de codificación y un comando para mejorar la vista del mobil  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- los links a X y los diferentes css -->
+    <link rel="icon" type="images/x-icon" href="icons/icon_menu_cart.png" />
+    <link rel="stylesheet" href="style/registro_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/registro.js"></script>
+    <link rel="icon" type="images/x-icon" href="images/Straw-Hat-Logo.ico" />
+</head>
+
+<body>
+<header id="header_history_page">
+    <div id="Logo_column_history">
+        <a href="index.html">
+            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+    </div>
+
+    <div id="Name_column">
+        <div class="Restaurant_name">
+            <h1>REGISTRARSE</h1>
+        </div>
+    </div>
+</header>
+
+
+<div id="registro-container">
+    <!-- Formulario de registro -->
+    <form id="formulario" action="#" method="post">
+        <h2>Regístrate para realizar la compra</h2>
+
+        <!-- Campos del formulario -->
+        <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre completo" required>
+
+        <!-- Contenedor para alinear teléfono y correo electrónico en la misma fila -->
+        <div class="flex-container">
+            <input type="tel" id="telefono" name="telefono" placeholder="Introduce tu teléfono" required>
+            <input type="email" id="email" name="email" placeholder="Introduce tu e-mail" required>
+        </div>
+
+        <input type="text" id="direccion" name="direccion" placeholder="Introduce tu dirección" required>
+
+        <!-- Botón de envío -->
+        <input id="submit" type="submit" value="Completar registro">
+    </form>
+    <div id="registro_exito" class="mensaje_exito" style="display: none;">
+        <h2>Su registro sea finalizó con éxito.</h2>
+        <img src="images/mugiwara.jpg" alt="Mugiwara">
+        <button id="boton_exito" class="boton_circular">Finalizar la compra</button>
+    </div>
+</div>
+
+<footer>
+    <div id="contenedor_texto_footer">
+        <p>© 2023 Baratie</p>
+    </div>
+    <div id="contenedor_redes_footer">
+        <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
+        <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
+        <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
+        <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
+        <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+    </div>
+</footer>
+</body>
+</html>
