@@ -13,7 +13,8 @@
     font-family: Inter;
     src: url(../fonts/Inter-Regular.ttf);}
 
-html{font-family: Inter, Arial;}
+html{
+    font-family: Inter, Arial, serif;}
 
 body{margin: 0;}
 
