@@ -159,17 +159,18 @@ body{margin: 0;}
 #contenedor_elementos_carta{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 2px;
 }
 
 .cuadrado_carta{
     width: 25%;
     height: 60vh;
+    padding-left: 2%;
 }
 
 .cuadrado_carta img{
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     border-radius: 20px;
     object-fit: cover;
 }
