@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Registro</title>
+    <title>Formulario de contacto</title>
     <!-- estos dos comandos son: formato de codificación y un comando para mejorar la vista del mobil  -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/one_piece_logo_small.png" type="image/png">
     <!-- los links a X y los diferentes css -->
-    <link rel="stylesheet" href="style/registro_style.css">
+    <link rel="stylesheet" href="style/contacto_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="scripts/registro.js"></script>
+    <script src="scripts/contacto.js"></script>
     <script src="scripts/menu_hmaburguesa.js"></script>
 </head>
 
@@ -22,7 +22,7 @@
 
     <div id="Name_column">
         <div class="Restaurant_name">
-            <h1>REGISTRARSE</h1>
+            <h1>CONTACTO</h1>
         </div>
         <div class="topnav">
             <img id="Logo_menu" src="" alt="">
@@ -56,10 +56,10 @@
 </header>
 
 
-<div id="registro-container">
+<div id="contacto-container">
     <!-- Formulario de registro -->
     <form id="formulario" action="#" method="post">
-        <h2>Regístrate para realizar la compra</h2>
+        <h2>Formulario de dudas</h2>
 
         <!-- Campos del formulario -->
         <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre completo" required>
@@ -70,17 +70,12 @@
             <input type="email" id="email" name="email" placeholder="Introduce tu e-mail" required>
         </div>
 
-        <input type="text" id="direccion" name="direccion" placeholder="Introduce tu dirección" required>
+        <textarea type="text" id="consulta" name="consulta" placeholder="Detalle de la consulta o problema: (max 800 caracteres) " maxlength="800" required></textarea>
 
         <!-- Botón de envío -->
         <button id="delete" type="button">Limpiar</button>
-        <button id="submit" type="button">Completar registro</button>
+        <input id="submit" type="submit" value="Enviar consulta">
     </form>
-    <div id="registro_exito" class="mensaje_exito" style="display: none;">
-        <h2>Su registro se ha finalizado con éxito.</h2>
-        <img src="images/mugiwara.jpg" alt="Mugiwara">
-        <button id="boton_exito" class="boton_circular">Finalizar la compra</button>
-    </div>
 </div>
 
 <footer>

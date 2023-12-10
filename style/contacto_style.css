@@ -20,7 +20,7 @@ html{
 
 body{margin: 0;
     margin-top: 13vh;
-    margin-bottom: 24vh;
+    margin-bottom: 22vh;
     background-image: url(../images/baratie_room.png);
     background-size: 110%;
 }
@@ -68,8 +68,8 @@ body{margin: 0;
     font-family: Revalia, serif;
 }
 
-/* Atributos del contenedor del registro de usuario*/
-#registro-container {
+/* Atributos del contenedor del contacto con la pagina por parte del usuario*/
+#contacto-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,11 +82,11 @@ body{margin: 0;
     margin-top: 10%;
 }
 
-#registro-container, input {
+#contacto-container, input {
     font-family: Revalia, serif;
 }
 
-#registro-container h2 {
+#contacto-container h2 {
     margin-top: 0;
     font-size: 1.4vw;
 }
@@ -96,7 +96,7 @@ form {
     max-width: 600px;
 }
 
-input, #submit, #delete {
+input, #consulta, #submit, #delete {
     width: 100%;
     padding: 3%;
     margin-bottom: 16px;
@@ -105,68 +105,43 @@ input, #submit, #delete {
     border: 0;
 }
 
+#consulta {
+    height: 20vh;
+    font-family: Revalia, serif;
+    resize: none;
+}
+
 #submit {
     background-color: rgb(229, 168, 41); /* Nuevo color de fondo del botón */
     color: white; /* Color del texto del botón */
-    cursor: pointer;
-}
-
-#submit, #delete {
-    font-family: Revalia, serif;
     font-size: 1vw;
-    color: white;
-}
-
-#delete {
-    background-color: rgba(187, 161, 136, 1);
-
 }
 
 #submit:hover {
     background-color: rgb(200, 150, 50);
 }
 
+#submit, #delete {
+    font-family: Revalia, serif;
+    font-size: 1vw;
+    color: white;
+    cursor: pointer;
+}
+
+#delete {
+    background-color: rgba(187, 161, 136, 1);
+    cursor: pointer;
+}
+
 #delete:hover {
     background-color: rgba(160, 161, 136, 1);
 }
+
 
 /* Nueva regla para alinear en la misma fila */
 .flex-container {
     display: flex;
     gap: 8px; /* Espacio entre los elementos */
-}
-
-/* Display del recuadro que contiene la informacion que sale al completarse el registro exitosamente */
-#registro_exito {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    width: 60%;
-    margin: 0;
-}
-
-/* Parametros de imagen */
-#registro_exito img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* Estilos para el boton de continuar con la compra */
-#boton_exito {
-    background-color: #FFCD00; /* Color de fondo amarillo */
-    color: #CC0018; /* Color del texto en rojo */
-    padding: 10px 50px 10px 50px;
-    border: 1px solid black;
-    border-radius: 25px; /* Borde circular */
-    cursor: pointer;
-    font-family: Inter, Arial, serif;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-#boton_exito:hover {
-    background-color: #ffdb4d; /* Cambia el color de fondo al pasar el ratón */
 }
 
 footer{
@@ -330,12 +305,12 @@ footer{
 }
 
 /* Seccion de breakpoints para la pagina en version movil/tableta */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .Restaurant_name h1 {
         font-size: 1.25em;
     }
-    #registro-container {
-        height: 40vh;
+    #contacto-container {
+        height: 50vh;
         width: 80%;
         margin-top: 50%;
         padding: 4%;
@@ -346,7 +321,7 @@ footer{
     #delete, #submit {
         font-size: 0.75em;
     }
-    #registro-container h2 {
+    #contacto-container h2 {
         font-size: 0.85em;
     }
     .Icon_footer {
@@ -357,3 +332,4 @@ footer{
         font-size: 0.75em;
     }
 }
+

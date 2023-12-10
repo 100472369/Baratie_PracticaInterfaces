@@ -3,6 +3,7 @@ $(document).ready(function () {
     const registroExito = $("#registro_exito");
     const submitButton = $("#submit");
     const botonExito = $("#boton_exito");
+    const deleteButton = $("#delete");
 
     // Verificar si hay datos de registro en el Web Storage. Si los datos estan presentes no se muestra el formulario
     const nombreRegistrado = localStorage.getItem('nombre');
@@ -42,6 +43,19 @@ $(document).ready(function () {
                 registroExito.fadeIn(500);
             });
         }
+    });
+
+    deleteButton.click(function(){
+        // Desactivar temporalmente la validación
+        registroForm.find(':input[required]').removeAttr('required');
+
+        // Limpiar el formulario
+        registroForm[0].reset();
+
+        // Restaurar la validación después de un breve retraso (para permitir la limpieza)
+        setTimeout(function() {
+            registroForm.find(':input[required]').attr('required', 'required');
+        }, 1);
     });
 
     // Evento del botón de éxito
