@@ -11,9 +11,8 @@ $(document).ready(function () {
     const emailRegistrado = localStorage.getItem('email');
     const direccionRegistrada = localStorage.getItem('direccion');
     if (nombreRegistrado && telefonoRegistrado && emailRegistrado && direccionRegistrada) {
-        registroForm.fadeOut(500, function () {
-            registroExito.fadeIn(500);
-        });
+        registroForm.hide();
+        registroExito.show();
     }
 
     /* Manejador de la funcion cuando se envia el formulario de registro */
@@ -61,7 +60,7 @@ $(document).ready(function () {
     // Evento del botón de éxito
     botonExito.click(function () {
         // Puedes agregar acciones adicionales al hacer clic en el botón de éxito
-        alert("Continuar con alguna acción deseada");
+        window.location.href = "index.html";
     });
 
     /* Funciones de validacion con REGEX para comprobar que el telefono y el e-mail sean
