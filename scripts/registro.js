@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     const registroForm = $("#formulario");
     const registroExito = $("#registro_exito");
@@ -56,13 +57,22 @@ $(document).ready(function () {
             registroForm.find(':input[required]').attr('required', 'required');
         }, 1);
     });
-
-    // Evento del botón de éxito
-    botonExito.click(function () {
-        // Puedes agregar acciones adicionales al hacer clic en el botón de éxito
-        window.location.href = "index.html";
-    });
-
+    let urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams);
+    // Verificar si venimos desde el enlace de compra para que una vez registrados podamos continuar con el pedido
+    if (urlParams.has('fuente')) {
+        botonExito.text('Continuar con el pedido');
+        botonExito.click(function () {
+            // Puedes agregar acciones adicionales al hacer clic en el botón de éxito
+            window.location.href = "pedido.html";
+        });
+    }
+    // Si no, tenemos la opcion de volver a la pagina principal
+    else {
+        botonExito.click(function () {
+            window.location.href = "index.html";
+        });
+    }
     /* Funciones de validacion con REGEX para comprobar que el telefono y el e-mail sean
     * correctos
     */
