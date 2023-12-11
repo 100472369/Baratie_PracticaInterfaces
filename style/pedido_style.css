@@ -151,6 +151,7 @@ body{margin: 0;
     padding-bottom: 5%;
     padding-right: 5%;
 }
+
 .boton_producto {
     display: inline-block;
     border-radius: 35%; /* Hace que el botón sea circular */
@@ -193,22 +194,6 @@ body{margin: 0;
 }
 
 
-.txt_plato {
-    padding: 10px;
-    background-color: #ca8e49;
-}
-.info_plato {
-    padding: 2%;
-    font-size: 0.75em;
-    color: white;
-    overflow-y: auto;
-}
-.opciones {
-    /* Opciones de anadir o quitar del plato */
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-}
 button {
     /*Atributos para los botones en general*/
     display: flex;
@@ -218,70 +203,6 @@ button {
     margin: 1.75%;
     cursor: pointer;
     border: 1px solid #ccc;
-}
-.opciones button {
-    /*Atributos para los botones de los platos*/
-    padding: 1.65%;
-    font-family: Karantina, Revans, 'Century Gothic', sans-serif;
-}
-/* Botones deshabilitados */
-.opciones button:disabled, .button:hover:disabled {
-    /*Atributos para los botones de los platos al estar desactivados en 'quitar' por cantidad*/
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-.opciones button:hover {
-    opacity: 0.75;
-}
-
-
-.Contenedor_producto{
-    display: grid;
-    grid-template-columns: 18vh 7vh;
-    width: 25%;
-    height: 15vh;
-    background-color: rgb(229,168,41);
-    border-radius: 2%;
-    border: 1px solid black;
-}
-
-.Columna_nombre{
-    display: grid;
-    grid-template-rows: 14vh 5vh;
-}
-
-.Columna_nombre p{
-    text-align: center;
-    font-size: 1.8vw;
-    order: 2;
-    font-family: Karantina;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.Columna_contador{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.Columna_contador button{
-    border-radius: 50%;
-    border: 0;
-    height: 50px;
-    width: 50px;
-}
-
-.Columna_contador button:hover{
-    cursor: pointer;
-    background-color: gray;
-    border: 1px solid black;
-}
-
-.Columna_contador p{
-    font-size: 2.5em;
 }
 
 .Foto_comida {
