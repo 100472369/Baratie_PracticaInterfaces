@@ -70,7 +70,9 @@ body{margin: 0;
     display: grid;
     grid-template-rows: repeat(4,auto);
     text-align: center;
-    padding: 3%;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .container-carta h2 {
@@ -143,6 +145,10 @@ body{margin: 0;
 .botones {
     display: grid;
     grid-template-columns: 33% 34% 33%;
+    place-content: center;
+    place-items: center;
+    padding-bottom: 5%;
+    padding-right: 5%;
 }
 .boton_producto {
     display: inline-block;
@@ -161,6 +167,30 @@ body{margin: 0;
     text-align: center;
     line-height: 1em;
 }
+
+.continuar_pedido{
+    text-align: center;
+}
+/* Estilos del botón */
+.boton-carrito {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 1.75em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 25px; /* Ajusta este valor para redondear más o menos las esquinas */
+    background-color: rgb(229,168,41);; /* Color de fondo del botón */
+    color: black; /* Color del texto del botón */
+    border: 1px solid black;; /* Color del borde del botón */
+}
+
+/* Cambia el color del botón al pasar el mouse sobre él */
+.boton-carrito:hover {
+    background-color: rgb(204, 147, 26);
+    border: 1px solid black;
+}
+
 
 .txt_plato {
     padding: 10px;
