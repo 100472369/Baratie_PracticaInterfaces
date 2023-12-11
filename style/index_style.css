@@ -319,7 +319,7 @@ footer{
 #Boton_reserva_mh{
     display: block;
     text-align: center;
-    font-size: 25px;
+    font-size: 1.5vw;
     font-weight: 600;
     color: rgb(241, 179, 63);
     background-color: black;
