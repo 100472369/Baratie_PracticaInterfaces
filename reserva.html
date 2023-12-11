@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Reserva</title>
+    <!-- estos dos comandos son: formato de codificación y un comando para mejorar la vista del mobil  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/one_piece_logo_small.png" type="image/png">
+    <!-- los links a X y los diferentes css -->
+    <link rel="stylesheet" href="style/reserva_style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/reserva.js"></script>
+</head>
+
+<body>
+<header id="header_history_page">
+    <div id="Logo_column_history">
+        <a href="index.html">
+            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+    </div>
+
+    <div id="Name_column">
+        <div class="Restaurant_name">
+            <h1>Reserva tu mesa</h1>
+        </div>
+    </div>
+</header>
+
+
+<div id="registro-container">
+    <!-- Formulario de registro -->
+    <form id="formulario" action="#" method="post">
+        <h2>RESERVA UNA MESA EN NUESTRA RUTA MARÍTIMA</h2>
+
+        <!-- Campos del formulario -->
+        <div class="campos_reserva" >Elige la ciudad correspondiente 
+            <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon_down" id="ciudad_down">
+            <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="ciudad_up">
+            <p id="ciudad_elegida"></p>
+            <div class="campos_reserva ciudades_dropdown">Buenos Aires</div>
+            <div class="campos_reserva ciudades_dropdown">Sevilla</div>
+            <div class="campos_reserva ciudades_dropdown">Islas filipinas</div>
+        </div>
+        
+        
+        <!-- <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre completo" required> -->
+
+        <!-- Contenedor para alinear teléfono y correo electrónico en la misma fila -->
+        <div class="flex-container">
+            <div class="campos_reserva">Fecha
+                <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon_down" id="fecha_down">
+                <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="fecha_up">
+                <p id="fecha_elegida"></p>
+                
+                <div id="calendar">
+                    <div id="calendar-header">
+                        <span id="month-prev" class="change-month"><</span>
+                        <h1 id="month"></h1>
+                        <span id="month-next" class="change-month">></span>
+                    </div>
+                    <div id="calendar-body">
+                    </div>
+                </div>
+
+            </div>
+            <div class="campos_reserva">Hora
+                <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon_down" id="hora_down">
+                <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="hora_up">
+                <p id="hora_elegida"></p>
+                <div class="campos_reserva horas_dropdown">13:00</div>
+                <div class="campos_reserva horas_dropdown">14:00</div>
+                <div class="campos_reserva horas_dropdown">15:00</div>
+                <div class="campos_reserva horas_dropdown">20:00</div>
+                <div class="campos_reserva horas_dropdown">21:00</div>
+                <div class="campos_reserva horas_dropdown">22:00</div>
+            </div>
+        </div>
+
+        <div class="campos_reserva" >Indica el numero de personas
+            <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon_down" id="num_personas_down">
+            <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="num_personas_up">
+                <p id="personas_elegidas"></p>
+                <div class="campos_reserva personas_dropdown">2</div>
+                <div class="campos_reserva personas_dropdown">3</div>
+                <div class="campos_reserva personas_dropdown">4</div>
+                <div class="campos_reserva personas_dropdown">5</div>
+                <div class="campos_reserva personas_dropdown">6</div>
+                <div class="campos_reserva personas_dropdown">7</div>
+                <div class="campos_reserva personas_dropdown">8</div>
+
+                
+        </div>
+
+        <!-- Botón de envío -->
+        <input id="submit" type="submit" value="Comprobar disponibilidad">
+    </form>
+    <div id="registro_exito" class="mensaje_exito" style="display: none;">
+        <h2>Su reserva se ha finalizado con éxito.</h2>
+        <img src="images/mugiwara.jpg" alt="Mugiwara">
+        <a href="index.html"><button id="boton_exito" class="boton_circular">Regresar al menu principal</button></a>
+    </div>
+</div>
+
+<footer>
+    <div id="contenedor_texto_footer">
+        <p>© 2023 Baratie</p>
+    </div>
+    <div id="contenedor_redes_footer">
+        <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
+        <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
+        <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
+        <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
+        <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+    </div>
+</footer>
+</body>
+</html>

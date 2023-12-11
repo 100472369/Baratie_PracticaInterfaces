@@ -1,0 +1,229 @@
+@font-face {
+    font-family: Revalia;
+    src: url(../fonts/Revalia-Regular.ttf);}
+
+@font-face {
+    font-family: Karantina;
+    src: url(../fonts/Karantina-Regular.ttf);}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-Regular.ttf);}
+
+@font-face {
+    font-family: IntknutAntiqua;
+    src: url(../fonts/InknutAntiqua-Light.ttf);}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Inter, Arial;}
+
+body{margin: 0;
+    margin-top: 13vh;
+    margin-bottom: 24vh;
+    background-image: url(../images/baratie_room.png);
+    background-size: 110%;
+}
+
+#header_history_page{
+    position: fixed; /* Fija el encabezado en la posición especificada */
+    top: 0;
+
+    display: grid;
+    height: 10vh;
+    width: 100%;
+    grid-template-columns: 1fr 6fr;
+}
+
+#Logo_column_history{
+    background-color: rgba(248, 248, 248, 1);
+    align-items: center;
+}
+
+.Logo_principal{
+    height: 10vh;
+    width: auto;
+}
+
+#Name_column{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(248, 248, 248, 1);
+}
+
+.Restaurant_name{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Restaurant_name h1{
+    margin-top: 0;
+    margin-bottom: 2px;
+    margin-right: 14vw;
+    text-align: center;
+    font-size: 2.6vw;
+    font-family: Revalia, serif;
+}
+
+/* Atributos del contenedor del registro de usuario*/
+#registro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+}
+
+#registro-container, input {
+    font-family: Revalia, serif;
+}
+
+#registro-container h2 {
+    margin-top: 0;
+    font-size: 1.4vw;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.campos_reserva {
+    width: 100%;
+    padding: 3%;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    background-color: #cfcfcf;
+    border: 0;
+}
+.ciudades_dropdown, .horas_dropdown, .personas_dropdown{
+    
+    display: none;
+}
+#calendar{
+    display: none;
+}
+
+#calendar-body div.today {
+    background-color: #f00;
+    color: #fff;
+}
+#calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #333;
+}
+.change-month {
+    cursor: pointer;
+}
+.dropdown_icon_down{
+    width: 25px;
+    height: 25px;
+}
+.dropdown_icon_up{
+    width: 25px;
+    height: 25px;
+    display: none;
+}
+
+input[type="submit"] {
+    background-color: rgb(229, 168, 41); /* Nuevo color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+
+/* Nueva regla para alinear en la misma fila */
+.flex-container {
+    display: flex;
+    gap: 8px; /* Espacio entre los elementos */
+}
+
+/* Display del recuadro que contiene la informacion que sale al completarse el registro exitosamente */
+#registro_exito {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 60%;
+    margin: 0;
+}
+
+/* Parametros de imagen */
+#registro_exito img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el boton de continuar con la compra */
+#boton_exito {
+    background-color: #FFCD00; /* Color de fondo amarillo */
+    color: #CC0018; /* Color del texto en rojo */
+    padding: 10px 50px 10px 50px;
+    border: 1px solid black;
+    border-radius: 25px; /* Borde circular */
+    cursor: pointer;
+    font-family: Inter, Arial, serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#boton_exito:hover {
+    background-color: #ffdb4d; /* Cambia el color de fondo al pasar el ratón */
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 97px;
+    width: 100%;
+    margin-right: 10px;
+    background-color: rgb(229,168,41);
+}
+
+#contenedor_redes_footer, #contenedor_texto_footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: Revalia, serif;
+    font-weight: 600;
+}
+
+.Icon_footer{
+    height: 45px;
+    width: 45px;
+}
+
+.Icon_footer:hover{
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(1.1);
+}
+
+/* Seccion de breakpoints para la pagina en version movil/tableta */
+@media (max-width: 600px) {
+    #registro-container {
+        height: 40vh;
+        width: 80%;
+        margin-top: 50%;
+    }
+    h2 {
+
+    }
+    #registro-container h2 {
+        font-size: 1em;
+    }
+}
