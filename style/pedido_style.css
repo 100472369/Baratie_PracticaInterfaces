@@ -52,6 +52,7 @@ body{margin: 0;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    width: 98%;
 }
 
 .Restaurant_name h1{
@@ -94,7 +95,7 @@ body{margin: 0;
 .platos-container {
     /* Contenedor de platos */
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 10em);
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
@@ -103,11 +104,11 @@ body{margin: 0;
     /*Atributos para cada uno de los platos*/
     display: grid;
     text-align: center;
-    grid-template-columns: 33% 67%;
+    grid-template-columns: 1fr 2fr;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 10em;
+
 }
 
 .texto_plato{
@@ -150,6 +151,7 @@ body{margin: 0;
     padding-bottom: 5%;
     padding-right: 5%;
 }
+
 .boton_producto {
     display: inline-block;
     border-radius: 35%; /* Hace que el botón sea circular */
@@ -192,22 +194,6 @@ body{margin: 0;
 }
 
 
-.txt_plato {
-    padding: 10px;
-    background-color: #ca8e49;
-}
-.info_plato {
-    padding: 2%;
-    font-size: 0.75em;
-    color: white;
-    overflow-y: auto;
-}
-.opciones {
-    /* Opciones de anadir o quitar del plato */
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-}
 button {
     /*Atributos para los botones en general*/
     display: flex;
@@ -218,84 +204,10 @@ button {
     cursor: pointer;
     border: 1px solid #ccc;
 }
-.opciones button {
-    /*Atributos para los botones de los platos*/
-    padding: 1.65%;
-    font-family: Karantina, Revans, 'Century Gothic', sans-serif;
-}
-/* Botones deshabilitados */
-.opciones button:disabled, .button:hover:disabled {
-    /*Atributos para los botones de los platos al estar desactivados en 'quitar' por cantidad*/
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-.opciones button:hover {
-    opacity: 0.75;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.Contenedor_producto{
-    display: grid;
-    grid-template-columns: 18vh 7vh;
-    width: 25%;
-    height: 15vh;
-    background-color: rgb(229,168,41);
-    border-radius: 2%;
-    border: 1px solid black;
-}
-
-.Columna_nombre{
-    display: grid;
-    grid-template-rows: 14vh 5vh;
-}
-
-.Columna_nombre p{
-    text-align: center;
-    font-size: 1.8vw;
-    order: 2;
-    font-family: Karantina;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.Columna_contador{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.Columna_contador button{
-    border-radius: 50%;
-    border: 0;
-    height: 50px;
-    width: 50px;
-}
-
-.Columna_contador button:hover{
-    cursor: pointer;
-    background-color: gray;
-    border: 1px solid black;
-}
-
-.Columna_contador p{
-    font-size: 2.5em;
-}
 
 .Foto_comida {
     width: 100%;
-    height: 100%;
+    height: 10em;
     object-fit: cover;
     object-position: center center; /* O ajusta según sea necesario */
     display: block; /* Asegura que la imagen se comporte como un elemento de bloque */
@@ -335,4 +247,134 @@ footer{
     cursor: pointer;
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     transform: scale(1.1);
+}
+
+
+
+/*Codigo del menú hamburguesa*/
+.topnav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+#logo_topnav {
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin-top: 20px;
+
+}
+
+#logo_topnav:hover {
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(1.1);
+}
+#myLinks {
+    height: 65vh;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    width: 21vw;
+    background-color: #fff; /* Color de fondo de los enlaces */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: none;
+    background-color: rgb(241, 179, 63);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 5px white;
+}
+
+#logo_m_h{
+    width: 100px;
+    height: 100px;
+}
+#logo_m_h:hover{
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.Restaurant_name a{
+    color: black;
+}
+
+#Restaurant_name a:active{
+    color: black;
+}
+
+.topnav a, #contenedor_texto_contacto_mh a {
+    font-family: Inter;
+    color: white;
+    padding: 14px 16px;
+    font-size: 18px;
+    display: block;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.Restaurant_name a:link, .topnav a:link, #contenedor_texto_contacto_mh a:link {
+    text-decoration: none;
+}
+
+.topnav a:hover, #contenedor_texto_contacto_mh a:hover {
+    color: black;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#Contenedor_redes_mh{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.redes_mh{
+    width: 50px;
+    height: 50px;
+}
+
+#contenedor_texto_contacto_mh{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+#contenedor_texto_contacto_mh a{
+    font-size: 14px;
+}
+
+#Boton_reserva_mh{
+    display: block;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: rgb(241, 179, 63);
+    background-color: black;
+    border: 2px solid white;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 20px 20px 20px 20px;
+    width: 50%;
+    height: 45px;
+}
+
+#Boton_reserva_mh:hover{
+    cursor: url("images/one_piece_logo_small.png"), pointer;
+    background-color: #333333;
+    color: white;
+    text-shadow: 0px 0px 3px white;
+    transition: all 0.1s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(0.96);
+    box-shadow: 0px 0px 10px white;
 }
