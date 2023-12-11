@@ -145,6 +145,10 @@ body{margin: 0;
 .botones {
     display: grid;
     grid-template-columns: 33% 34% 33%;
+    place-content: center;
+    place-items: center;
+    padding-bottom: 5%;
+    padding-right: 5%;
 }
 .boton_producto {
     display: inline-block;
