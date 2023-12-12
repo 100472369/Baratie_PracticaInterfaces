@@ -62,9 +62,27 @@ body{margin: 0;
     margin-bottom: 2px;
     margin-right: 14vw;
     text-align: center;
-    margin-right: 14vw;
+    margin-left: 18vw;
     font-size: 2.6vw;
     font-family: Revalia;
+}
+
+#carrito-header {
+    display: flex;
+    align-items: center;
+    font-family: Inter, serif;
+    font-size: 1em;
+}
+#carrito-header img {
+    width: 15%;
+    position: relative;
+}
+#contador_carrito {
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    margin-left: 1.7%;
+    padding-bottom: 0.25%;
 }
 
 .container-carta {
@@ -264,6 +282,8 @@ button {
 }
 
 #Contenedor_resumen{
+    display: grid;
+    grid-template-rows:15% 70% 15%;
     margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
@@ -273,6 +293,18 @@ button {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#Contenedor_resumen h2, #Contenedor_resumen h3 {
+    font-family: Karantina, serif;
+    font-size: 3em;
+    margin: 0;
+    padding: 2%;
+    text-align: center;
+}
+
+#nombre_articulo {
+    padding: 4%;
+    overflow-y: auto;
 }
 
 #Contenedor_carrito_main {

@@ -1,94 +1,110 @@
-/*Codigo JS para manejar la pagina de las compras y los diferentes eventos que suceden en ella*/
-document.addEventListener("DOMContentLoaded", function () {
-    //Seleccionar todos los elementos de plato, botones de añadir y botones de quitar
+$(document).ready(function () {
     const platos = $(".plato");
     const addButtons = $(".add");
     const removeButtons = $(".remove");
-    let contador = 0;
-    const totalElement = $("#total-sum");
-    const platosSeleccionadosElement = $("#platos-seleccionados");
-    let carrito = {};
-    const contadores = {};
-    // Cargo los datos en el WebStorage del carrito si existe de alguna sesion no confirmada anteriormente
-    const carritoData = localStorage.getItem('carrito');
-    if (carritoData) {
-        carrito = JSON.parse(carritoData);
-        // Actualizar la vista del carrito con los datos cargados
-        updateCarrito();
-    }
-    // Obtenemos la informacion de cada plato, asi como su cantidad para sumarla al carrito
-    platos.each(function(index, plato) {
-        contadores[index] = 0;
-        // const nombrePlato = $(plato).find(".txt_plato").text();
+    const contadorCarrito = $("#contador_carrito");
+    const totalArticulosResumen = $("#total_articulos_resumen");
+    const nombreArticuloElement = $("#nombre_articulo");
+    const precioTotalElement = $("#precio_total");
+
+    let contadores = obtenerContadoresDesdeStorage() || {};
+
+    platos.each(function (index, plato) {
         const removeButton = removeButtons.eq(index);
         const addButton = addButtons.eq(index);
-        const contadorElement = $(plato).find(".contador"); // Seleccionar el elemento del contador
+        const contadorElement = $(plato).find(".contador");
+
+        if (!contadores.hasOwnProperty(index)) {
+            contadores[index] = 0;
+            guardarContadorEnStorage(index, 0); // Inicializar el contador en el almacenamiento local
+        } else {
+            contadorElement.text(contadores[index]); // Restaurar el valor del contador en la interfaz
+        }
+
         if (contadores[index] <= 0) {
             removeButton.prop("disabled", true);
+        } else {
+            removeButton.prop("disabled", false);
         }
-        addButton.click(function() {
-            // Incrementar el contador para el plato actual
+
+        addButton.click(function () {
             contadores[index]++;
-            // Actualizar la interfaz de usuario o realizar otras acciones
             contadorElement.text(contadores[index]);
             removeButton.prop("disabled", false);
+            actualizarCarrito();
+            guardarContadorEnStorage(index, contadores[index]);
         });
-        removeButton.click(function() {
-            // Incrementar el contador para el plato actual
+
+        removeButton.click(function () {
             contadores[index]--;
-            // Actualizar la interfaz de usuario o realizar otras acciones
             contadorElement.text(contadores[index]);
             if (contadores[index] <= 0) {
                 removeButton.prop("disabled", true);
             }
+            actualizarCarrito();
+            guardarContadorEnStorage(index, contadores[index]);
         });
-            /*
-            if (carrito[nombrePlato]) {
-                carrito[nombrePlato].cantidad += 1;
-                carrito[nombrePlato].total += precio;
-            } else {
-                carrito[nombrePlato] = { cantidad: 1, total: precio };
-            }
-            updateCarrito();*/
-        /*
-        // Manejar evento de restar platos del carrito
-        removeButton.click(function() {
-            if (carrito[nombrePlato] && carrito[nombrePlato].cantidad > 0) {
-                carrito[nombrePlato].cantidad -= 1;
-                carrito[nombrePlato].total -= parseFloat($(plato).data("precio"));
-            }
-            updateCarrito();
-        });*/
+
+        // Actualizar el carrito al inicio
+        actualizarCarrito();
     });
 
-    // Funcion principal que actualiza el carrito cada vez que se quita o suma un nuevo plato
-    function updateCarrito() {
-        let totalCarrito = 0;
-        let detallesCarrito = "";
-        contador = 0;
-        // Informacion que se mostrara en el ticket total
-        for (const plato in carrito) {
-            if (carrito[plato].cantidad > 0) {
-                totalCarrito += carrito[plato].total;
-                detallesCarrito += `${plato}: ${carrito[plato].cantidad} x €${carrito[plato].total.toFixed(2)}<br>`;
-                contador += carrito[plato].cantidad;
-            }
+    function actualizarCarrito() {
+        let totalProductos = 0;
+        let precioTotal = 0;
+
+        // Filtrar solo los platos que tienen cantidad mayor a 0 en el carrito
+        const platosSeleccionados = Object.keys(contadores).filter(index => contadores[index] > 0);
+
+        // Actualizar el carrito
+        platosSeleccionados.forEach(index => {
+            totalProductos += contadores[index];
+
+            const precioPlato = parseFloat(platos.eq(index).find(".precio").text());
+            precioTotal += contadores[index] * precioPlato;
+        });
+
+        // Actualizar el resumen solo si hay productos seleccionados
+        if (totalProductos > 0) {
+            // Actualizar el resumen
+            totalArticulosResumen.text(`Total de productos: ${totalProductos}`);
+            precioTotalElement.text(`Precio total: ${precioTotal.toFixed(2)} €`);
+
+            // Actualizar el cuerpo de id="nombre_articulo"
+            nombreArticuloElement.empty();
+            platosSeleccionados.forEach(index => {
+                const nombrePlato = platos.eq(index).find(".nombre_plato").text();
+                const cantidadSeleccionada = contadores[index];
+                const precioIndividual = parseFloat(platos.eq(index).find(".precio").text());
+
+                const texto = `${nombrePlato} ${cantidadSeleccionada} x ${precioIndividual.toFixed(2)} €`;
+
+                const elementoP = $("<p>").text(texto);
+                nombreArticuloElement.append(elementoP);
+            });
+        } else {
+            // Si no hay productos seleccionados, limpiar el resumen
+            totalArticulosResumen.empty();
+            nombreArticuloElement.empty();
+            precioTotalElement.empty();
         }
-        totalElement.text(totalCarrito.toFixed(2));
-        platosSeleccionadosElement.html(detallesCarrito);
-        $(".counter").text(contador);
-        // Activar o desactivar los botones de quitar segun la cantidad en el carrito
-        removeButtons.each(function(index, removeButton) {
-            const plato = platos.eq(index).find(".txt_plato").text();
-            if (carrito[plato] && carrito[plato].cantidad > 0) {
-                $(removeButton).prop("disabled", false);
-            } else {
-                $(removeButton).prop("disabled", true);
+
+        // Actualizar el contador en el header
+        contadorCarrito.text(totalProductos);
+    }
+
+    function guardarContadorEnStorage(index, valor) {
+        localStorage.setItem(`contador_${index}`, valor);
+    }
+
+    function obtenerContadoresDesdeStorage() {
+        let contadoresStorage = {};
+        Object.keys(localStorage).forEach(key => {
+            if (key.startsWith('contador_')) {
+                const index = key.replace('contador_', '');
+                contadoresStorage[index] = parseInt(localStorage.getItem(key));
             }
         });
-        // Guardo los datos en el WebStorage
-        localStorage.setItem('carrito', JSON.stringify(carrito));
+        return contadoresStorage;
     }
 });
-
-
