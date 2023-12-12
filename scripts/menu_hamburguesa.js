@@ -13,3 +13,5 @@ function showStripres(){
     logo.slideDown();
     x.slideUp();
 }
+
+$

@@ -9,9 +9,6 @@
     <!-- los links a X y los diferentes css -->
     <link rel="icon" type="images/x-icon" href="icons/icon_van.png" />
     <link rel="stylesheet" href="style/pedido_style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="scripts/pedidos.js"></script>
-    <script src="scripts/menu_hamburguesa.js"></script>
 </head>
 
 <body>
@@ -24,6 +21,12 @@
         <div id="Name_column">
             <div class="Restaurant_name">
                 <h1>REALIZAR PEDIDO</h1>
+            </div>
+            <div id="carrito-header">
+                <p id="contador_carrito">
+                    0
+                </p>
+                <img src="icons/icon_cart.png" alt="Carrito">
             </div>
             <div class="topnav">
                 <img id="Logo_menu" src="" alt="">
@@ -43,7 +46,7 @@
                         <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
                     </div>
                     <div id="contenedor_texto_contacto_mh">
-                        <a href="#Pagina2">Política de<br>privacidad</a>
+                        <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac">Política de<br>privacidad</a>
                         <a href="contacto.html">Contacto</a>
                     </div>
                     <button id="Boton_reserva_mh">RESERVAR</button>
@@ -604,11 +607,19 @@
 
         <div id="Contenedor_carrito_main">
             <div id="Contenedor_video">
-                <img src="images/thousand_sunny.gif" loop>
+                <img src="images/thousand_sunny.gif" alt="GIF de un barco en el mar" loop>
             </div>
 
             <div id="Contenedor_resumen">
-                
+                <div>
+                    <h2 id="total_articulos_resumen"></h2>
+                </div>
+                <div id="nombre_articulo">
+
+                </div>
+                <div>
+                    <h3 id="precio_total"></h3>
+                </div>
             </div>
         </div>
 
@@ -627,9 +638,9 @@
             <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="scripts/script.js"></script>
-    <script src="scripts/menu_hmaburguesa.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="scripts/pedidos.js"></script>
+<script src="scripts/menu_hamburguesa.js"></script>
 </body>
 </html>
 
