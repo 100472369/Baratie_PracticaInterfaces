@@ -3,6 +3,7 @@ $(document).ready(function (){
     let fecha_elegida = $("#fecha_elegida");
     let hora_elegida = $("#hora_elegida");
     let personas_elegidas = $("#personas_elegidas");
+    const submit = $("#submit");
     // cargar calendario
     renderCalendar();
     // funcion para ir al mes anterior
@@ -101,8 +102,8 @@ $(document).ready(function (){
     $("#formulario").submit(function(e){
         e.preventDefault();
     })
-    $("#submit").click(function(){
-        if (ciudad_elegida.text() !== ""  && fecha_elegida.text() !== "" && hora_elegida.text() !== "" && personas_elegidas.text() !== ""){
+    submit.click(function(){
+        if (ciudad_elegida.text() !== ""  && hora_elegida.text() !== "" && personas_elegidas.text() !== ""){
             console.log("AQUI 1");
             $("#formulario").fadeOut(500, function(){
                 $("#mensaje_reserva").text(`Mesa reservada el ${fecha_elegida.text()} a las ${hora_elegida.text()}.`)
