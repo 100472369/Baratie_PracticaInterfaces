@@ -105,7 +105,8 @@ $(document).ready(function (){
         if (ciudad_elegida.text() !== ""  && fecha_elegida.text() !== "" && hora_elegida.text() !== "" && personas_elegidas.text() !== ""){
             console.log("AQUI 1");
             $("#formulario").fadeOut(500, function(){
-                $("#registro_exito").fadeIn(500);
+                $("#mensaje_reserva").text(`Mesa reservada el ${fecha_elegida.text()} a las ${hora_elegida.text()}.`)
+                $("#reserva_exito").fadeIn(500);
             });
         }
     })

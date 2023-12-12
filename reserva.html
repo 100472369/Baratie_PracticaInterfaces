@@ -5,7 +5,7 @@
     <!-- estos dos comandos son: formato de codificación y un comando para mejorar la vista del mobil  -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/one_piece_logo_small.png" type="image/png">
+    <link rel="icon" href="icons/bell_reserva.png" type="image/png">
     <!-- los links a X y los diferentes css -->
     <link rel="stylesheet" href="style/reserva_style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -14,21 +14,21 @@
 </head>
 
 <body>
-<header id="header_history_page">
-    <div id="Logo_column_history">
+<header id="header_book_table_page">
+    <div id="Logo_column_book_table">
         <a href="index.html">
             <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
     </div>
 
     <div id="Name_column">
-        <div class="Restaurant_name">
+        <div class="page_name">
             <h1>Reserva tu mesa</h1>
         </div>
     </div>
 </header>
 
 
-<div id="registro-container">
+<div id="book_table_container">
     <!-- Formulario de registro -->
     <form id="formulario" action="#" method="post">
         <h2>RESERVA UNA MESA EN NUESTRA RUTA MARÍTIMA</h2>
@@ -93,12 +93,14 @@
         </div>
 
         <!-- Botón de envío -->
-        <input id="submit" type="submit" value="Comprobar disponibilidad">
+        <input id="submit" type="submit" value="Reservar mesa">
     </form>
-    <div id="registro_exito" class="mensaje_exito" style="display: none;">
-        <h2>Su reserva se ha finalizado con éxito.</h2>
-        <img src="images/mugiwara.jpg" alt="Mugiwara">
-        <a href="index.html"><button id="boton_exito" class="boton_circular">Regresar al menu principal</button></a>
+    <div id="reserva_exito" class="mensaje_exito" style="display: none;">
+        <h2 id="mensaje_reserva"></h2>
+        <img src="images/chopper_one_piece.png" alt="Mugiwara">
+        <a href="index.html">
+            <button id="boton_exito">Regresar al menu principal</button>
+        </a>
     </div>
 </div>
 
