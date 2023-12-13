@@ -2,12 +2,30 @@ $(document).ready(function () {
     const platos = $(".plato");
     const addButtons = $(".add");
     const removeButtons = $(".remove");
+    const botonpasarCarrito = $(".boton-carrito");
+    const botonModificarCompra = $("#Boton_modificar_pedido");
+    const botonFinalizarCompra = $("#Boton_finalizar_pedido");
     const contadorCarrito = $("#contador_carrito");
     const totalArticulosResumen = $("#total_articulos_resumen");
     const nombreArticuloElement = $("#nombre_articulo");
     const precioTotalElement = $("#precio_total");
 
     let contadores = obtenerContadoresDesdeStorage() || {};
+
+    $("#Pagina_carrito").hide();
+    $("#Pagina_pedido_realizado").hide();
+
+    botonpasarCarrito.click(function(){
+        mostrarCarrito();
+    })
+
+    botonModificarCompra.click(function(){
+        mostrarCarta();
+    })
+
+    botonFinalizarCompra.click(function(){
+        mostrarFinalizacion();
+    })
 
     platos.each(function (index, plato) {
         const removeButton = removeButtons.eq(index);
@@ -107,4 +125,23 @@ $(document).ready(function () {
         });
         return contadoresStorage;
     }
+
+    function mostrarCarrito(){
+        $("#Pagina_carta").hide()
+        $("#Pagina_carrito").show();
+        $("#Pagina_pedido_realizado").hide();
+    }
+
+    function mostrarCarta(){
+        $("#Pagina_carta").show()
+        $("#Pagina_carrito").hide();
+        $("#Pagina_pedido_realizado").hide();
+    }
+
+    function mostrarFinalizacion(){
+        $("#Pagina_carta").hide()
+        $("#Pagina_carrito").hide();
+        $("#Pagina_pedido_realizado").show();
+    }
+
 });
