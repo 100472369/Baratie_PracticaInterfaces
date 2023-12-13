@@ -8,6 +8,7 @@ $(document).ready(function () {
     const contadorCarrito = $("#contador_carrito");
     const totalArticulosResumen = $("#total_articulos_resumen");
     const nombreArticuloElement = $("#nombre_articulo");
+    const precioArticuloElement = $("#precio_articulo");
     const precioTotalElement = $("#precio_total");
     const pagina_carrito = $("#Pagina_carrito");
     const pagina_pedido_realizado = $("#Pagina_pedido_realizado");
@@ -76,8 +77,11 @@ $(document).ready(function () {
         // Actualizar el carrito al inicio
         actualizarCarrito();
     });
-
     function actualizarCarrito() {
+        // Limpiar contenido antes de agregar nuevas líneas
+        nombreArticuloElement.empty();
+        precioArticuloElement.empty();
+
         let totalProductos = 0;
         let precioTotal = 0;
 
@@ -88,28 +92,27 @@ $(document).ready(function () {
         platosSeleccionados.forEach(index => {
             totalProductos += contadores[index];
 
-            const precioPlato = parseFloat(platos.eq(index).find(".precio").text());
-            precioTotal += contadores[index] * precioPlato;
+            const nombrePlato = platos.eq(index).find(".nombre_plato").text();
+            const cantidadSeleccionada = contadores[index];
+            const precioIndividual = parseFloat(platos.eq(index).find(".precio").text());
+            const textoNombre = `${nombrePlato}`;
+            const textoPrecio = `${precioIndividual.toFixed(2)}€ x ${cantidadSeleccionada}`;
+
+            // Actualizar el cuerpo de id="nombre_articulo" y id="precio_articulo"
+            const elementoNombre = $("<p>").text(textoNombre);
+            const elementoPrecio = $("<p>").text(textoPrecio);
+
+            nombreArticuloElement.append(elementoNombre);
+            precioArticuloElement.append(elementoPrecio);
+
+            precioTotal += contadores[index] * precioIndividual;
         });
 
         // Actualizar el resumen
         if (totalProductos >= 0) {
             // Actualizar el resumen
             totalArticulosResumen.text(`Total de productos: ${totalProductos}`);
-            precioTotalElement.text(`Precio total: ${precioTotal.toFixed(2)} €`);
-
-            // Actualizar el cuerpo de id="nombre_articulo"
-            nombreArticuloElement.empty();
-            platosSeleccionados.forEach(index => {
-                const nombrePlato = platos.eq(index).find(".nombre_plato").text();
-                const cantidadSeleccionada = contadores[index];
-                const precioIndividual = parseFloat(platos.eq(index).find(".precio").text());
-
-                const texto = `${nombrePlato} ${cantidadSeleccionada} x ${precioIndividual.toFixed(2)} €`;
-
-                const elementoP = $("<p>").text(texto);
-                nombreArticuloElement.append(elementoP);
-            });
+            precioTotalElement.text(`${precioTotal.toFixed(2)} €`);
         } else {
             // Si no hay productos seleccionados, limpiar el resumen
             totalArticulosResumen.empty();
@@ -120,7 +123,6 @@ $(document).ready(function () {
         // Actualizar el contador en el header
         contadorCarrito.text(totalProductos);
     }
-
     function guardarContadorEnStorage(index, valor) {
         /* Guardamos en el local storage los valores de los contadores en su indice correspondiente */
         localStorage.setItem(`contador_${index}`, valor);
