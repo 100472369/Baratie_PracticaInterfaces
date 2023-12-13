@@ -8,7 +8,7 @@ $(document).ready(function () {
     toCompra.click(function() {
         if (!(nombreRegistrado && telefonoRegistrado && emailRegistrado && direccionRegistrada)) {
             // Ademas, se incluye una fuente especial para poder manejar este evento en especifico
-            toCompra.attr('href','registro.html?fuente=pagina1');
+            toCompra.attr('href','registro.html?source=pagina1');
         }
     });
 

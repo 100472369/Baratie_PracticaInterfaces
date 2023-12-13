@@ -11,6 +11,7 @@ $(document).ready(function () {
     const telefonoRegistrado = localStorage.getItem('telefono');
     const emailRegistrado = localStorage.getItem('email');
     const direccionRegistrada = localStorage.getItem('direccion');
+    const urlActual = window.location.href;
     if (nombreRegistrado && telefonoRegistrado && emailRegistrado && direccionRegistrada) {
         registroForm.hide();
         registroExito.show();
@@ -60,11 +61,18 @@ $(document).ready(function () {
     let urlParams = new URLSearchParams(window.location.search);
     console.log(urlParams);
     // Verificar si venimos desde el enlace de compra para que una vez registrados podamos continuar con el pedido
-    if (urlParams.has('fuente')) {
+    if (urlActual.includes('source=pagina_pedido')) {
+        
         botonExito.text('Continuar con el pedido');
         botonExito.click(function () {
             // Puedes agregar acciones adicionales al hacer clic en el botón de éxito
             window.location.href = "pedido.html";
+        });
+    } else if (urlActual.includes('source=pagina_reserva')) {
+        botonExito.text('Continuar con la reserva');
+        botonExito.click(function () {
+            // Puedes agregar acciones adicionales al hacer clic en el botón de éxito
+            window.location.href = "reserva.html";
         });
     }
     // Si no, tenemos la opcion de volver a la pagina principal
