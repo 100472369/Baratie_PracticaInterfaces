@@ -18,7 +18,7 @@ $(document).ready(function () {
     pagina_carrito.hide();
     pagina_pedido_realizado.hide();
 
-    botonpasarCarrito.click(function(){
+    $(".boton-carrito, #carrito-header").click(function(){
         mostrarCarrito();
     })
 
@@ -183,6 +183,8 @@ $(document).ready(function () {
     function mostrarFinalizacion(){
         $("#Pagina_carta").hide()
         pagina_carrito.fadeOut(500, function() {
+            $("#contador_carrito").fadeOut(100);
+            $("#logo_carrito_header").fadeOut(100);
             pagina_pedido_realizado.fadeIn(500);
         });
     }

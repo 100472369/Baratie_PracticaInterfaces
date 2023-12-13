@@ -55,6 +55,7 @@ body{margin: 0;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    width: 98%;
 }
 
 .page_name h1{
@@ -64,6 +65,7 @@ body{margin: 0;
     text-align: center;
     font-size: 2.6vw;
     font-family: Revalia, serif;
+    
 }
 
 /* Atributos del contenedor de la reserva de usuario*/
@@ -259,6 +261,7 @@ footer{
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     transform: scale(1.1);
 }
+
 
 /* Seccion de breakpoints para la pagina en version movil/tableta */
 @media (max-width: 600px) {
