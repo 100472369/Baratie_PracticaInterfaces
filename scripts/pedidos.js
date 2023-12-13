@@ -9,11 +9,13 @@ $(document).ready(function () {
     const totalArticulosResumen = $("#total_articulos_resumen");
     const nombreArticuloElement = $("#nombre_articulo");
     const precioTotalElement = $("#precio_total");
+    const pagina_carrito = $("#Pagina_carrito");
+    const pagina_pedido_realizado = $("#Pagina_pedido_realizado");
 
     let contadores = obtenerContadoresDesdeStorage() || {};
 
-    $("#Pagina_carrito").hide();
-    $("#Pagina_pedido_realizado").hide();
+    pagina_carrito.hide();
+    pagina_pedido_realizado.hide();
 
     botonpasarCarrito.click(function(){
         mostrarCarrito();
@@ -23,9 +25,17 @@ $(document).ready(function () {
         mostrarCarta();
     })
 
-    botonFinalizarCompra.click(function(){
-        mostrarFinalizacion();
-    })
+    botonFinalizarCompra.click(function() {
+        // Verificar si hay datos en el localStorage antes de mostrar la finalización
+        if (hayDatosEnLocalStorage()) {
+            mostrarFinalizacion();
+            // Borrar los datos del localStorage
+            limpiarLocalStorage();
+        } else {
+            // Mostrar un mensaje de alerta si no hay datos en el carrito
+            alert("Ooops! Parece que has intentado finalizar la compra... pero no tienes nada YOHOHOHOHO")
+        }
+    });
 
     platos.each(function (index, plato) {
         const removeButton = removeButtons.eq(index);
@@ -82,8 +92,8 @@ $(document).ready(function () {
             precioTotal += contadores[index] * precioPlato;
         });
 
-        // Actualizar el resumen solo si hay productos seleccionados
-        if (totalProductos > 0) {
+        // Actualizar el resumen
+        if (totalProductos >= 0) {
             // Actualizar el resumen
             totalArticulosResumen.text(`Total de productos: ${totalProductos}`);
             precioTotalElement.text(`Precio total: ${precioTotal.toFixed(2)} €`);
@@ -112,8 +122,38 @@ $(document).ready(function () {
     }
 
     function guardarContadorEnStorage(index, valor) {
+        /* Guardamos en el local storage los valores de los contadores en su indice correspondiente */
         localStorage.setItem(`contador_${index}`, valor);
     }
+
+    function hayDatosEnLocalStorage() {
+        // Verificar si hay al menos un contador diferente de cero en el localStorage
+        return Object.keys(localStorage).some(key => key.startsWith('contador_') && parseInt(localStorage.getItem(key)) !== 0);
+    }
+
+    function limpiarLocalStorage() {
+        try {
+            // Obtener todas las claves del localStorage
+            const claves = Object.keys(localStorage);
+
+            // Filtrar solo las claves relacionadas con el carrito
+            const clavesCarrito = claves.filter(key => key.startsWith('contador_'));
+
+            // Imprimir las claves antes de intentar borrar
+            console.log("Claves antes de borrar:", clavesCarrito);
+
+            // Borrar cada clave relacionada con el carrito
+            clavesCarrito.forEach(key => {
+                localStorage.removeItem(key);
+            });
+
+            // Imprimir las claves después de borrar
+            console.log("Claves después de borrar:", Object.keys(localStorage));
+        } catch (error) {
+            console.error("Error al intentar borrar claves:", error);
+        }
+    }
+
 
     function obtenerContadoresDesdeStorage() {
         let contadoresStorage = {};
@@ -128,20 +168,20 @@ $(document).ready(function () {
 
     function mostrarCarrito(){
         $("#Pagina_carta").hide()
-        $("#Pagina_carrito").show();
-        $("#Pagina_pedido_realizado").hide();
+        pagina_carrito.show();
+       pagina_pedido_realizado.hide();
     }
 
     function mostrarCarta(){
         $("#Pagina_carta").show()
-        $("#Pagina_carrito").hide();
-        $("#Pagina_pedido_realizado").hide();
+        pagina_carrito.hide();
+        pagina_pedido_realizado.hide();
     }
 
     function mostrarFinalizacion(){
         $("#Pagina_carta").hide()
-        $("#Pagina_carrito").hide();
-        $("#Pagina_pedido_realizado").show();
+        pagina_carrito.hide();
+        pagina_pedido_realizado.show();
     }
 
 });
