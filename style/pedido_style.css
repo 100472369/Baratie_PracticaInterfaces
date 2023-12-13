@@ -195,7 +195,14 @@ body{margin: 0;
     text-decoration: none;
 }
 
-.remove:disabled {
+.boton_producto:hover {
+    background-color: white;
+    color: rgb(229,168,41);
+}
+
+.remove:disabled, .remove:disabled:hover {
+    background-color: rgb(229,168,41);
+    color: white;
     opacity: 0.5;
     cursor: not-allowed;
 }
@@ -520,6 +527,10 @@ button {
     border-radius: 45px 45px 45px 45px;
     font-size: 1.2em;
     width: 60%;
+}
+
+#Boton_volver_main_page:hover {
+    background-color: rgba(62,90,155,0.9);
 }
 
 /*Codigo del footer*/

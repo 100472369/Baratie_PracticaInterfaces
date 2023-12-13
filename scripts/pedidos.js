@@ -168,22 +168,23 @@ $(document).ready(function () {
         return contadoresStorage;
     }
 
-    function mostrarCarrito(){
-        $("#Pagina_carta").hide()
-        pagina_carrito.show();
-       pagina_pedido_realizado.hide();
-    }
-
-    function mostrarCarta(){
-        $("#Pagina_carta").show()
-        pagina_carrito.hide();
+    function mostrarCarrito() {
+        $("#Pagina_carta").fadeOut(350, function() {
+            pagina_carrito.fadeIn(350);
+        });
         pagina_pedido_realizado.hide();
     }
-
+    function mostrarCarta() {
+        pagina_carrito.fadeOut(350, function() {
+            $("#Pagina_carta").fadeIn(350);
+        });
+        pagina_pedido_realizado.hide();
+    }
     function mostrarFinalizacion(){
         $("#Pagina_carta").hide()
-        pagina_carrito.hide();
-        pagina_pedido_realizado.show();
+        pagina_carrito.fadeOut(500, function() {
+            pagina_pedido_realizado.fadeIn(500);
+        });
     }
 
 });

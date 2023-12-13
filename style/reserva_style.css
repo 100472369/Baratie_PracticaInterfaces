@@ -121,7 +121,7 @@ form {
     opacity: 50%;
 }
 
-.dropdown_icon_down, .dropdown_icon_up {
+.dropdown_icon_down, .dropdown_icon_up, .ciudad_icon {
     right: 1px;
     cursor: pointer;
 }
@@ -156,7 +156,7 @@ form {
     cursor: not-allowed;
 }
 /* el icono de dropdown para bajar y subir */
-.dropdown_icon_down, .dropdown_icon_up{
+.dropdown_icon_down, .dropdown_icon_up, .ciudad_icon{
     width: 25px;
     height: 25px;
 }
