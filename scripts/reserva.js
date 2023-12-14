@@ -40,30 +40,6 @@ $(document).ready(function (){
             document.getElementById('calendar-body').classList.remove('fade-out');
         }, 500);
     });
-    // funcion para cargar dropdowns
-    $(".dropdown_icon_down").each(function(){
-        $(this).click(function(){
-        let id = $(this)[0].id;
-        // if (id === "ciudad_down"){
-        //     bajar_ciudades();
-        // }
-        if (id === "fecha_down"){
-            bajar_fechas();
-        }
-        if (id === "num_meses_down"){
-            bajar_meses()
-        }
-        if (id === "hora_down"){
-            bajar_horas()
-        }
-        if (id === "num_dias_down"){
-            bajar_dias()
-        }
-        if (id === "num_personas_down"){
-            bajar_personas()
-        }
-        })  
-    })
     $(".ciudad_icon").each(function() {
         $(this).click(function() {
             console.log(isCiudadBajado);
@@ -75,32 +51,54 @@ $(document).ready(function (){
             }
         });
     });
-    // funcion para quitar dropdowns
-    $(".dropdown_icon_up").each(function(){
-        $(this).click(function(){
-        let id = $(this)[0].id;
-        // if (id === "ciudad_up"){
-        //     subir_ciudades();
-        // }
-        if (id === "fecha_up"){
-            subir_fechas();
-        }
-        if (id === "num_meses_up"){
-            subir_meses();
-        }
-        if (id === "num_dias_up"){
-            subir_dias();
-        }
-        if (id === "hora_up"){
-            subir_horas();
-        }
-        if (id === "num_personas_up"){
-            subir_personas();
-        }
-        })  
-    })
+    $(".mes_icon").each(function() {
+        $(this).click(function() {
+            console.log(isMesBajado);
+            if (isMesBajado) {
+                console.log("He de subir")
+                subir_meses();
+            } else {
+                bajar_meses();
+            }
+        });
+    });
+    $(".dia_icon").each(function() {
+        $(this).click(function() {
+            console.log(isDiasBajado);
+            if (isDiasBajado) {
+                console.log("He de subir")
+                subir_dias();
+            } else {
+                bajar_dias();
+            }
+        });
+    });
 
     // funcion para seleccionar ciudad
+    $(".hora_icon").each(function() {
+        $(this).click(function() {
+            console.log(isHorasBajado);
+            if (isHorasBajado) {
+                console.log("He de subir")
+                subir_horas();
+            } else {
+                bajar_horas();
+            }
+        });
+    })
+
+    $(".personas_icon").each(function() {
+        $(this).click(function() {
+            console.log(isPersonasBajado);
+            if (isPersonasBajado) {
+                console.log("He de subir")
+                subir_personas();
+            } else {
+                bajar_personas();
+            }
+        });
+    })
+
     $(".ciudades_dropdown").each(function () {
         $(this).click(function () {
             let city = $(this).text();
@@ -361,6 +359,16 @@ function renderCalendar() {
 }
 // funciones para esconder elementos al hacer el dropdown
 let isCiudadBajado = false;
+let isMesBajado = false;
+let isDiasBajado = false;
+let isHorasBajado = false;
+let isPersonasBajado = false;
+function bajar_fechas(){
+    $("#fecha_down").hide();
+    $("#fecha_up").show();
+    $("#calendar").show();
+}
+
 function bajar_ciudades() {
     // Animar la rotación del elemento con clase "dropdown_icon_up" a 180 grados
     $(".ciudad_icon").animate({
@@ -380,32 +388,77 @@ function bajar_ciudades() {
     });
 }
 
-
-
-function bajar_fechas(){
-    $("#fecha_down").hide();
-    $("#fecha_up").show();
-    $("#calendar").show();
-}
 function bajar_meses() {
-    $("#num_meses_down").hide();
-    $("#num_meses_up").show();
-    $(".meses_dropdown").show();
+    // Animar la rotación del elemento con clase "dropdown_icon_up" a 180 grados
+    $(".mes_icon").animate({
+        deg: 180
+    }, {
+        step: function(now, fx) {
+            $(this).css('transform', 'rotate(' + now + 'deg)');
+        },
+        duration: 500, // Puedes ajustar la duración de la animación según tus preferencias
+        complete: function() {
+            // Ocultar los elementos con clase "ciudades_dropdown"
+            $(".meses_dropdown").show();
+
+            // Actualizar el estado
+            isMesBajado = true;
+        }
+    });
 }
-function bajar_horas(){
-    $("#hora_down").hide();
-    $("#hora_up").show();
-    $(".horas_dropdown").show();
+function bajar_horas() {
+    // Animar la rotación del elemento con clase "dropdown_icon_up" a 180 grados
+    $(".hora_icon").animate({
+        deg: 180
+    }, {
+        step: function(now, fx) {
+            $(this).css('transform', 'rotate(' + now + 'deg)');
+        },
+        duration: 500, // Puedes ajustar la duración de la animación según tus preferencias
+        complete: function() {
+            // Ocultar los elementos con clase "ciudades_dropdown"
+            $(".horas_dropdown").show();
+
+            // Actualizar el estado
+            isHorasBajado = true;
+        }
+    });
 }
 function bajar_dias() {
-    $("#num_dias_down").hide();
-    $("#num_dias_up").show();
-    $(".dias_dropdown").show();
+    // Animar la rotación del elemento con clase "dropdown_icon_up" a 180 grados
+    $(".dia_icon").animate({
+        deg: 180
+    }, {
+        step: function(now, fx) {
+            $(this).css('transform', 'rotate(' + now + 'deg)');
+        },
+        duration: 500, // Puedes ajustar la duración de la animación según tus preferencias
+        complete: function() {
+            // Ocultar los elementos con clase "ciudades_dropdown"
+            $(".dias_dropdown").show();
+
+            // Actualizar el estado
+            isDiasBajado = true;
+        }
+    });
 }
-function bajar_personas(){
-    $("#num_personas_down").hide();
-    $("#num_personas_up").show();
-    $(".personas_dropdown").show();
+function bajar_personas() {
+    // Animar la rotación del elemento con clase "dropdown_icon_up" a 180 grados
+    $(".personas_icon").animate({
+        deg: 180
+    }, {
+        step: function(now, fx) {
+            $(this).css('transform', 'rotate(' + now + 'deg)');
+        },
+        duration: 500, // Puedes ajustar la duración de la animación según tus preferencias
+        complete: function() {
+            // Ocultar los elementos con clase "ciudades_dropdown"
+            $(".personas_dropdown").show();
+
+            // Actualizar el estado
+            isPersonasBajado = true;
+        }
+    });
 }
 // funciones para quitar elementos del dropdown
 function subir_ciudades() {
@@ -434,22 +487,74 @@ function subir_fechas(){
     $("#calendar").hide();
 }
 function subir_meses() {
-    $("#num_meses_down").show();
-    $("#num_meses_up").hide();
-    $(".meses_dropdown").hide();
+    // Animar la rotación del elemento con clase "dropdown_icon_up" a 0 grados
+    $(".mes_icon").animate({
+        deg: 0
+    }, {
+        step: function(now, fx) {
+            $(this).css('transform', 'rotate(' + now + 'deg)');
+        },
+        duration: 500, // Puedes ajustar la duración de la animación según tus preferencias
+        complete: function() {
+            // Mostrar los elementos con clase "ciudades_dropdown"
+            $(".meses_dropdown").hide();
+
+            // Actualizar el estado
+            isMesBajado = false;
+        }
+    });
 }
 function subir_dias() {
-    $("#num_dias_down").show();
-    $("#num_dias_up").hide();
-    $(".dias_dropdown").hide();
+    // Animar la rotación del elemento con clase "dropdown_icon_up" a 0 grados
+    $(".dia_icon").animate({
+        deg: 0
+    }, {
+        step: function(now, fx) {
+            $(this).css('transform', 'rotate(' + now + 'deg)');
+        },
+        duration: 500, // Puedes ajustar la duración de la animación según tus preferencias
+        complete: function() {
+            // Mostrar los elementos con clase "ciudades_dropdown"
+            $(".dias_dropdown").hide();
+
+            // Actualizar el estado
+            isDiasBajado = false;
+        }
+    });
 }
-function subir_horas(){
-    $("#hora_down").show();
-    $("#hora_up").hide();
-    $(".horas_dropdown").hide();
+function subir_horas() {
+    // Animar la rotación del elemento con clase "dropdown_icon_up" a 0 grados
+    $(".hora_icon").animate({
+        deg: 0
+    }, {
+        step: function(now, fx) {
+            $(this).css('transform', 'rotate(' + now + 'deg)');
+        },
+        duration: 500, // Puedes ajustar la duración de la animación según tus preferencias
+        complete: function() {
+            // Mostrar los elementos con clase "ciudades_dropdown"
+            $(".horas_dropdown").hide();
+
+            // Actualizar el estado
+            isHorasBajado = false;
+        }
+    });
 }
-function subir_personas(){
-    $("#num_personas_down").show();
-    $("#num_personas_up").hide();
-    $(".personas_dropdown").hide();
+function subir_personas() {
+    // Animar la rotación del elemento con clase "dropdown_icon_up" a 0 grados
+    $(".personas_icon").animate({
+        deg: 0
+    }, {
+        step: function(now, fx) {
+            $(this).css('transform', 'rotate(' + now + 'deg)');
+        },
+        duration: 500, // Puedes ajustar la duración de la animación según tus preferencias
+        complete: function() {
+            // Mostrar los elementos con clase "ciudades_dropdown"
+            $(".personas_dropdown").hide();
+
+            // Actualizar el estado
+            isPersonasBajado = false;
+        }
+    });
 }
