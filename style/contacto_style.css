@@ -176,6 +176,10 @@ footer{
     transform: scale(1.1);
 }
 
+label {
+    display: none;
+}
+
 /*Codigo del menú hamburguesa*/
 .topnav {
     position: relative;

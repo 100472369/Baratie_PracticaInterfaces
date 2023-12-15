@@ -40,7 +40,7 @@
                         <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
                     </div>
                     <div id="contenedor_texto_contacto_mh">
-                        <a href="#Pagina2">Política de<br>privacidad</a>
+                        <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac">Política de<br>privacidad</a>
                         <a href="contacto.html">Contacto</a>
                     </div>
                     <button id="Boton_reserva_mh">RESERVAR</button>
@@ -60,15 +60,15 @@
             <h2>Formulario de dudas</h2>
 
             <!-- Campos del formulario -->
-            <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre completo" required>
+            <label for="nombre"></label><input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre completo" required>
 
             <!-- Contenedor para alinear teléfono y correo electrónico en la misma fila -->
             <div class="flex-container">
-                <input type="tel" id="telefono" name="telefono" placeholder="Introduce tu teléfono" required>
-                <input type="email" id="email" name="email" placeholder="Introduce tu e-mail" required>
+                <label for="telefono"></label><input type="tel" id="telefono" name="telefono" placeholder="Introduce tu teléfono" required>
+                <label for="email"></label><input type="email" id="email" name="email" placeholder="Introduce tu e-mail" required>
             </div>
 
-            <textarea type="text" id="consulta" name="consulta" placeholder="Detalle de la consulta o problema: (max 800 caracteres) " maxlength="800" required></textarea>
+            <label for="consulta"></label><textarea id="consulta" name="consulta" placeholder="Detalle de la consulta o problema: (max 800 caracteres) " maxlength="800" required></textarea>
 
             <!-- Botón de envío -->
             <button id="delete" type="button">Limpiar</button>

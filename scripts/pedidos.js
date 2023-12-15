@@ -2,7 +2,6 @@ $(document).ready(function () {
     const platos = $(".plato");
     const addButtons = $(".add");
     const removeButtons = $(".remove");
-    const botonpasarCarrito = $(".boton-carrito");
     const botonModificarCompra = $("#Boton_modificar_pedido");
     const botonFinalizarCompra = $("#Boton_finalizar_pedido");
     const contadorCarrito = $("#contador_carrito");
