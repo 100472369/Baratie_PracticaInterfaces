@@ -18,12 +18,33 @@ html{
 
 body{margin: 0;}
 
-#header_main_page{
+.header_main_page{
     display: grid;
     height: 20vh;
     width: 100%;
     grid-template-columns: 1fr 6fr;
 }
+.header_main_page.is-sticky {
+    top: 0;
+    position: fixed;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+    height: 10vh;
+    width: 100%; 
+    animation: slideDown 1s ease-out;
+    
+  }
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }  
+  }
+
+  .header_main_page.is-sticky #Name_column, .header_main_page.is-sticky .Logo_principal, .header_main_page.is-sticky #Logo_column, .header_main_page.is-sticky .icon{
+    height: 10vh;
+  }
 
 #Logo_column{
    background-color: rgba(248, 248, 248, 1);
@@ -47,7 +68,6 @@ body{margin: 0;}
     flex-direction: column;
     justify-content: center;
 }
-
 .Restaurant_name h1{
     margin-top: 0;
     margin-bottom: 2px;
