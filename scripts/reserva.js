@@ -160,6 +160,7 @@ $(document).ready(function (){
                 $("#formulario").fadeOut(500, function(){
                     $("#mensaje_reserva").text(`Mesa reservada el próximo ${dia_elegido.text()} de ${mes_elegido.text()} a las ${hora_elegida.text()}.`)
                     $("#reserva_exito").fadeIn(500);
+                    if (idioma === "en") $("#boton_exito").text('Go back to homepage');
                 });
             }
         }
