@@ -17,13 +17,15 @@ html{
     font-family: Inter, Arial, serif;}
 
 body{margin: 0;}
-
+/* El header de nuestra página */
 .header_main_page{
     display: grid;
     height: 20vh;
     width: 100%;
     grid-template-columns: 1fr 6fr;
+    
 }
+/* Se usa para animar el header de manera dinámica cuando el usario hace scroll down. */
 .header_main_page.is-sticky {
     top: 0;
     position: fixed;
@@ -32,14 +34,22 @@ body{margin: 0;}
     width: 100%; 
     animation: slideDown 0.5s ease-out;
   }
-
+  /* Estas son las animaciones que va a usar el header. */
   @keyframes slideDown {
     from {
       transform: translateY(-100%);
     }
     to {
       transform: translateY(0);
-    }  
+    } 
+  }
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    } 
   }
 
   .header_main_page.is-sticky #Name_column, .header_main_page.is-sticky .Logo_principal, .header_main_page.is-sticky #Logo_column, .header_main_page.is-sticky .icon{
