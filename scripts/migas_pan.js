@@ -1,9 +1,19 @@
 $(document).ready(function () {
+    const urlActual = window.location.href;
+    if (urlActual.includes('source=index_entrantes')) {
+        pasarEntrantes();
+    } else if  (urlActual.includes('source=index_principales')) {
+        pasarPrincipales();
+    } else if  (urlActual.includes('source=index_postres')) {
+        pasarPostres();
+    } else if  (urlActual.includes('source=index_cocteles')) {
+        pasarCocteles();
+    }
+    else {
   $("#pagina_principales").hide(); 
   $("#pagina_postres").hide(); 
-  $("#pagina_cocteles").hide(); 
-
-
+  $("#pagina_cocteles").hide();
+    }
   $("#Button_entrantes, #Boton_movimiento_back_entrantes").click(function(){
     pasarEntrantes();
   })
@@ -21,8 +31,6 @@ $(document).ready(function () {
   })
 
 })
-
-
 function pasarEntrantes(){
     $("#Button_postres").css("background-color", "rgb(220, 220, 220)");
     $("#Button_principales").css("background-color", "rgb(220, 220, 220)");
