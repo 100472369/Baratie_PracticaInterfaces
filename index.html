@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/index_style.css">
     <link rel="stylesheet" href="style/menu_hamburguesa_style.css">
     
+    
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         </div>
         <div id="Name_column">
             <div class="links_page">
-                <ul>
+                <ul class="ul_link_page">
                     <a href="menu.html"><li>- Carta -</li></a>
                     <a href="informacion.html"><li>- Información General -</li></a>
                     <a href="historia.html"><li>- Quienes Somos -</li></a>
@@ -30,7 +31,7 @@
                 <p id="texto_baratie">“En el Baratie, la calidad se saborea en cada plato”</p>
             </div>
             <div class="links_page">
-                <ul>
+                <ul class="ul_link_page">
                     <a href="reserva.html"><li>- Reservar -</li></a>
                     <a id="to_pedido" href="pedido.html"><li>- Pedidos Online -</li></a>
                     <a href="registro.html"><li>- Registrate -</li></a>
@@ -84,33 +85,27 @@
     </section>
 
     <section id="Pagina_Carta">
-        <div class="Titulo">
-            <h1>-- CARTA --</h1>
+        <div id="Titulo">
+            <div class="horizontal_line"><hr></div>
+            <div><h1>NUESTRA CARTA</h1></div>
+            <div class="horizontal_line"><hr></div>
         </div>
 
         <div id="contenedor_elementos_carta">
-            <div class="cuadrado_carta">
-                <a href="menu.html#pagina_entrantes">
-                    <img src="images/pescado_horno.jpg" alt="">
-                </a>
+            <div class="cuadrado_carta" id="carta_entrantes">
+                <img src="images/pescado_horno.jpg" alt="">
                 <p>ENTRANTES</p>
             </div>
-            <div class="cuadrado_carta">
-                <a href="menu.html#pagina_principales">
-                    <img src="images/zamburinas_plancha.jpg" alt="">
-                </a>
+            <div class="cuadrado_carta" id="carta_principales">
+                <img src="images/zamburinas_plancha.jpg" alt="">
                 <p>PRINCIPALES</p>
             </div>
-            <div class="cuadrado_carta">
-                <a href="menu.html#pagina_postres">
-                    <img src="images/tarta_lima.jpg" alt="">
-                </a>
+            <div class="cuadrado_carta" id="carta_postres">
+                <img src="images/tarta_lima.jpg" alt="">
                 <p>POSTRES</p>
             </div>
-            <div class="cuadrado_carta">
-                <a href="menu.html#pagina_cocteles">
-                    <img src="images/coctel_main_page.jpg" alt="">
-                </a>
+            <div class="cuadrado_carta" id="carta_cocteles">
+                <img src="images/coctel_main_page.jpg" alt="">
                 <p>CÓCTELES</p>
             </div>
         </div>
@@ -133,5 +128,6 @@
     <script src="scripts/menu_hamburguesa.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/registro_principal.js"></script>
+    
 </body>
 </html>

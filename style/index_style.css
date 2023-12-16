@@ -30,9 +30,9 @@ body{margin: 0;}
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
     height: 10vh;
     width: 100%; 
-    animation: slideDown 1s ease-out;
-    
+    animation: slideDown 0.5s ease-out;
   }
+
   @keyframes slideDown {
     from {
       transform: translateY(-100%);
@@ -45,6 +45,8 @@ body{margin: 0;}
   .header_main_page.is-sticky #Name_column, .header_main_page.is-sticky .Logo_principal, .header_main_page.is-sticky #Logo_column, .header_main_page.is-sticky .icon{
     height: 10vh;
   }
+
+  .header_main_page.is-sticky #Restaurant_name {width: 98%;}
 
 #Logo_column{
    background-color: rgba(248, 248, 248, 1);
@@ -97,7 +99,6 @@ body{margin: 0;}
 .links_page li:hover{
     transition: all 0.1s cubic-bezier(0.19, 1, 0.22, 1);
     transform: scale(0.9);
-
 }
 
 .links_page a:link{
@@ -160,7 +161,7 @@ body{margin: 0;}
 
 #Pagina_Carta{
     display: grid;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     grid-template-rows: 150px 1fr;
     background-image: url(../images/pirates_background.jpg);
@@ -169,7 +170,46 @@ body{margin: 0;}
 }
 
 
-.Titulo h1, .cuadrado_carta p{
+#Titulo{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    margin-top: 1%;
+    height: 10vh;
+    width: 100%;
+}
+
+#Titulo h1{
+    font-size: 6em;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Karantina;
+}
+
+.horizontal_line {
+    width: 100%; /* Ajusta el ancho del contenedor según tus necesidades */
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.horizontal_line hr {
+    border: 2px solid #333; /* Grosor y color de la línea */
+    border-radius: 5% 5% 5% 5% ;
+    width: 93%;
+}
+
+.cuadrado_carta{
+    width: 25%;
+    height: 60vh;
+    padding-left: 2%;
+}
+
+.cuadrado_carta:hover{
+    cursor: pointer;
+}
+
+.cuadrado_carta p{
     font-family: Karantina;
     font-size: 7em;
 }
@@ -177,13 +217,7 @@ body{margin: 0;}
 #contenedor_elementos_carta{
     display: flex;
     flex-direction: row;
-    gap: 2px;
-}
-
-.cuadrado_carta{
-    width: 25%;
-    height: 60vh;
-    padding-left: 2%;
+    gap: 2%;
 }
 
 .cuadrado_carta img{
