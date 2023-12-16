@@ -11,20 +11,20 @@ $(document).ready(function () {
     const precioTotalElement = $("#precio_total");
     const pagina_carrito = $("#Pagina_carrito");
     const pagina_pedido_realizado = $("#Pagina_pedido_realizado");
-
+    // Cargamos los contadores desde el storage si existen, o establecemos por defecto sus valores
     let contadores = obtenerContadoresDesdeStorage() || {};
-
+    // Fases 2 y 3 (resumen, finalizacion) ocultas
     pagina_carrito.hide();
     pagina_pedido_realizado.hide();
-
+    // Mostrar resumen en caso de presionar el carrito
     $(".boton-carrito, #carrito-header").click(function(){
         mostrarCarrito();
     })
-
+    // Mostrar de nuevo la pagina 1 de la carta al presionar en el boton correspondiente
     botonModificarCompra.click(function(){
         mostrarCarta();
     })
-
+    /* Manejo de eventos al finalizar la compra */
     botonFinalizarCompra.click(function() {
         // Verificar si hay datos en el localStorage antes de mostrar la finalización
         if (hayDatosEnLocalStorage()) {
@@ -36,25 +36,26 @@ $(document).ready(function () {
             alert("Ooops! Parece que has intentado finalizar la compra... pero no tienes nada YOHOHOHOHO")
         }
     });
-
+    /* Funciones que manejan la cuenta del carrito para cada plato (con su indice individual asociado) */
     platos.each(function (index, plato) {
         const removeButton = removeButtons.eq(index);
         const addButton = addButtons.eq(index);
         const contadorElement = $(plato).find(".contador");
-
+        // Asignamos un indice a cada uno de los platos dentro de sus contenedores
         if (!contadores.hasOwnProperty(index)) {
             contadores[index] = 0;
-            guardarContadorEnStorage(index, 0); // Inicializar el contador en el almacenamiento local
+            guardarContadorEnStorage(index, 0);
         } else {
             contadorElement.text(contadores[index]); // Restaurar el valor del contador en la interfaz
         }
-
+        // Desactivar boton de quitar en caso de estar la cuenta a 0
         if (contadores[index] <= 0) {
             removeButton.prop("disabled", true);
         } else {
             removeButton.prop("disabled", false);
         }
-
+        // Aumentamos la cuenta del plato al seleccionar, procuramos tener siempre deshabilitado el boton de quitar,
+        // se actualiza el plato en el carrito y se guardan sus datos en WebStorage
         addButton.click(function () {
             contadores[index]++;
             contadorElement.text(contadores[index]);
@@ -62,7 +63,7 @@ $(document).ready(function () {
             actualizarCarrito();
             guardarContadorEnStorage(index, contadores[index]);
         });
-
+        // Misma logica al quitar, con la excepcion de desactivar nuevamente el boton si la cuena esta a 0
         removeButton.click(function () {
             contadores[index]--;
             contadorElement.text(contadores[index]);
@@ -72,41 +73,35 @@ $(document).ready(function () {
             actualizarCarrito();
             guardarContadorEnStorage(index, contadores[index]);
         });
-
         // Actualizar el carrito al inicio
         actualizarCarrito();
     });
     function actualizarCarrito() {
-        // Limpiar contenido antes de agregar nuevas líneas
+        // Limpiar contenido
         nombreArticuloElement.empty();
         precioArticuloElement.empty();
-
+        // Inicio de cuentas a 0
         let totalProductos = 0;
         let precioTotal = 0;
-
-        // Filtrar solo los platos que tienen cantidad mayor a 0 en el carrito
+        // Filtrar solo los platos que tienen cantidad mayor a 0 en el carrito para mostrar
         const platosSeleccionados = Object.keys(contadores).filter(index => contadores[index] > 0);
-
-        // Actualizar el carrito
+        // Seleccion de platos de carrito para mostrar por pantalla en la ventana de resumen
         platosSeleccionados.forEach(index => {
             totalProductos += contadores[index];
-
             const nombrePlato = platos.eq(index).find(".nombre_plato").text();
             const cantidadSeleccionada = contadores[index];
             const precioIndividual = parseFloat(platos.eq(index).find(".precio").text());
             const textoNombre = `${nombrePlato}`;
             const textoPrecio = `${precioIndividual.toFixed(2)}€ x ${cantidadSeleccionada}`;
-
             // Actualizar el cuerpo de id="nombre_articulo" y id="precio_articulo"
             const elementoNombre = $("<p>").text(textoNombre);
             const elementoPrecio = $("<p>").text(textoPrecio);
-
+            // Agregamos a los arrays el nombre y precio
             nombreArticuloElement.append(elementoNombre);
             precioArticuloElement.append(elementoPrecio);
-
+            // Establecimiento de precio total para mostrarlo tambien
             precioTotal += contadores[index] * precioIndividual;
         });
-
         // Actualizar el resumen
         if (totalProductos >= 0) {
             // Actualizar el resumen
@@ -118,45 +113,38 @@ $(document).ready(function () {
             nombreArticuloElement.empty();
             precioTotalElement.empty();
         }
-
-        // Actualizar el contador en el header
+        // Actualizar el contador en el header del carrito
         contadorCarrito.text(totalProductos);
     }
     function guardarContadorEnStorage(index, valor) {
-        /* Guardamos en el local storage los valores de los contadores en su indice correspondiente */
+        /* Funcion que guarda en el local storage los valores de los contadores en su indice correspondiente */
         localStorage.setItem(`contador_${index}`, valor);
     }
 
     function hayDatosEnLocalStorage() {
-        // Verificar si hay al menos un contador diferente de cero en el localStorage
+        /* Funcion que verifica si hay al menos un contador diferente de cero en el localStorage */
         return Object.keys(localStorage).some(key => key.startsWith('contador_') && parseInt(localStorage.getItem(key)) !== 0);
     }
 
     function limpiarLocalStorage() {
+        /* Funcion que limpia el WebStorage */
         try {
-            // Obtener todas las claves del localStorage
             const claves = Object.keys(localStorage);
-
             // Filtrar solo las claves relacionadas con el carrito
             const clavesCarrito = claves.filter(key => key.startsWith('contador_'));
-
-            // Imprimir las claves antes de intentar borrar
-            console.log("Claves antes de borrar:", clavesCarrito);
-
             // Borrar cada clave relacionada con el carrito
             clavesCarrito.forEach(key => {
                 localStorage.removeItem(key);
             });
-
-            // Imprimir las claves después de borrar
-            console.log("Claves después de borrar:", Object.keys(localStorage));
         } catch (error) {
+            // Depuracion para posible error
             console.error("Error al intentar borrar claves:", error);
         }
     }
 
 
     function obtenerContadoresDesdeStorage() {
+        // Funcion que obtiene los contadores dentro del storage para cada plato y podamos verificar si estan a 0
         let contadoresStorage = {};
         Object.keys(localStorage).forEach(key => {
             if (key.startsWith('contador_')) {
@@ -166,6 +154,9 @@ $(document).ready(function () {
         });
         return contadoresStorage;
     }
+
+    /* Funciones de manejo de animaciones para mostrar y ocultar los diferentes contenedores de la pagina de pedidos
+       a medida que avanzamos en las fases de la compra */
 
     function mostrarCarrito() {
         $("#Pagina_carta").fadeOut(350, function() {
@@ -187,5 +178,4 @@ $(document).ready(function () {
             pagina_pedido_realizado.fadeIn(500);
         });
     }
-
 });

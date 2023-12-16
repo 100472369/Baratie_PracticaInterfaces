@@ -34,7 +34,7 @@ $(document).ready(function () {
         } else if (direccion.trim() === '') {
             alert("Dirección no válida");
         } else {
-            /* Los datos son válidos, guardar en el Web Storage y mostrar el contenido de éxito */
+            /* Los datos son validos, guardar en el Web Storage y mostrar el contenido de exito en registro */
             localStorage.setItem('nombre', nombre);
             localStorage.setItem('telefono', telefono);
             localStorage.setItem('email', email);
@@ -47,7 +47,7 @@ $(document).ready(function () {
     });
 
     deleteButton.click(function(){
-        // Desactivar temporalmente la validación
+        // Desactivar temporalmente la validacion para evitar el mensaje de campo requerido
         registroForm.find(':input[required]').removeAttr('required');
 
         // Limpiar el formulario
@@ -60,18 +60,15 @@ $(document).ready(function () {
     });
     let urlParams = new URLSearchParams(window.location.search);
     console.log(urlParams);
-    // Verificar si venimos desde el enlace de compra para que una vez registrados podamos continuar con el pedido
+    // Verificar si venimos desde el enlace de compra/reserva para que una vez registrados podamos continuar con el pedido/reserva
     if (urlActual.includes('source=pagina_pedido')) {
-        
         botonExito.text('Continuar con el pedido');
         botonExito.click(function () {
-            // Puedes agregar acciones adicionales al hacer clic en el botón de éxito
             window.location.href = "pedido.html";
         });
     } else if (urlActual.includes('source=pagina_reserva')) {
         botonExito.text('Continuar con la reserva');
         botonExito.click(function () {
-            // Puedes agregar acciones adicionales al hacer clic en el botón de éxito
             window.location.href = "reserva.html";
         });
     }
