@@ -1,3 +1,4 @@
+/* Estilos de la pagina de contacto */
 @font-face {
     font-family: Revalia;
     src: url(../fonts/Revalia-Regular.ttf);}
@@ -14,43 +15,41 @@
     font-family: IntknutAntiqua;
     src: url(../fonts/InknutAntiqua-Light.ttf);}
 
+/* Letras por defecto */
 html{
     scroll-behavior: smooth;
-    font-family: Inter, Arial;}
-
+    font-family: Inter, Arial, serif;}
+/* Disposicion del body */
 body{margin: 0;
     margin-top: 13vh;
     margin-bottom: 22vh;
     background-image: url(../images/baratie_room.png);
     background-size: 110%;
 }
-
+/* Mismo encabezado que las demas paginas */
 #header_history_page{
     position: fixed; /* Fija el encabezado en la posición especificada */
     top: 0;
-
     display: grid;
     height: 10vh;
     width: 100%;
     grid-template-columns: 1fr 6fr;
 }
-
+/* Logo de la pagina */
 #Logo_column_history{
     background-color: rgba(248, 248, 248, 1);
     align-items: center;
 }
-
 .Logo_principal{
     height: 10vh;
     width: auto;
 }
-
+/* Columna del nombre*/
 #Name_column{
     display: flex;
     justify-content: center;
     background-color: rgba(248, 248, 248, 1);
 }
-
 .Restaurant_name{
     display: flex;
     align-items: center;
@@ -58,7 +57,6 @@ body{margin: 0;
     justify-content: center;
     width: 98%;
 }
-
 .Restaurant_name h1{
     margin-top: 0;
     margin-bottom: 2px;
@@ -81,21 +79,21 @@ body{margin: 0;
     margin: auto;
     margin-top: 10%;
 }
-
+/* Font para los campos del formulario*/
 #contacto-container, input {
     font-family: Revalia, serif;
 }
-
+/* Titulo del formulario */
 #contacto-container h2 {
     margin-top: 0;
     font-size: 1.4vw;
 }
-
+/* Cuerpo del formulario */
 form {
     width: 100%;
     max-width: 600px;
 }
-
+/* Cuerpo de los campos y botones */
 input, #consulta, #submit, #delete {
     width: 100%;
     padding: 3%;
@@ -104,51 +102,44 @@ input, #consulta, #submit, #delete {
     background-color: #cfcfcf;
     border: 0;
 }
-
 #consulta {
     height: 20vh;
     font-family: Revalia, serif;
     resize: none;
 }
-
 #submit {
     background-color: rgb(229, 168, 41); /* Nuevo color de fondo del botón */
     color: white; /* Color del texto del botón */
     font-size: 1vw;
 }
-
 #submit:hover {
     background-color: rgb(200, 150, 50);
 }
-
 #submit, #delete {
     font-family: Revalia, serif;
     font-size: 1vw;
     color: white;
     cursor: pointer;
 }
-
 #delete {
     background-color: rgba(187, 161, 136, 1);
     cursor: pointer;
 }
-
 #delete:hover {
     background-color: rgba(160, 161, 136, 1);
 }
 
 
-/* Nueva regla para alinear en la misma fila */
+/* Nueva regla para alinear en la misma fila email y telefono */
 .flex-container {
     display: flex;
-    gap: 8px; /* Espacio entre los elementos */
+    gap: 8px;
 }
 
 label {
     display: none;
 }
-
-/*Codigo del menú hamburguesa*/
+/*Codigo del menu hamburguesa*/
 .topnav {
     position: relative;
     display: flex;
@@ -156,7 +147,6 @@ label {
     align-content: center;
 
 }
-
 #logo_topnav {
     height: 40px;
     width: 40px;
@@ -164,7 +154,6 @@ label {
     margin-top: 20px;
 
 }
-
 #logo_topnav:hover {
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     transform: scale(1.1);
@@ -182,7 +171,6 @@ label {
     border-radius: 0px 0px 10px 10px;
     box-shadow: 0px 0px 5px white;
 }
-
 #logo_m_h{
     width: 100px;
     height: 100px;
@@ -192,15 +180,12 @@ label {
     transform: scale(1.1);
     cursor: pointer;
 }
-
 .Restaurant_name a{
     color: black;
 }
-
 #Restaurant_name a:active{
     color: black;
 }
-
 .topnav a, #contenedor_texto_contacto_mh a {
     font-family: Inter;
     color: white;
@@ -208,23 +193,19 @@ label {
     font-size: 18px;
     display: block;
 }
-
 .topnav a.icon {
     display: block;
     position: absolute;
     right: 0;
     top: 0;
 }
-
 .Restaurant_name a:link, .topnav a:link, #contenedor_texto_contacto_mh a:link {
     text-decoration: none;
 }
-
 .topnav a:hover, #contenedor_texto_contacto_mh a:hover {
     color: black;
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
 #Contenedor_redes_mh{
     height: 70px;
     display: flex;
@@ -232,12 +213,10 @@ label {
     align-items: center;
     justify-content: center;
 }
-
 .redes_mh{
     width: 50px;
     height: 50px;
 }
-
 #contenedor_texto_contacto_mh{
     display: flex;
     flex-direction: row;
@@ -245,11 +224,9 @@ label {
     justify-content: center;
     gap: 10%;
 }
-
 #contenedor_texto_contacto_mh a{
     font-size: 14px;
 }
-
 #Boton_reserva_mh{
     display: block;
     text-align: center;
@@ -264,7 +241,6 @@ label {
     width: 50%;
     height: 45px;
 }
-
 #Boton_reserva_mh:hover{
     cursor: url("images/one_piece_logo_small.png"), pointer;
     background-color: #333333;

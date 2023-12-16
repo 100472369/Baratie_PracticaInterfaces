@@ -11,5 +11,4 @@ $(document).ready(function () {
             toCompra.attr('href','registro.html?source=pagina_pedido');
         }
     });
-
 });
