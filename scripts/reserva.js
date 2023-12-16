@@ -159,7 +159,8 @@ $(document).ready(function (){
                 localStorage.removeItem('dia_elegido');
                 // Generacion de la pantalla que mestra que la reserva ha sido efectuada con exito
                 $("#formulario").fadeOut(500, function(){
-                    $("#mensaje_reserva").text(`Mesa reservada el próximo ${dia_elegido.text()} de ${mes_elegido.text()} a las ${hora_elegida.text()}.`)
+                    if (idioma === "en") $("#mensaje_reserva").text(`Booked for next ${dia_elegido.text()} of ${mes_elegido.text()} at ${hora_elegida.text()}.`)
+                    else $("#mensaje_reserva").text(`Mesa reservada el próximo ${dia_elegido.text()} de ${mes_elegido.text()} a las ${hora_elegida.text()}.`)
                     $("#reserva_exito").fadeIn(500);
                     if (idioma === "en") $("#boton_exito").text('Go back to homepage');
                 });
