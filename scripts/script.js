@@ -29,21 +29,21 @@ $(document).ready(function() {
 
     let idiomaActual = $('html').attr('lang');
 
-// Si el idioma actual es español
-if (idiomaActual === 'es') {
-    let enlaceReserva = $('<a>', { href: 'reserva.html', target: '_self' });
-    $('#Boton_reserva_mh').wrap(enlaceReserva);
+    // Si el idioma actual es español
+    if (idiomaActual === 'es') {
+        let enlaceReserva = $('<a>', { href: 'reserva.html', target: '_self' });
+        $('#Boton_reserva_mh').wrap(enlaceReserva);
 
-    let linkPolitica = $('<a>', { href: 'https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac', target: '_self' });
-    $('#Link_politica').wrap(linkPolitica);
-}
-// Si el idioma actual es inglés
-else if (idiomaActual === 'en') {
-    let enlaceReserva = $('<a>', { href: 'reserva_eng.html', target: '_self' });
-    $('#Boton_reserva_mh').wrap(enlaceReserva);
+        let linkPolitica = $('<a>', { href: 'https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac', target: '_self' });
+        $('#Link_politica').wrap(linkPolitica);
+    }
+    // Si el idioma actual es inglés
+    else if (idiomaActual === 'en') {
+        let enlaceReserva = $('<a>', { href: 'reserva_eng.html', target: '_self' });
+        $('#Boton_reserva_mh').wrap(enlaceReserva);
 
-    let linkPolitica = $('<a>', { href: 'https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac', target: '_self:' });
-    $('#Link_politica').wrap(linkPolitica);
-}
+        let linkPolitica = $('<a>', { href: 'https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac', target: '_self:' });
+        $('#Link_politica').wrap(linkPolitica);
+    }
 
 });

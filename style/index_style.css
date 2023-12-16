@@ -217,6 +217,8 @@ body{margin: 0;}
 
 .cuadrado_carta:hover{
     cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(0.95);
 }
 
 .cuadrado_carta p{

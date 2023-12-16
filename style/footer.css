@@ -9,6 +9,7 @@ footer{
     width: 100%;
     margin-right: 10px;
     background-color: rgb(229,168,41);
+    z-index: 2;
 }
 
 #contenedor_redes_idioma_footer, #contenedor_texto_footer{

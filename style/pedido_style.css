@@ -19,7 +19,7 @@ html{
     font-family: Inter, Arial;}
 
 body{margin: 0;
-    margin-top: 13vh;}
+    margin-top: 10vh;}
 
 #header_page{
     position: fixed; /* Fija el encabezado en la posición especificada */
@@ -312,7 +312,7 @@ button {
 #Pagina_carrito{
     width: 100%;
     height: 85vh;
-    margin-bottom: 15vh;
+    margin-bottom: 7vh;
 }
 
 #Contenedor_carrito_main{
