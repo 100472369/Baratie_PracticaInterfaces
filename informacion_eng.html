@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Baratie</title>
+    <!-- estos dos comandos son: formato de codificación y un comando para mejorar la vista del mobil  -->
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- los links a X y los diferentes css -->
+    <link rel="icon" type="images/x-icon" href="icons/icon_info.png" />
+    <link rel="stylesheet" href="style/informacion_style.css">
+    <link rel="stylesheet" href="style/menu_hamburguesa_style.css">
+</head>
+
+<body>
+    <header id="header_page">
+        <div id="Logo_column">
+            <a href="index.html">
+            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+        </div>
+
+        <div id="Name_column">
+            <div class="Restaurant_name">
+                <h1>MORE INFORMATION</h1>
+            </div>
+            <div class="topnav">
+                <img id="Logo_menu" src="" alt="">
+                <div id="myLinks">
+                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="" onclick="showStripres()">
+                    <div id="Contenedor_links">
+                        <a href="menu.html">Menu</a>
+                        <a href="historia.html">Our story</a>
+                        <a href="pedido.html">Home delivery</a>
+                        <a href="">Book a table</a>
+                        <a href="registro.html">Sign up</a>
+                        <a href="informacion.html">More information</a>
+                    </div>
+                    <div id="Contenedor_redes_mh">
+                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
+                    </div>
+                    <div id="contenedor_texto_contacto_mh">
+                        <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac">Privacy<br>policy</a>
+                        <a href="contacto.html">Contact us</a>
+                    </div>
+                    <button id="Boton_reserva_mh">BOOK</button>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    <img id="logo_topnav" src="icons/three_stripes.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="Pagina_horarios">
+        <div id="Titulo">
+            <div class="horizontal_line"><hr></div>
+            <div><h1>TIME SCHEDULE </h1></div>
+            <div class="horizontal_line"><hr></div>
+        </div>
+            <p>All restaurants are open from 13:00 to 23:00. </p>
+    </section>  
+
+    <section id="Pagina_locales">
+        <div id="Titulo2">
+            <div class="horizontal_line"><hr></div>
+            <div><h1>RESTAURANTS</h1></div>
+            <div class="horizontal_line"><hr></div>
+        </div>
+        <div id="seccion_sevilla" class="localizacion">
+            <div class="cuadro_texto_locales">
+                <h2>SEVILLE</h2>
+                <div class="tira_direccion">
+                    <img src="icons/icon_localization_red.png" alt="">
+                    <p>Arjona Street 41001, Sevilla, España</p>
+                </div>
+                <div class="tira_telefono">
+                    <img src="icons/icon_phone_red.png" alt="">
+                    <p>+34 647 890 678</p>
+                </div>
+            </div>
+            <div class="contenedor_imagen_mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.0259122003085!2d-6.004825924134469!3d37.389219472085124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c12f1782cd7%3A0xa8da77b2fb19e64f!2sC.%20Arjona%2C%2041001%20Sevilla!5e0!3m2!1ses!2ses!4v1701685901167!5m2!1ses!2ses" 
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div id="seccion_buenosaires" class="localizacion">
+            <div class="cuadro_texto_locales">
+                <h2>BUENOS AIRES</h2>
+                <div class="tira_direccion">
+                    <img src="icons/icon_localization_red.png" alt="">
+                    <p>Olga Cossettini Street 851, Buenos Aires, Argentina</p>
+                </div>
+                <div class="tira_telefono">
+                    <img src="icons/icon_phone_red.png" alt="">
+                    <p>+54 985 347 436</p>
+                </div>
+            </div>
+            <div class="contenedor_imagen_mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.880915293381!2d-58.36674602425975!3d-34.60717267295308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3356adce4160f%3A0x99467588bb07c597!2sOlga%20Cossettini%20851%2C%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2ses!4v1701686015911!5m2!1ses!2ses" 
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div id="seccion_filipinas" class="localizacion">
+            <div class="cuadro_texto_locales">
+                <h2>PHILIPPINE ISLANDS</h2>
+                <div class="tira_direccion">
+                    <img src="icons/icon_localization_red.png" alt="">
+                    <p>Juan Luna Street 117, Manila, Philippines</p>
+                </div>
+                <div class="tira_telefono">
+                    <img src="icons/icon_phone_red.png" alt="">
+                    <p>+63 289 902 489</p>
+                </div>
+            </div>
+            <div class="contenedor_imagen_mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.047063999085!2d120.97323087510614!3d14.596394085889472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca10aecd7c2b%3A0x5fd2ff185190ed0a!2s117%20Juan%20Luna%20St%2C%20Binondo%2C%20Manila%2C%201006%20Metro%20Manila%2C%20Filipinas!5e0!3m2!1ses!2ses!4v1701686172234!5m2!1ses!2ses" 
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="contenedor_texto_footer">
+            <p>© 2023 Baratie</p>
+        </div>
+        <div id="contenedor_redes_footer">
+            <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/menu_hamburguesa.js"></script>
+</body>
+</html>

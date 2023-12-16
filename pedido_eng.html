@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Baratie</title>
+    <!-- estos dos comandos son: formato de codificación y un comando para mejorar la vista del mobil  -->
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- los links a X y los diferentes css -->
+    <link rel="icon" type="images/x-icon" href="icons/icon_van.png" />
+    <link rel="stylesheet" href="style/pedido_style.css">
+    <link rel="stylesheet" href="style/menu_hamburguesa_style.css">
+</head>
+
+<body>
+    <header id="header_page">
+        <div id="Logo_column">
+            <a href="index.html">
+            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+        </div>
+
+        <div id="Name_column">
+            <div class="Restaurant_name">
+                <h1>PLACE AN ORDER</h1>
+            </div>
+            <div id="carrito-header">
+                <p id="contador_carrito">
+                    0
+                </p>
+                <img id="logo_carrito_header" src="icons/icon_cart.png" alt="Carrito">
+            </div>
+            <div class="topnav">
+                <img id="Logo_menu" src="" alt="">
+                <div id="myLinks">
+                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="" onclick="showStripres()">
+                    <div id="Contenedor_links">
+                        <a href="menu.html">Menu</a>
+                        <a href="historia.html">Our story</a>
+                        <a href="pedido.html">Home delivery</a>
+                        <a href="">Book a table</a>
+                        <a href="registro.html">Sign up</a>
+                        <a href="informacion.html">More information</a>
+                    </div>
+                    <div id="Contenedor_redes_mh">
+                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
+                    </div>
+                    <div id="contenedor_texto_contacto_mh">
+                        <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac">Privacy<br>policy</a>
+                        <a href="contacto.html">Contact us</a>
+                    </div>
+                    <button id="Boton_reserva_mh">BOOK</button>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    <img id="logo_topnav" src="icons/three_stripes.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="Pagina_carta">
+        <div class="container-carta">
+            <!--Informacion de entrantes, principales y postres:
+                -Precio
+                -Titulo del plato
+                -Informacion nutricional del plato
+                -Botones para anadir o quitar (por defecto desactivado si hay 0 platos de ese seleccionados)-->
+            <div class="entrantes">
+                <div class="titulo_seccion_platos"><h2>Appetizers</h2></div>
+                <div class="platos-container">
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                OVEN-BAKED QUEEN SCALLOPS
+                            </div>
+                            <div class="descripcion_plato">
+                                Our special scallops, harvested and carefully selected by our collectors
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    15€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/almejas.jpeg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                SAILOR-STYLE CLAMS
+                            </div>
+                            <div class="descripcion_plato">
+                                The most flavorful clams from the seven seas, with our special saylor-style sauce
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    20€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/gambas.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                GRILLED WHITE SHRIMPS
+                            </div>
+                            <div class="descripcion_plato">
+                                White shrimp harvested in the seas of our journey, exquisite and flavorful
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    23€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/ensalada_mixta.jpeg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                SPECIAL MIXED SALAD
+                            </div>
+                            <div class="descripcion_plato">
+                                The classic mixed salad with our chef's secret touch
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    9€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/ensalada_burrata.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                BURRATA AND PESTO SALAD
+                            </div>
+                            <div class="descripcion_plato">
+                                Arugula salad with our delicious burrata, walnuts, and its indispensable pesto
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    15€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/ensalada_cesar.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                CAESAR SALAD
+                            </div>
+                            <div class="descripcion_plato">
+                                The crispy chicken and Caesar dressing make this salad a flavor explosion
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    12€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="principales">
+                <div class="titulo_seccion_platos"><h2>Main courses</h2></div>
+                <div class="platos-container">
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/paella.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                VALENCIAN PAELLA
+                            </div>
+                            <div class="descripcion_plato">
+                                One of our star dishes, crafted with the care and affection that a Valencian would put into it
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    15€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/arroz-caldoso-de-bogavante.jpeg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                RICE WITH LOBSTER
+                            </div>
+                            <div class="descripcion_plato">
+                                Our tasty soupy rice accompanied by the finest lobster from the ocean
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    22€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/arroz-negroo.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                BLACK RICE
+                            </div>
+                            <div class="descripcion_plato">
+                                The small squids and cuttlefish blend in our creamy black rice
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    15€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/lubina-al-horno-con-patatas.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                CANTABRIC SEA BASS
+                            </div>
+                            <div class="descripcion_plato">
+                                The best fish from the Cantabrian Sea, served directly on the plate with our special garnish
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    20€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/dorada.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                CÁDIZ GILTHEAD BREAM
+                            </div>
+                            <div class="descripcion_plato">
+                                The finest fish from the Andalusian lands, absolutely delicious
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    17€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/besugo.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                GRILLED PORGY
+                            </div>
+                            <div class="descripcion_plato">
+                                Our most premium and flavorful fish, grilled to perfection
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    30€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="postres">
+                <div class="titulo_seccion_platos"><h2>Desserts</h2></div>
+                <div class="platos-container">
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/flan.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                PUDDING WITH MILK CARAMEL
+                            </div>
+                            <div class="descripcion_plato">
+                                Our homemade pudding with sweet milk caramel made in our kitchens
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    3€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/easy-lemon-pie-recipe-8.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                LEMON PIE
+                            </div>
+                            <div class="descripcion_plato">
+                                The acidity of the lemon blends with the sweetness of our dough, an ideal combination
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    4.50€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/torta.jpeg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                ROGEL PIE
+                            </div>
+                            <div class="descripcion_plato">
+                                Puff pastry, meringue, and sweet milk caramel make this dessert a unique recipe
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    6€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/cafe.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                AMERICAN COFFEE
+                            </div>
+                            <div class="descripcion_plato">
+                                The best coffee from Colombia, only for lovers of the bitter taste
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    2.50€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/te.png">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                RED BERRIES TEA
+                            </div>
+                            <div class="descripcion_plato">
+                                The delicious red berries make this tea a unique delicacy
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    2.20€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/mate.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                BREWED MATE
+                            </div>
+                            <div class="descripcion_plato">
+                                Our famous mate, prepared by one of our Argentine chefs
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    2€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cocteles">
+                <div class="titulo_seccion_platos"><h2>Coctels</h2></div>
+                <div class="platos-container">
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/gin-tonic-receta.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                GIN TONIC
+                            </div>
+                            <div class="descripcion_plato">
+                                The best gin in the world accompanied by our homemade tonic to make this classic
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    8€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/mojito.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                MOJITO
+                            </div>
+                            <div class="descripcion_plato">
+                                Our mint and lemon come together with rum to create the perfect cocktail
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    7€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/margarita.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                MARGARITA
+                            </div>
+                            <div class="descripcion_plato">
+                                Tequila and triple sec come together with lemon juice to create this cocktail
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    6€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/daiquiri.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                DAIQUIRI
+                            </div>
+                            <div class="descripcion_plato">
+                                The best daiquiri in the world, thanks to our special rum
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    6€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/caipi.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                CAIPIRINHA
+                            </div>
+                            <div class="descripcion_plato">
+                                Cachaça and Brazilian lime create an explosive mix
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    6€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plato">
+                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/piña_colada.jpg">
+                        <div class="texto_plato">
+                            <div class="nombre_plato">
+                                PIÑA COLADA
+                            </div>
+                            <div class="descripcion_plato">
+                                Pineapple and fresh coconut, combined with rum, make this cocktail our specialty
+                            </div>
+                            <div class="parametros">
+                                <div class="precio">
+                                    6€
+                                </div>
+                                <div class="botones">
+                                    <button class="boton_producto add">+</button>
+                                    <div class="contador"> 0 </div>
+                                    <button class="boton_producto remove">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="continuar_pedido">
+            <button class="boton-carrito"> <b>GO TO CART</b> </button>
+        </div>
+    </section>
+
+    <!-- CODIGO DE CARRITO -->
+    <section id="Pagina_carrito">
+        <div id="Titulo">
+            <div class="horizontal_line"><hr></div>
+            <div><h1>ORDER SUMMARY</h1></div>
+            <div class="horizontal_line"><hr></div>
+        </div>
+
+        <div id="Contenedor_carrito_main">
+            <div id="Contenedor_video">
+                <img src="images/thousand_sunny.gif" alt="GIF de un barco en el mar" loop>
+            </div>
+
+            <div id="Contenedor_resumen">
+                <div id = "titulo_resumen">
+                    <div class="horizontal_line_2"><hr></div>
+                    <div><h2>ORDER SUMMARY</h2></div>
+                    <div class="horizontal_line_2"><hr></div>
+                </div>
+                <div id="contenedor_articulos">
+                    <div id="nombre_articulo"></div>
+                    <div id="precio_articulo"></div>
+                </div>
+                <div id="precio">
+                    <div class="horizontal_line_3"><hr></div>
+                    <div id="columnas_precio">
+                        <div id="texto_precio">TOTAL</div>
+                        <div><h3 id="precio_total"></h3></div>
+                    </div>
+                </div>
+                <div id="Contenedor_botones_carrito">
+                    <button id="Boton_modificar_pedido">↩ Modify order</button>
+                    <button id="Boton_finalizar_pedido">Finish ordering ↪</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Pagina_pedido_realizado">
+        <div id="Contenedor_pedido_realizado">
+            <h2>¡Your order has been correctly processed!</h2>
+            <img src="images/luffy_happy.png" alt="Imagen de Luffy super contento">
+            <a href="index.html"><button id="Boton_volver_main_page">Go back to home page</button></a>
+        </div>
+    </section>
+
+
+    <footer>
+        <div id="contenedor_texto_footer">
+            <p>© 2023 Baratie</p>
+        </div>
+        <div id="contenedor_redes_footer">
+            <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+        </div>
+    </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="scripts/script.js"></script>
+<script src="scripts/pedidos.js"></script>
+<script src="scripts/menu_hamburguesa.js"></script>
+</body>
+</html>
+
