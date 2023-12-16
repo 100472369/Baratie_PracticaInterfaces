@@ -147,7 +147,8 @@ $(document).ready(function (){
             if (!(nombreRegistrado && telefonoRegistrado && emailRegistrado && direccionRegistrada)) {
                 alert("Ooops, parece que antes hay que registrarse para poder hacer reservas!");
                 // Ademas, se incluye una fuente especial para poder manejar este evento en especifico
-                window.location.href = 'registro.html?source=pagina_reserva';
+                if (idioma === "en") window.location.href = 'registro_eng.html?source=pagina_reserva';
+                else window.location.href = 'registro.html?source=pagina_reserva';
             }
             else{
                 // Eliminar datos del localStorage al hacer clic en submit ya que no se usaran para futuras reservas
