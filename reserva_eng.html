@@ -13,6 +13,7 @@
 
 </head>
 <body>
+    <!-- header de la página -->
     <header id="header_book_table_page">
         <div id="Logo_column_book_table">
             <a href="index_eng.html">
@@ -55,52 +56,34 @@
 
 
     <div id="book_table_container">
-        <!-- Formulario de registro -->
+        <!-- Formulario de reserva -->
         <form id="formulario" action="#" method="post">
             <h2>BOOK A TABLE IN OUR SEA ROUTE</h2>
 
             <!-- Campos del formulario -->
             <div class="campos_reserva" >
                 <div class="contendor_info">
+                    <!-- eleccion de ciudad -->
                     <div id="ciudad_elegida">Pick your preferred city</div>
                     <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon ciudad_icon" id="ciudad_down">
                     <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="ciudad_up">
                 </div>
                 <div class="contenido">
+                        <!-- ciudades disponibles -->
                         <div class="campos_reserva ciudades_dropdown">Buenos Aires</div>
                         <div class="campos_reserva ciudades_dropdown">Seville</div>
                         <div class="campos_reserva ciudades_dropdown">Philippines Islands</div>
                 </div>
-                <!--<p id="ciudad_elegida"></p>-->
             </div>
-
-
-            <!-- <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre completo" required> -->
-
-            <!-- Contenedor para alinear teléfono y correo electrónico en la misma fila -->
-    <!--        <div class="flex-container">-->
-                <div class="campos_reserva hola">Date
-                    <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_ico" id="fecha_down">
-                    <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="fecha_up">
-                    <p id="fecha_elegida"></p>
-
-                    <div id="calendar">
-                        <div id="calendar-header">
-                            <span id="month-prev" class="change-month"><</span>
-                            <h1 id="month"></h1>
-                            <span id="month-next" class="change-month">></span>
-                        </div>
-                        <div id="calendar-body">
-                        </div>
-                    </div>
-                </div>
                 <div class="campos_reserva">
+                    <!-- eleccion de mes -->
                     <div class="contendor_info">
                         <div id="mes_elegido">Pick the month</div>
                         <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon mes_icon" id="num_meses_down">
                         <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="num_meses_up">
                     </div>
                     <div class="contenido">
+                        <!-- contenido para los 6 meses siguientes -->
                         <div class="campos_reserva meses_dropdown"></div>
                         <div class="campos_reserva meses_dropdown"></div>
                         <div class="campos_reserva meses_dropdown"></div>
@@ -111,6 +94,7 @@
                 </div>
             <div class="campos_reserva">
                 <div class="contendor_info">
+                    <!-- eleccion de dia -->
                     <div id="dia_elegido">Pick the day</div>
                     <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon dia_icon" id="num_dias_down">
                     <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="num_dias_up">
@@ -118,30 +102,32 @@
                 <div class="contenido contenido_dias">
                 </div>
             </div>
-                <div class="campos_reserva">
-                    <div class="contendor_info">
-                        <div id="hora_elegida">Pick the time</div>
-                        <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon hora_icon" id="hora_down">
-                        <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="hora_up">
-                    </div>
-                    <div class="contenido">
-                        <div class="campos_reserva horas_dropdown">13:00</div>
-                        <div class="campos_reserva horas_dropdown">14:00</div>
-                        <div class="campos_reserva horas_dropdown">15:00</div>
-                        <div class="campos_reserva horas_dropdown">20:00</div>
-                        <div class="campos_reserva horas_dropdown">21:00</div>
-                        <div class="campos_reserva horas_dropdown">22:00</div>
-                    </div>
-                </div>
-    <!--        </div>-->
-
             <div class="campos_reserva">
                 <div class="contendor_info">
+                    <!-- eleccion de hora -->
+                    <div id="hora_elegida">Pick the time</div>
+                    <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon hora_icon" id="hora_down">
+                    <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="hora_up">
+                </div>
+                <div class="contenido">
+                    <!-- horas disponibles -->
+                    <div class="campos_reserva horas_dropdown">13:00</div>
+                    <div class="campos_reserva horas_dropdown">14:00</div>
+                    <div class="campos_reserva horas_dropdown">15:00</div>
+                    <div class="campos_reserva horas_dropdown">20:00</div>
+                    <div class="campos_reserva horas_dropdown">21:00</div>
+                    <div class="campos_reserva horas_dropdown">22:00</div>
+                </div>
+            </div>
+            <div class="campos_reserva">
+                <div class="contendor_info">
+                    <!-- eleccion del numero de personas -->
                     <div id="personas_elegidas">Pick the number of people</div>
                     <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon personas_icon" id="num_personas_down">
                     <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="num_personas_up">
                 </div>
                 <div class="contenido">
+                    <!-- numero de personas disponibles -->
                     <div class="campos_reserva personas_dropdown">2</div>
                     <div class="campos_reserva personas_dropdown">3</div>
                     <div class="campos_reserva personas_dropdown">4</div>

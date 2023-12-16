@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!-- header de la pagina -->
     <header id="header_page">
         <div id="Logo_column">
             <a href="index.html">
@@ -60,7 +61,7 @@
             </div>
         </div>
     </header>
-
+    <!-- pagina de la carta -->
     <section id="Pagina_carta">
         <div class="container-carta">
             <!--Informacion de entrantes, principales y postres:
@@ -68,6 +69,7 @@
                 -Titulo del plato
                 -Informacion nutricional del plato
                 -Botones para anadir o quitar (por defecto desactivado si hay 0 platos de ese seleccionados)-->
+            <!-- los platos entrantes -->
             <div class="entrantes">
                 <div class="titulo_seccion_platos"><h2>Entrantes</h2></div>
                 <div class="platos-container">
@@ -199,7 +201,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- los platos principales -->
             <div class="principales">
                 <div class="titulo_seccion_platos"><h2>Principales</h2></div>
                 <div class="platos-container">
@@ -331,7 +333,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- los postres -->
             <div class="postres">
                 <div class="titulo_seccion_platos"><h2>Postres</h2></div>
                 <div class="platos-container">
@@ -463,7 +465,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- los cocteles -->
             <div class="cocteles">
                 <div class="titulo_seccion_platos"><h2>Cocteles</h2></div>
                 <div class="platos-container">
@@ -596,36 +598,40 @@
                 </div>
             </div>
         </div>
+        <!-- boton para pasar al carrito -->
         <div class="continuar_pedido">
             <button class="boton-carrito"> <b>Pasar a carrito</b> </button>
         </div>
     </section>
 
     <!-- CODIGO DE CARRITO -->
-    <section id="Pagina_carrito">
-
+    <section id="Pagina_carrito">         
         <div id="Contenedor_carrito_main">
+            <!-- contenedor con un video que se pone de fondo -->
             <div id="Contenedor_video">
                 <img src="images/thousand_sunny.gif" alt="GIF de un barco en el mar" loop>
             </div>
-
+            <!-- el contenedor que tiene el resumen del pago -->
             <div id="Contenedor_resumen">
                 <div id = "titulo_resumen">
                     <div class="horizontal_line_2"><hr></div>
                     <div><h2>RESUMEN DE COMPRA</h2></div>
                     <div class="horizontal_line_2"><hr></div>
                 </div>
+                <!-- aqui esta el contenedor con los platos pedidos. Se rellena mediante javascript -->
                 <div id="contenedor_articulos">
                     <div id="nombre_articulo"></div>
                     <div id="precio_articulo"></div>
                 </div>
                 <div id="precio">
+                    <!-- aqui se muestra el precio de cada plato y tambien el total. Se calcula con javascript-->
                     <div class="horizontal_line_3"><hr></div>
                     <div id="columnas_precio">
                         <div id="texto_precio">IMPORTE TOTAL</div>
                         <div><h3 id="precio_total"></h3></div>
                     </div>
                 </div>
+                <!-- dos botones. Uno para finalizar pedido y otro para modificar pedido -->
                 <div id="Contenedor_botones_carrito">
                     <button id="Boton_modificar_pedido">↩ Modificar Pedido</button>
                     <button id="Boton_finalizar_pedido">Finalizar Pedido ↪</button>
@@ -633,7 +639,8 @@
             </div>
         </div>
     </section>
-
+    
+    <!-- pagina que se carga cuando se realiza exitosamente el pedido. Contiene una imagen y un boton para volver a la pagina principal -->
     <section id="Pagina_pedido_realizado">
         <div id="Contenedor_pedido_realizado">
             <h2>¡Su pedido ha sido encargado con éxito!</h2>
@@ -642,7 +649,7 @@
         </div>
     </section>
 
-
+    <!-- footer de nuestra pagina -->
     <footer>
         <div id="contenedor_texto_footer">
             <p>© 2023 Baratie</p>

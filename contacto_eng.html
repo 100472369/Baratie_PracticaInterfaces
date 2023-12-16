@@ -16,49 +16,50 @@
 </head>
 
 <body>
-<header id="header_history_page">
-    <div id="Logo_column_history">
-        <a href="index_eng.html">
-            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt="logo_baratie"></a>
-    </div>
+    <!-- header de la pagina -->
+    <header id="header_history_page">
+        <div id="Logo_column_history">
+            <a href="index_eng.html">
+                <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt="logo_baratie"></a>
+        </div>
 
-    <div id="Name_column">
-        <div class="Restaurant_name">
-            <h1>CONTACT US</h1>
-        </div>
-        <div class="topnav">
-            <div id="myLinks">
-                <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="loog_menu_hamburguesa" onclick="showStripres()">
-                <div id="Contenedor_links">
-                    <a href="menu_eng.html">Menu</a>
-                    <a href="historia_eng.html">Our story</a>
-                    <a href="pedido_eng.html">Home delivery</a>
-                    <a href="reserva_eng.html">Book a table</a>
-                    <a href="registro_eng.html">Sign up</a>
-                    <a href="informacion_eng.html">More information</a>
-                </div>
-                <div id="Contenedor_redes_mh">
-                    <img class="redes_mh" src="icons/icon_insta_mh.png" alt="logo_instagram">
-                    <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="logo_twitter">
-                    <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="logo_tiktok">
-                </div>
-                <div id="contenedor_texto_contacto_mh">
-                    <a href="#Pagina2"><br>privacy</a> policy
-                    <a href="contacto_eng.html">Contact us</a>
-                </div>
-                <button id="Boton_reserva_mh">BOOK A TABLE</button>
+        <div id="Name_column">
+            <div class="Restaurant_name">
+                <h1>CONTACT US</h1>
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-                <img id="logo_topnav" src="icons/three_stripes.png" alt="logo_topnav">
-            </a>
+            <div class="topnav">
+                <div id="myLinks">
+                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="loog_menu_hamburguesa" onclick="showStripres()">
+                    <div id="Contenedor_links">
+                        <a href="menu_eng.html">Menu</a>
+                        <a href="historia_eng.html">Our story</a>
+                        <a href="pedido_eng.html">Home delivery</a>
+                        <a href="reserva_eng.html">Book a table</a>
+                        <a href="registro_eng.html">Sign up</a>
+                        <a href="informacion_eng.html">More information</a>
+                    </div>
+                    <div id="Contenedor_redes_mh">
+                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="logo_instagram">
+                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="logo_twitter">
+                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="logo_tiktok">
+                    </div>
+                    <div id="contenedor_texto_contacto_mh">
+                        <a href="#Pagina2"><br>privacy</a> policy
+                        <a href="contacto_eng.html">Contact us</a>
+                    </div>
+                    <button id="Boton_reserva_mh">BOOK A TABLE</button>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    <img id="logo_topnav" src="icons/three_stripes.png" alt="logo_topnav">
+                </a>
+            </div>
         </div>
-    </div>
 </header>
 
 
 <div id="contacto-container">
-    <!-- Formulario de registro -->
+        <!-- Formulario de dudas que contiene: nombre, telefono, email y consulta -->
     <form id="formulario" action="#" method="post">
         <h2>Inquiry form</h2>
 
@@ -73,7 +74,8 @@
 
         <textarea type="text" id="consulta" name="consulta" placeholder="Explain your problem or question: (800 characters max) " maxlength="800" required></textarea>
 
-        <!-- Botón de envío -->
+        <!-- Botones de envío -->
+        <!-- el boton de limiar limpia todos los campos anteriores y el de enviar valida el mensaje -->
         <button id="delete" type="button">Clear</button>
         <input id="submit" type="submit" value="Send query">
     </form>
