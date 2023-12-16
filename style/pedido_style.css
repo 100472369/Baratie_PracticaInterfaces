@@ -511,39 +511,3 @@ button {
 #Boton_volver_main_page:hover {
     background-color: rgba(62,90,155,0.9);
 }
-
-/*Codigo del footer*/
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 97px;
-    width: 100%;
-    margin-right: 10px;
-    background-color: rgb(229,168,41);
-    z-index: 2;
-}
-
-#contenedor_redes_footer, #contenedor_texto_footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-family: Revalia;
-    font-weight: 600;
-}
-
-.Icon_footer{
-    height: 45px;
-    width: 45px;
-}
-
-.Icon_footer:hover{
-    cursor: pointer;
-    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-    transform: scale(1.1);
-}
-
-

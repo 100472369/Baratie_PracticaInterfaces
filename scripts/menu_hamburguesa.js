@@ -13,7 +13,7 @@ $(document).ready(function () {
             $(".ul_link_page").show();
             $("#texto_baratie").show();
             
-            $(".header_main_page").css("animation", "slideUp 1s ease-out"); 
+            $(".header_main_page").css("animation", "slideUp 0.5s ease-out"); 
           }  
     });
     
