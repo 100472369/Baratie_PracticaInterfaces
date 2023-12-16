@@ -26,15 +26,31 @@ $(document).ready(function () {
         let direccion = $("#direccion").val();
 
         // Control de errores via REGEX
+        let mensajes = {
+            'es': {
+                nombreInvalido: "Nombre no válido",
+                telefonoInvalido: "Teléfono no válido",
+                emailInvalido: "Correo electrónico no válido",
+                direccionInvalida: "Dirección no válida"
+            },
+            'en': {
+                nombreInvalido: "Invalid name",
+                telefonoInvalido: "Invalid phone number",
+                emailInvalido: "Invalid email address",
+                direccionInvalida: "Invalid address"
+            }
+        };
+
         if (nombre.trim() === '') {
-            alert("Nombre no válido");
+            alert(mensajes[idioma].nombreInvalido);
         } else if (!telefonoValido(telefono)) {
-            alert("Teléfono no válido");
+            alert(mensajes[idioma].telefonoInvalido);
         } else if (!emailValido(email)) {
-            alert("Correo electrónico no válido");
+            alert(mensajes[idioma].emailInvalido);
         } else if (direccion.trim() === '') {
-            alert("Dirección no válida");
-        } else {
+            alert(mensajes[idioma].direccionInvalida);
+        }
+        else {
             /* Los datos son validos, guardar en el Web Storage y mostrar el contenido de exito en registro */
             localStorage.setItem('nombre', nombre);
             localStorage.setItem('telefono', telefono);

@@ -145,25 +145,32 @@ $(document).ready(function (){
             {
             // Si el usuario no esta registrado, tiene que registrarse previamente mediante una redireccion
             if (!(nombreRegistrado && telefonoRegistrado && emailRegistrado && direccionRegistrada)) {
-                alert("Ooops, parece que antes hay que registrarse para poder hacer reservas!");
+                 if (idioma === "en") alert("Ooops, it seems like you must be registered in order to make reservations first!");
+                 else alert("Ooops, parece que antes hay que registrarse para poder hacer reservas!");
                 // Ademas, se incluye una fuente especial para poder manejar este evento en especifico
                 if (idioma === "en") window.location.href = 'registro_eng.html?source=pagina_reserva';
                 else window.location.href = 'registro.html?source=pagina_reserva';
             }
-            else{
-                // Eliminar datos del localStorage al hacer clic en submit ya que no se usaran para futuras reservas
-                localStorage.removeItem('ciudad_elegida');
-                localStorage.removeItem('hora_elegida');
-                localStorage.removeItem('personas_elegidas');
-                localStorage.removeItem('mes_elegido');
-                localStorage.removeItem('dia_elegido');
-                // Generacion de la pantalla que mestra que la reserva ha sido efectuada con exito
-                $("#formulario").fadeOut(500, function(){
-                    if (idioma === "en") $("#mensaje_reserva").text(`Booked for next ${dia_elegido.text()} of ${mes_elegido.text()} at ${hora_elegida.text()}.`)
-                    else $("#mensaje_reserva").text(`Mesa reservada el próximo ${dia_elegido.text()} de ${mes_elegido.text()} a las ${hora_elegida.text()}.`)
-                    $("#reserva_exito").fadeIn(500);
-                    if (idioma === "en") $("#boton_exito").text('Go back to homepage');
-                });
+            else {
+                // Mostrar aviso para para confirmar la reserva
+                let confirmado;
+                if (idioma === "en") confirmado = confirm("Do you want to confirm your reservation ('Accept' in order to confirm; otherwise 'cancel')");
+                else confirmado = confirm("¿Desea confirmar su reserva? ('Aceptar' para confirmar; 'cancelar para volver')");
+                if (confirmado) {
+                    // Eliminar datos del localStorage al hacer clic en submit ya que no se usaran para futuras reservas
+                    localStorage.removeItem('ciudad_elegida');
+                    localStorage.removeItem('hora_elegida');
+                    localStorage.removeItem('personas_elegidas');
+                    localStorage.removeItem('mes_elegido');
+                    localStorage.removeItem('dia_elegido');
+                    // Generacion de la pantalla que mestra que la reserva ha sido efectuada con exito
+                    $("#formulario").fadeOut(500, function () {
+                        if (idioma === "en") $("#mensaje_reserva").text(`Booked for next ${mes_elegido.text()}, ${dia_elegido.text()}, at ${hora_elegida.text()}.`)
+                        else $("#mensaje_reserva").text(`Mesa reservada el próximo ${dia_elegido.text()} de ${mes_elegido.text()} a las ${hora_elegida.text()}.`)
+                        $("#reserva_exito").fadeIn(500);
+                        if (idioma === "en") $("#boton_exito").text('Go back to homepage');
+                    });
+                }
             }
         }
     })
