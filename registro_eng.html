@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registro</title>
+    <!-- estos dos comandos son: formato de codificación y un comando para mejorar la vista del mobil  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/one_piece_logo_small.png" type="image/png">
+    <!-- los links a X y los diferentes css -->
+    <link rel="stylesheet" href="style/registro_style.css">
+    <link rel="stylesheet" href="style/menu_hamburguesa_style.css">
+</head>
+
+<body>
+    <header id="header_history_page">
+        <div id="Logo_column_history">
+            <a href="index.html">
+                <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+        </div>
+
+        <div id="Name_column">
+            <div class="Restaurant_name">
+                <h1>SIGN UP</h1>
+            </div>
+            <div class="topnav">
+                <img id="Logo_menu" src="" alt="">
+                <div id="myLinks">
+                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="" onclick="showStripres()">
+                    <div id="Contenedor_links">
+                        <a href="menu.html">Menu</a>
+                        <a href="historia.html">Our story</a>
+                        <a href="pedido.html">Home delivery</a>
+                        <a href="">Book a table</a>
+                        <a href="registro.html">Sign up</a>
+                        <a href="informacion.html">More information</a>
+                    </div>
+                    <div id="Contenedor_redes_mh">
+                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
+                    </div>
+                    <div id="contenedor_texto_contacto_mh">
+                        <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac">Política de<br>privacidad</a>
+                        <a href="contacto.html">Contact us</a>
+                    </div>
+                    <button id="Boton_reserva_mh">BOOK</button>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    <img id="logo_topnav" src="icons/three_stripes.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="registro-container">
+        <!-- Formulario de registro -->
+        <form id="formulario" action="#" method="post">
+            <h2>Sign up to make purchases and reservations</h2>
+
+            <!-- Campos del formulario -->
+            <label for="nombre"></label><input type="text" id="nombre" name="nombre" placeholder="Type your full name" required>
+
+            <!-- Contenedor para alinear teléfono y correo electrónico en la misma fila -->
+            <div class="flex-container">
+                <label for="telefono"></label><input type="tel" id="telefono" name="telefono" placeholder="Type your phone number" required>
+                <label for="email"></label><input type="email" id="email" name="email" placeholder="Type your e-mail" required>
+            </div>
+
+            <label for="direccion"></label><input type="text" id="direccion" name="direccion" placeholder="Type your address" required>
+
+            <!-- Botón de envío -->
+            <button id="delete" type="button">Clear</button>
+            <button id="submit" type="button">Complete sign up</button>
+        </form>
+        <div id="registro_exito" class="mensaje_exito" style="display: none;">
+            <h2>Your registration is complete.</h2>
+            <img src="images/mugiwara.jpg" alt="Mugiwara">
+            <button id="boton_exito" class="boton_circular">Go back to home page</button>
+        </div>
+    </div>
+
+    <footer>
+        <div id="contenedor_texto_footer">
+            <p>© 2023 Baratie</p>
+        </div>
+        <div id="contenedor_redes_footer">
+            <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/registro.js"></script>
+    <script src="scripts/menu_hamburguesa.js"></script>
+    <script src="scripts/registro_principal.js"></script>
+</body>
+</html>

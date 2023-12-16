@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reservations</title>
+    <!-- estos dos comandos son: formato de codificación y un comando para mejorar la vista del mobil  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/bell_reserva.png" type="image/png">
+    <!-- los links a X y los diferentes css -->
+    <link rel="stylesheet" href="style/reserva_style.css">
+    <link rel="stylesheet" href="style/menu_hamburguesa_style.css">
+</head>
+<body>
+    <header id="header_book_table_page">
+        <div id="Logo_column_book_table">
+            <a href="index.html">
+                <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+        </div>
+        <div id="Name_column">
+            <div class="page_name">
+                <h1>Book a table</h1>
+            </div>
+            <div class="topnav">
+                <img id="Logo_menu" src="" alt="">
+                <div id="myLinks">
+                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="" onclick="showStripres()">
+                    <div id="Contenedor_links">
+                        <a href="menu.html">Menu</a>
+                        <a href="historia.html">Our story</a>
+                        <a href="pedido.html">Home delivery</a>
+                        <a href="reserva.html">Book a table</a>
+                        <a href="registro.html">Sign up</a>
+                        <a href="informacion.html">More information</a>
+                    </div>
+                    <div id="Contenedor_redes_mh">
+                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
+                    </div>
+                    <div id="contenedor_texto_contacto_mh">
+                        <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac"
+                        target="_blank" rel="noopener noreferrer">Privacy<br>policy</a>
+                        <a href="contacto.html">Contact us</a>
+                    </div>
+                    <button id="Boton_reserva_mh">BOOK</button>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    <img id="logo_topnav" src="icons/three_stripes.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="book_table_container">
+        <!-- Formulario de registro -->
+        <form id="formulario" action="#" method="post">
+            <h2>BOOK A TABLE IN OUR SEA ROUTE</h2>
+
+            <!-- Campos del formulario -->
+            <div class="campos_reserva" >
+                <div class="contendor_info">
+                    <div id="ciudad_elegida">Pick your preferred city</div>
+                    <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon ciudad_icon" id="ciudad_down">
+                    <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="ciudad_up">
+                </div>
+                <div class="contenido">
+                        <div class="campos_reserva ciudades_dropdown">Buenos Aires</div>
+                        <div class="campos_reserva ciudades_dropdown">Seville</div>
+                        <div class="campos_reserva ciudades_dropdown">Philippines Islands</div>
+                </div>
+                <!--<p id="ciudad_elegida"></p>-->
+            </div>
+
+
+            <!-- <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre completo" required> -->
+
+            <!-- Contenedor para alinear teléfono y correo electrónico en la misma fila -->
+    <!--        <div class="flex-container">-->
+                <div class="campos_reserva hola">Date
+                    <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_ico" id="fecha_down">
+                    <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="fecha_up">
+                    <p id="fecha_elegida"></p>
+
+                    <div id="calendar">
+                        <div id="calendar-header">
+                            <span id="month-prev" class="change-month"><</span>
+                            <h1 id="month"></h1>
+                            <span id="month-next" class="change-month">></span>
+                        </div>
+                        <div id="calendar-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="campos_reserva">
+                    <div class="contendor_info">
+                        <div id="mes_elegido">Pick the month</div>
+                        <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon mes_icon" id="num_meses_down">
+                        <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="num_meses_up">
+                    </div>
+                    <div class="contenido">
+                        <div class="campos_reserva meses_dropdown"></div>
+                        <div class="campos_reserva meses_dropdown"></div>
+                        <div class="campos_reserva meses_dropdown"></div>
+                        <div class="campos_reserva meses_dropdown"></div>
+                        <div class="campos_reserva meses_dropdown"></div>
+                        <div class="campos_reserva meses_dropdown"></div>
+                    </div>
+                </div>
+            <div class="campos_reserva">
+                <div class="contendor_info">
+                    <div id="dia_elegido">Pick the day</div>
+                    <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon dia_icon" id="num_dias_down">
+                    <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="num_dias_up">
+                </div>
+                <div class="contenido contenido_dias">
+                </div>
+            </div>
+                <div class="campos_reserva">
+                    <div class="contendor_info">
+                        <div id="hora_elegida">Pick the time</div>
+                        <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon hora_icon" id="hora_down">
+                        <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="hora_up">
+                    </div>
+                    <div class="contenido">
+                        <div class="campos_reserva horas_dropdown">13:00</div>
+                        <div class="campos_reserva horas_dropdown">14:00</div>
+                        <div class="campos_reserva horas_dropdown">15:00</div>
+                        <div class="campos_reserva horas_dropdown">20:00</div>
+                        <div class="campos_reserva horas_dropdown">21:00</div>
+                        <div class="campos_reserva horas_dropdown">22:00</div>
+                    </div>
+                </div>
+    <!--        </div>-->
+
+            <div class="campos_reserva">
+                <div class="contendor_info">
+                    <div id="personas_elegidas">Pick the number of people</div>
+                    <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon personas_icon" id="num_personas_down">
+                    <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="num_personas_up">
+                </div>
+                <div class="contenido">
+                    <div class="campos_reserva personas_dropdown">2</div>
+                    <div class="campos_reserva personas_dropdown">3</div>
+                    <div class="campos_reserva personas_dropdown">4</div>
+                    <div class="campos_reserva personas_dropdown">5</div>
+                    <div class="campos_reserva personas_dropdown">6</div>
+                    <div class="campos_reserva personas_dropdown">7</div>
+                    <div class="campos_reserva personas_dropdown">8</div>
+                </div>
+            </div>
+
+            <!-- Botón de envío -->
+            <button id="submit" type="button">Book the table</button>
+        </form>
+        <div id="reserva_exito" class="mensaje_exito" style="display: none;">
+            <h2 id="mensaje_reserva"></h2>
+            <img src="images/chopper_one_piece.png" alt="Mugiwara">
+            <a href="index.html">
+                <button id="boton_exito">Go back to home page</button>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div id="contenedor_texto_footer">
+            <p>© 2023 Baratie</p>
+        </div>
+        <div id="contenedor_redes_footer">
+            <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
+            <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/reserva.js"></script>
+    <script src="scripts/menu_hamburguesa.js"></script>
+</body>
+</html>
