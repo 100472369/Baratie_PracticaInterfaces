@@ -215,3 +215,69 @@ body{margin: 0;
     outline: none;
 }
 
+
+
+@media (max-width: 768px) {
+    #pagina_entrantes h2, #pagina_principales h2, #pagina_postres h2, #pagina_cocteles h2 {
+        font-size: 1.75em;
+    }
+
+    .comida_menu{
+        font-size: 1.3em;
+    }
+
+    .precios_menu{
+        font-size: 1.3em;
+    }
+
+    .Button_migas{
+        width: 20vw;
+    }
+
+    #pagina_entrantes, #pagina_principales, #pagina_postres, #pagina_cocteles{
+        width: 80vw;
+        height: 40vh;
+    }
+
+    .Restaurant_name h1{
+        font-size: 5vw;
+    }
+
+    @media (max-width: 600px) {
+        #pagina_entrantes h2, #pagina_principales h2, #pagina_postres h2, #pagina_cocteles h2 {
+            font-size: 1.6em;
+        }
+
+        .comida_menu{
+            font-size: 0.85em;
+        }
+
+        .precios_menu{
+            font-size: 0.85em;
+        }
+
+        .Button_migas{
+            font-size: 0.7em;
+            width: 23vw;
+        }
+
+        #pagina_entrantes, #pagina_principales, #pagina_postres, #pagina_cocteles{
+            width: 92vw;
+        }
+
+        #pagina_principales p {
+            font-size: 0.9em;
+        }
+
+        .Boton_movimiento, .Boton_movimiento_two_back, .Boton_movimiento_two_next{
+            font-size: 0.8em;
+            height: 4vh;
+            width: 40vw;
+        }
+
+        .Restaurant_name h1{
+            font-size: 6vw;
+        }
+
+    }
+}
