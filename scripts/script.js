@@ -1,3 +1,4 @@
+// script para poner enlaces y para el cambio de idioma
 $(document).ready(function() {
     // Array de objetos con información de las redes sociales
     const redesSociales = [

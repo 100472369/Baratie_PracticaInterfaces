@@ -1,4 +1,6 @@
+// funcionalidad del registro si se viene de otra pagina
 $(document).ready(function () {
+    // atributos del registro
     let idioma = $('html').attr('lang');
     const nombreRegistrado = localStorage.getItem('nombre');
     const telefonoRegistrado = localStorage.getItem('telefono');
@@ -14,6 +16,7 @@ $(document).ready(function () {
             else toCompra.attr('href','registro_eng.html?source=pagina_pedido');
         }
     });
+    // si el usuario se registra vinidendo desde el pedido se redigira a la pagina de pedido
     botonPedido.click(function() {
         if (!(nombreRegistrado && telefonoRegistrado && emailRegistrado && direccionRegistrada)) {
             if (idioma === "es") botonPedido.attr('href','registro.html?source=pagina_pedido');

@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+    // atributos del registro
     let idioma = $('html').attr('lang');
     const registroForm = $("#formulario");
     const registroExito = $("#registro_exito");

@@ -1,3 +1,4 @@
+// script con la funcionalidad de la reserva
 $(document).ready(function (){
     // Cuando carguemos el documento es importante generar los meses segun la fecha en la que estamos
     let idioma = $('html').attr('lang');

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // atributos utilizados
     let idioma = $('html').attr('lang');
     const toCompra = $("#pedidos_desde_hamburguesa");
     const nombreRegistrado = localStorage.getItem('nombre');
@@ -13,6 +14,7 @@ $(document).ready(function() {
         }
     });
 });
+// funcion para desplegar el menu hamburguesa
 function myFunction() {
     let x = $("#myLinks");
     let logo = $("#logo_topnav");
@@ -20,7 +22,7 @@ function myFunction() {
     x.slideDown();
 
 }
-
+// funcion para cerrar el menu hamurguesa
 function showStripres(){
     let x = $("#myLinks");
     let logo = $("#logo_topnav");

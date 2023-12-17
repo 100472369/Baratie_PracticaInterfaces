@@ -1,3 +1,4 @@
+// script con la funcionalidad de los pedidos
 $(document).ready(function () {
     let idioma = $('html').attr('lang');
     const platos = $(".plato");

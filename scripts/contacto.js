@@ -1,3 +1,4 @@
+// script para el formulario de contacto
 $(document).ready(function () {
     let idioma = $('html').attr('lang');
     const submitButton = $("#submit");
