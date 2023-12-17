@@ -28,7 +28,7 @@ body{margin: 0;
 }
 /* Mismo encabezado que las demas paginas */
 #header_history_page{
-    position: fixed; /* Fija el encabezado en la posición especificada */
+    position: fixed; 
     top: 0;
     display: grid;
     height: 10vh;

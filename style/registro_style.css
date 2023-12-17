@@ -108,8 +108,8 @@ input, #submit, #delete {
 }
 
 #submit {
-    background-color: rgb(229, 168, 41); /* Nuevo color de fondo del botón */
-    color: white; /* Color del texto del botón */
+    background-color: rgb(229, 168, 41); 
+    color: white; 
     cursor: pointer;
 }
 
@@ -133,10 +133,9 @@ input, #submit, #delete {
     background-color: rgba(160, 161, 136, 1);
 }
 
-/* Nueva regla para alinear en la misma fila */
 .flex-container {
     display: flex;
-    gap: 8px; /* Espacio entre los elementos */
+    gap: 8px; 
 }
 
 /* Display del recuadro que contiene la informacion que sale al completarse el registro exitosamente */
@@ -163,7 +162,7 @@ input, #submit, #delete {
     color: #CC0018; /* Color del texto en rojo */
     padding: 10px 50px 10px 50px;
     border: 1px solid black;
-    border-radius: 25px; /* Borde circular */
+    border-radius: 25px; 
     cursor: pointer;
     font-family: Inter, Arial, serif;
     font-weight: bold;
@@ -171,7 +170,7 @@ input, #submit, #delete {
 }
 
 #boton_exito:hover {
-    background-color: #ffdb4d; /* Cambia el color de fondo al pasar el ratón */
+    background-color: #ffdb4d; 
 }
 
 

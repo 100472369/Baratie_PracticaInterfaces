@@ -23,7 +23,7 @@ body{margin: 0;
     margin-bottom: 27vh;}
 
 #header_history_page{
-    position: fixed; /* Fija el encabezado en la posición especificada */
+    position: fixed; 
     top: 0;
     
     display: grid;
@@ -170,7 +170,7 @@ body{margin: 0;
 
 .Boton_movimiento:hover, .Boton_movimiento_two_back:hover, .Boton_movimiento_two_next:hover{
     cursor: pointer;
-    background-color: rgba(238, 169, 20, 0.733); /* Cambia al color que desees para el hover */
+    background-color: rgba(238, 169, 20, 0.733); 
     box-shadow: 0 0 1px black;
     transform: translate(0, 0);
 

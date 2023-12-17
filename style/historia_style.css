@@ -102,8 +102,8 @@ body{margin: 0;
     width: 75%; /* Ancho del 75% de la pantalla */
     margin: 0 auto; /* Centra el div horizontalmente */
     height: 50vh;
-    padding: 20px; /* Ajusta según tus preferencias */
-    background-color: #f0f0f0; /* Ajusta según tus preferencias */
+    padding: 20px; 
+    background-color: #f0f0f0; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,11 +155,18 @@ body{margin: 0;
 /* recuadro de nuestras rutas */
 #Recuadro_info_ruta{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
 
 }
+
 #Contenedor_mapa {
     overflow-x: auto;
+    order:2;
+}
+
+#contenedor_ruta {
+    overflow-x: auto;
+    order:1;
 }
 
 /* contenedor para las imagenes */
@@ -180,10 +187,12 @@ body{margin: 0;
     height: 40vh;
     overflow: hidden;
   }
+
   /* animacion  con la ruta seguida */
   #contenedor_ruta ul {
     list-style-type: none;
-    animation: desplazamiento 60s linear infinite; /* Ajusta la duración según tus necesidades */
+    animation: desplazamiento 60s linear infinite; 
+    z-index: 2;
   }
   
   @keyframes desplazamiento {
@@ -202,6 +211,17 @@ body{margin: 0;
         grid-template-columns: 1fr;
         grid-template-rows: 50% 50%;
     }
+
+    #Contenedor_mapa {
+        overflow-x: auto;
+        order:1;
+    }
+    
+    #contenedor_ruta {
+        overflow-x: auto;
+        order:2;
+    }
+
 #Contenedor_mapa img {
       height: auto;
   }

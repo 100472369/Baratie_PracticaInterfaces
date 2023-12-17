@@ -197,7 +197,7 @@ body{margin: 0;}
 }
 
 .horizontal_line {
-    width: 100%; /* Ajusta el ancho del contenedor según tus necesidades */
+    width: 100%; 
     display: flex;
     text-align: center;
     align-items: center;

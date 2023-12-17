@@ -36,6 +36,7 @@
     border-radius: 0px 0px 10px 10px;
     box-shadow: 0px 0px 5px white;
     margin-right: 15%;
+    z-index: 5;
 }
 
 #logo_m_h{
