@@ -199,6 +199,7 @@ body{margin: 0;
     text-align: center;
     font-size: 2em; /* Ajusta el tamaño del texto según tus necesidades */
     text-decoration: none;
+    font-weight: bold;
 }
 
 .boton_producto:hover {
@@ -345,7 +346,7 @@ button {
 
 #contenedor_articulos {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 70% 30%;
     padding: 0 0 4% 4%;
     overflow-y: auto;
     font-size: 1.25em;
@@ -364,7 +365,7 @@ button {
 
 #columnas_precio {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 70% 30%;
     padding-top: 2%;
 }
 #texto_precio {
@@ -510,4 +511,94 @@ button {
 
 #Boton_volver_main_page:hover {
     background-color: rgba(62,90,155,0.9);
+}
+
+@media (max-width: 1400px) {
+    .platos-container {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #Contenedor_resumen{
+        width: 60%;
+    }
+
+    #Contenedor_resumen h2, #Contenedor_resumen h3 {
+        font-size: 2.5em;
+    }
+
+    #texto_precio {
+        font-size: 2.5em;
+    }
+
+    .Restaurant_name h1{
+        font-size: 3vw;
+    }
+
+    @media (max-width: 900px) {
+        .platos-container {
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: 100%;
+        }
+
+        #Contenedor_resumen{
+            width: 70%;
+        }
+
+        #columnas_precio {
+            grid-template-columns: 65% 35%;
+        }
+
+        #contenedor_articulos {
+            grid-template-columns: 65% 35%;
+            font-size: 1.15em;
+        }
+
+        .Restaurant_name h1{
+            font-size: 3.75vw;
+        }
+
+
+        #Name_column{
+            display: grid;
+            grid-template-columns: 60% 27% 8%;
+            grid-gap:15px;
+            justify-content: center;
+            background-color: rgba(248, 248, 248, 1);
+            position: relative;
+        }
+
+        @media (max-width: 600px) {
+            .Restaurant_name h1{
+                font-size: 5vw;
+            }
+
+            #Contenedor_resumen h2, #Contenedor_resumen h3 {
+                font-size: 2em;
+            }
+
+            #texto_precio {
+                font-size: 2em;
+            }
+
+            #contenedor_articulos {
+                font-size: 1em;
+                grid-template-columns: 65% 35%;
+            }
+
+            #Contenedor_resumen{
+                width: 80%;
+            }
+
+            #Boton_modificar_pedido, #Boton_finalizar_pedido{
+                height: 70%;
+                font-size: 0.8em;
+            }
+
+            #Contenedor_pedido_realizado {
+                width: 80%;
+            }
+
+        }
+    }
 }
