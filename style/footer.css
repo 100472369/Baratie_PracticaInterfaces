@@ -42,3 +42,23 @@ footer {
     transform: scale(1.1); /* Aumento de escala al pasar el ratón */
 }
 
+
+@media (max-width: 960px) {
+    footer p {
+        font-size: 1em;
+    }
+    .Icon_footer, .Icon_footer_idioma {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    footer p {
+        font-size: 0.75em;
+    }
+    .Icon_footer, .Icon_footer_idioma {
+        height: 25px;
+        width: 25px;
+    }
+}

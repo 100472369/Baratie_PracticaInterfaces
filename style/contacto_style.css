@@ -281,3 +281,50 @@ label {
     }
 }
 
+/* Seccion de breakpoints para la pagina en version movil/tableta */
+@media (max-width: 980px) {
+    .Restaurant_name h1 {
+        font-size: 1.25em;
+    }
+    form, ex {
+        max-width: 950px;
+    }
+    #registro-container {
+        height: 40vh;
+        width: 80%;
+        margin-top: 20%;
+        padding: 4%;
+    }
+    input {
+        font-size: 0.75em;
+    }
+    #delete, #submit {
+        font-size: 0.75em;
+    }
+    #registro-container h2 {
+        font-size: 0.85em;
+    }
+    #registro_exito img {
+        width: 50%;
+    }
+    .Icon_footer {
+        width: 12%;
+        height: 24%;
+    }
+    p {
+        font-size: 0.75em;
+    }
+    #contacto-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    #registro-container {
+        height: 40vh;
+        width: 80%;
+        margin-top: 45%;
+        padding: 4%;
+    }
+}
+
