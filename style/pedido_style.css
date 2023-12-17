@@ -474,7 +474,7 @@ button {
     background-color: white;
     padding: 20px; 
     width: 45vw; 
-    height: 60vh;
+    height: auto;
     text-align: center; 
     display: flex; /* Agrega flexbox para centrar los elementos internos */
     flex-direction: column; /* Apila los elementos verticalmente */
