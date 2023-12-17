@@ -250,9 +250,12 @@ body{margin: 0;}
 
 
 @media screen and (max-width: 980px) {
-    .header_main_page {
-        grid-template-columns: 1fr 85%;
+    #Name_column{
+        display: grid;
+        grid-template-columns: 85% 15%;
+        background-color: rgba(248, 248, 248, 1);
     }
+
     .Restaurant_name h1 {
         font-size: 1.75em;
     }
@@ -311,8 +314,23 @@ body{margin: 0;}
 }
 
 @media screen and (max-width: 600px) {
+    .header_main_page{
+        height: 8vh;
+    }
+
+    #Name_column{
+        display: grid;
+        grid-template-columns: 85% 15%;
+        background-color: rgba(248, 248, 248, 1);
+        height: 8vh;
+    }
+
+    #Logo_column{
+        height: 8vh;
+    }
+
     .Restaurant_name h1 {
-        font-size: 0.75em;
+        font-size: 1.7em;
     }
     #texto_baratie {
         font-size: 0.75em;
@@ -332,6 +350,10 @@ body{margin: 0;}
     }
     #Titulo h1 {
         font-size: 3.5em;
+    }
+
+    #Pagina_Botones{
+        height: 60vh;
     }
 }
 

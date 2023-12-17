@@ -532,7 +532,7 @@ button {
     }
 
     .Restaurant_name h1{
-        font-size: 3vw;
+        font-size: 2.8vw;
     }
 
     @media (max-width: 900px) {
@@ -555,14 +555,14 @@ button {
         }
 
         .Restaurant_name h1{
-            font-size: 3.75vw;
+            font-size: 4vw;
         }
 
 
         #Name_column{
             display: grid;
-            grid-template-columns: 60% 27% 8%;
-            grid-gap:15px;
+            grid-template-columns: 75% 12% 13%;
+            grid-gap: 2px;
             justify-content: center;
             background-color: rgba(248, 248, 248, 1);
             position: relative;

@@ -52,6 +52,10 @@ $(document).ready(function() {
         $("#boton_informacion_index").click(function(){
             window.location.href = 'informacion.html';
         });
+
+        $("#boton_exito, Boton_volver_main_page").click(function(){
+            window.location.href = 'index_eng.html';
+        });
     }
     // Si el idioma actual es inglés
     else if (idiomaActual === 'en') {
@@ -64,13 +68,17 @@ $(document).ready(function() {
         $("#boton_reservar_index").click(function(){
             window.location.href = 'reserva_eng.html';
         });
-
+        
         $("#boton_pedido_index").click(function(){
             window.location.href = 'pedido_eng.html';
         });
 
         $("#boton_informacion_index").click(function(){
             window.location.href = 'informacion_eng.html';
+        });
+
+        $("#boton_exito, Boton_volver_main_page").click(function(){
+            window.location.href = 'index_eng.html';
         });
     }
 });
