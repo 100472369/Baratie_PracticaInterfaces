@@ -54,7 +54,7 @@ $(document).ready(function() {
         });
 
         $("#boton_exito, Boton_volver_main_page").click(function(){
-            window.location.href = 'index_eng.html';
+            window.location.href = 'index.html';
         });
     }
     // Si el idioma actual es inglés
