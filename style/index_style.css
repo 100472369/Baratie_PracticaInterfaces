@@ -250,12 +250,15 @@ body{margin: 0;}
 
 
 @media screen and (max-width: 980px) {
+    .header_main_page{
+        z-index: 4;
+    }
     #Name_column{
         display: grid;
         grid-template-columns: 85% 15%;
         background-color: rgba(248, 248, 248, 1);
     }
-
+    
     .Restaurant_name h1 {
         font-size: 1.75em;
     }

@@ -77,7 +77,7 @@ $(document).ready(function() {
             window.location.href = 'informacion_eng.html';
         });
 
-        $("#boton_exito, Boton_volver_main_page").click(function(){
+        $("#boton_exito, #Boton_volver_main_page").click(function(){
             window.location.href = 'index_eng.html';
         });
     }
