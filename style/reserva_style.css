@@ -177,7 +177,7 @@ form {
     box-sizing: border-box;
     border: 0;
     font-family: Revalia, serif;
-    font-size: 1vw;
+    font-size: 1em;
 }
 
 #submit:hover {
@@ -231,14 +231,34 @@ form {
 }
 
 /* Seccion de breakpoints para la pagina en version movil/tableta */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .page_name h1 {
+        font-size: 1.75em;
+    }
     #book_table_container {
-        height: 40vh;
-        width: 80%;
+        height: auto;
+        width: 90%;
+        margin-top: 30%;
+    }
+    #book_table_container h2 {
+        font-size: 1.25em;
+    }
+    #ciudad_elegida, #mes_elegido, #hora_elegida, #dia_elegido, #personas_elegidas, .campos_reserva {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .page_name h1 {
+        font-size: 1.25em;
+    }
+    #book_table_container {
         margin-top: 50%;
     }
-
     #book_table_container h2 {
+        font-size: 1em;
+    }
+    #ciudad_elegida, #mes_elegido, #hora_elegida, #dia_elegido, #personas_elegidas, .campos_reserva {
         font-size: 1em;
     }
 }

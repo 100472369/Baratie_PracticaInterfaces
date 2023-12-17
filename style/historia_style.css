@@ -158,11 +158,16 @@ body{margin: 0;
     grid-template-columns: 2fr 1fr;
 
 }
+#Contenedor_mapa {
+    overflow-x: auto;
+}
+
 /* contenedor para las imagenes */
 #Contenedor_mapa img{
     height: 40vh;
     width: auto;
     object-fit: cover;
+    overflow-x: hidden;
 }
 
 #Contenedor_mapa h2{
@@ -189,10 +194,18 @@ body{margin: 0;
       transform: translateY(-100%);
     }
   }
-  
   #contenedor_ruta ul li {
     line-height: 2em; 
   }
+@media (max-width: 1024px){
+    #Recuadro_info_ruta {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+    }
+#Contenedor_mapa img {
+      height: auto;
+  }
+}
 
 
 
