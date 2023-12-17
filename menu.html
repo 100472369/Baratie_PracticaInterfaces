@@ -14,10 +14,11 @@
 </head>
 
 <body>
+    <!-- header de la página -->
     <header id="header_history_page">
         <div id="Logo_column_history">
-            <a href="index.html">
-            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+            <a href="index.html" title="Volver a la página principal">
+            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt="logo_baratie"></a>
         </div>
         
         <div id="Name_column">
@@ -25,21 +26,20 @@
                 <h1>MENÚ</h1>
             </div>
             <div class="topnav">
-                <img id="Logo_menu" src="" alt="">
                 <div id="myLinks">
-                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="" onclick="showStripres()">
+                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="logo_menu_hamburguesa" onclick="showStripres()" title="Cerrar el menú">
                     <div id="Contenedor_links">
                         <a href="menu.html">Menú</a>
                         <a href="historia.html">Nuestra Historia</a>
-                        <a href="pedido.html">Pedidos a Domicilio</a>
+                        <a href="pedido.html" id="pedidos_desde_hamburguesa">Pedidos a Domicilio</a>
                         <a href="">Reserva tu Mesa</a>
                         <a href="registro.html">Registrarse</a>
                         <a href="informacion.html">Más Información</a>
                     </div>
                     <div id="Contenedor_redes_mh">
-                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="logo_insta">
+                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="logo_twitter">
+                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="logo_tiktok">
                     </div>
                     <div id="contenedor_texto_contacto_mh">
                         <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac">Política de<br>privacidad</a>
@@ -49,19 +49,19 @@
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
-                    <img id="logo_topnav" src="icons/three_stripes.png" alt="">
+                    <img id="logo_topnav" src="icons/three_stripes.png" alt="logo_topnav">
                 </a>
             </div>
         </div>
     </header>
-    
+    <!--botones para cambiar de sección en la carta  -->
     <div id="migas_de_pan">
         <button class="Button_migas" id="Button_entrantes">Entrantes</button>
         <button class="Button_migas" id="Button_principales">Principales</button>
         <button class="Button_migas" id="Button_postres">Postres</button>
         <button class="Button_migas" id="Button_cocteles">Cócteles</button>
     </div>
-
+    <!-- página de entrantes -->
     <section id="pagina_entrantes">
         <h2>Entrantes</h2>
         <div id="Contenedor_entrantes" class="contenedor_categoria">
@@ -97,12 +97,12 @@
                 </ul>
             </div>   
         </div>
-
+        <!-- botón de para redirecciones -->
         <div class="Contenedor_botones_movimiento">
             <button class="Boton_movimiento" id="Boton_movimiento_to_principales">Pasar a Principales ↪</button>
         </div>
     </section>
-
+    <!-- página de principales -->
     <section id="pagina_principales">
         <h2>Arroces *</h2>
         <div id="Contenedor_arroces" class="contenedor_categoria">
@@ -139,20 +139,20 @@
                 </ul>
             </div>   
         </div>
-
+        <!-- botón de para redirecciones -->
         <div class="Contenedor_botones_movimiento">
             <button class="Boton_movimiento_two_back" id="Boton_movimiento_back_entrantes">↩ Volver a Entrantes </button>
             <button class="Boton_movimiento_two_next" id="Boton_movimiento_to_postres">Pasar a Postres ↪</button>
         </div>
 
     </section>
-
+    <!-- página de postres -->
     <section id="pagina_postres">
         <h2>Postres</h2>
         <div id="Contenedor_postres" class="contenedor_categoria">
             <div class="comida_menu">
                 <ul>
-                    <li>Flan Casero con Dulce de Leche</li>
+                    <li>Flan con Dulce de Leche</li>
                     <li>Lemon Pie</li>
                     <li>Tarta Rogel</li>
                 </ul>
@@ -182,14 +182,14 @@
                 </ul>
             </div>   
         </div>
-
+        <!-- botón de para redirecciones -->
         <div class="Contenedor_botones_movimiento">
             <button class="Boton_movimiento_two_back" id="Boton_movimiento_back_principales">↩ Volver a Principales</button>
             <button class="Boton_movimiento_two_next" id="Boton_movimiento_to_cocteles">Pasar a Cócteles ↪</button>
         </div>
 
     </section>
-
+    <!-- página de cocteles -->
     <section id="pagina_cocteles">
         <h2>Cócteles</h2>
         <div id="Contenedor_cocteles" class="contenedor_categoria">
@@ -214,26 +214,27 @@
                 </ul>
             </div>    
         </div>
+            <!-- botón de para redirecciones -->
         <div class="Contenedor_botones_movimiento">
             <button class="Boton_movimiento" id="Boton_movimiento_back_postres">↩ Volver a Postres</button>
         </div>
     </section>
-
+    <!-- footer de la página -->
     <footer>
         <div id="contenedor_texto_footer">
             <p>© 2023 Baratie</p>
         </div>
         <div id="contenedor_redes_idioma_footer">
             <div id="contenedor_redes_footer">
-                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="logo_instagram" title="Visita el Instragram oficial de One Piece!">
+                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="logo_tiktok" title="Visita el TikTok oficial de One Piece!">
+                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="logo_crunchyroll" title="Mira One Piece ahora mismo en Crunchyroll">
+                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="logo_twitter" title="Visita el sitio oficial de X/Twitter de One Piece!">
+                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="logo_footer" title="Visita el canal oficial de One Piece!">
             </div>
             <div id="contenedor_idioma_footer">
                 <a href="menu_eng.html">
-                    <img class="Icon_footer_idioma" src="icons/icon_uk.png" alt=""></a>
+                    <img class="Icon_footer_idioma" src="icons/icon_uk.png" alt="bandera" title="Cambiar a inglés"></a>
             </div>
         </div>
     </footer>

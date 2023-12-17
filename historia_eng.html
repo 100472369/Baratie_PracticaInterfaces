@@ -15,10 +15,11 @@
 </head>
 
 <body>
+    <!-- header de la pagina -->
     <header id="header_history_page">
         <div id="Logo_column_history">
-            <a href="index_eng.html">
-                <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+            <a href="index_eng.html" title="Go back to homepage">
+                <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt="logo_baratie"></a>
         </div>
 
         <div id="Name_column">
@@ -26,21 +27,20 @@
                 <h1>OUR STORY</h1>
             </div>
             <div class="topnav">
-                <img id="Logo_menu" src="" alt="">
                 <div id="myLinks">
-                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="" onclick="showStripres()">
+                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="logo_menu_hamburguesa" onclick="showStripres()" title="Close the menu">
                     <div id="Contenedor_links">
                         <a href="menu_eng.html">Menu</a>
                         <a href="historia_eng.html">Our story</a>
-                        <a href="pedido_eng.html">Home delivery</a>
+                        <a href="pedido_eng.html" id="pedidos_desde_hamburguesa">Home delivery</a>
                         <a href="reserva_eng.html">Book a table</a>
                         <a href="registro_eng.html">Sign up</a>
                         <a href="informacion_eng.html">More information</a>
                     </div>
                     <div id="Contenedor_redes_mh">
-                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="logo_insta">
+                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="logo_twitter">
+                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="logo_tiktok">
                     </div>
                     <div id="contenedor_texto_contacto_mh">
                         <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac">Privacy<br>policy</a>
@@ -50,14 +50,14 @@
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
-                    <img id="logo_topnav" src="icons/three_stripes.png" alt="">
+                    <img id="logo_topnav" src="icons/three_stripes.png" alt="logo_topnav">
                 </a>
             </div>
         </div>
     </header>
-
+    <!-- seccion que contiene nuestra historia -->
     <section id="Pagina_nuestra_historia">
-        <div id="Titulo">
+        <div class="Titulo">
             <div class="horizontal_line"><hr></div>
             <div><h1>OUR STORY</h1></div>
             <div class="horizontal_line"><hr></div>
@@ -74,7 +74,7 @@
                 </p>
         </div>
     </section>
-
+    <!-- recuadro que contiene datos sobre el restaurante -->
     <section id="Pagina_info_recuadros">
         <div class="recuadro_info">
             <p>+200 COUNTRIES VISITED</p>
@@ -86,7 +86,7 @@
             <p>+25 MICHELIN AWARDS</p>
         </div>
         <div class="recuadro_info">
-            <p>ILIAS'S MUSLIM ASS AT THE KITCHEN</p>
+            <p>WORLD'S BEST COOKS IN OUR KITCHENS</p>
         </div>
         <div class="recuadro_info">
             <p>+220 PIRATES ON BOARD</p>
@@ -96,8 +96,9 @@
         </div>
     </section>
 
+    <!-- Seccion que muestra nuestra ruta -->
     <section id="Pagina_visitanos">
-        <div id="Titulo">
+        <div class="Titulo">
             <div class="horizontal_line"><hr></div>
             <div><h1>VISIT US</h1></div>
             <div class="horizontal_line"><hr></div>
@@ -105,55 +106,51 @@
         <P>In the wake of Magallanes y Elcano, the Baratie sails following the trail of these skilled sailors, passing through countless cities, countries and continents.
             During our voyage, we carry out stays in these cities, allowing local residents to pay a visit to our restaurant, alongside allowing home delivery,
             which is carried out by our crew.<br><br>
-            The roadmap and dates for the stays carried out during our voyage are as follows:</P>
+            The roadmap for the stays carried out during our voyage are as follows on the map:</P>
 
         <div id="Recuadro_info_ruta">
             <div id="Contenedor_mapa">
-                <img src="images/ruta_magallanes.png" alt="">
+                <!-- mapa de nuestra ruta -->
+                <img src="images/ruta_magallanes.png" alt="imagen_ruta">
+                <!-- header con el punto de inicio -->
                 <h2>STARTING POINT<br>48°52.6′s 123°23.6′w </h2>
             </div>
             <div id="contenedor_ruta">
                 <ul>
-                    <li>LLEGUE AL CLUB CON EL COMBO</li>
-                    <li>RAPIDO LA VI LEJOS</li>
-                    <li>SE PINTABA LOS LABIOS</li>
-                    <li>Y LA COPA COMO ESPEJO</li>
-                    <li>SE ACERCO POCO A POCO</li>
-                    <li>Y YO QUERIENDO QUE ME BAILE</li>
-                    <li>LUEGO ME DIJO VAMOS </li>
-                    <li>QUE TE ENSEÑO BUEÑOS AIRES</li>
-                    <li>Y NOS FUIMOS EN UNA</li>
-                    <li>EMPEZAMOS A LA UNA</li>
-                    <li>Y CON LA NOTA RÁPIDO NOS DIERON LAS TRES</li>
-                    <li>PERREAMOS TODA LA NOCHE</li>
-                    <li>Y NOS DORMIMOS A LAS DIEZ</li>
-                    <li>ANDO REZANDOLE A DIOS PA REPETIRLO OTRA VEZ</li>
-                    <li>Y NOS FUIMOS EN UNA</li>
-                    <li>EMPEZAMOS A LA UNA</li>
-                    <li>Y CON LA NOTA RÁPIDO NOS DIERON LAS TRES</li>
-                    <li>PERREAMOS TODA LA NOCHE</li>
-                    <li>Y NOS DORMIMOS A LAS DIEZ</li>
-                    <li>ANDO REZANDOLE A DIOS PA REPETIRLO OTRA VEZ</li>
+                        <li>THE BARATIE SHIP SET SAIL FROM THE PORT OF SEVILLE</li>
+                        <li>IT SAILED SWIFTLY UNTIL IT REACHED THE SHORES OF BUENOS AIRES</li>
+                        <li>ON THE JOURNEY, THE WATERS OF THE GUADALQUIVIR RIVER REFLECTED THE PATH LIKE A MIRROR</li>
+                        <li>UPON ARRIVING IN THE PHILIPPINES, THE CREW NOTICED THE DISTANCE FROM HOME</li>
+                        <li>THEY EXPLORED THE ISLANDS, PAINTED WITH THE COLORS OF THE PACIFIC</li>
+                        <li>AMIDST LAUGHTER AND SONGS, THEY DECIDED TO MAKE A STOP IN BUENOS AIRES</li>
+                        <li>AT THE PORTEÑO HARBOR, THEY DISCOVERED THE RHYTHMS AND FLAVORS OF THE CITY</li>
+                        <li>A LOCAL DANCER INVITED THEM TO UNCOVER THE CHARMS OF BUENOS AIRES</li>
+                        <li>THEY BOARDED THE SHIP AGAIN, READY TO EXPLORE BEYOND THE SEAS</li>
+                        <li>THEY SAILED TOWARDS THE PHILIPPINE ISLANDS, WHERE ADVENTURE AWAITED THEM</li>
+                        <li>UNDER THE PACIFIC STARS, THEY ENJOYED A NIGHT OF DANCING</li>
+                        <li>THE MUSIC RESONATED IN THE RESTAURANT WHILE DINERS ENJOYED THE NIGHT</li>
+                        <li>WITH THE DAWN, THE SHIP RETURNED TO ITS JOURNEY, SLEEPING BY TEN</li>
+                        <li>IN THE SILENCE OF THE OCEAN, THEY LONGED TO RELIVE THE ADVENTURE AGAIN AND AGAIN</li>
                 </ul>
             </div>
         </div>
     </section>
-
+    <!-- footer de la pagina -->
     <footer>
         <div id="contenedor_texto_footer">
             <p>© 2023 Baratie</p>
         </div>
         <div id="contenedor_redes_idioma_footer">
             <div id="contenedor_redes_footer">
-                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="logo_instagram" title="Visit One Piece's official Instagram!">
+                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="logo_tiktok" title="Visit One Piece's official TikTok!">
+                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="logo_crunchyroll" title="Watch One Piece, available now on Crunchyroll">
+                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="logo_twitter" title="Visit One Piece's official X/Twitter!">
+                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="logo_footer" title="Visit One Piece's official YouTube channel!">
             </div>
             <div id="contenedor_idioma_footer">
                 <a href="historia.html">
-                    <img class="Icon_footer_idioma" src="icons/icon_spain.png" alt=""></a>
+                    <img class="Icon_footer_idioma" src="icons/icon_spain.png" alt="bandera" title="Change to Spanish"></a>
             </div>
         </div>
     </footer>

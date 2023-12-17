@@ -14,10 +14,11 @@
 </head>
 
 <body>
+    <!-- header de la página -->
     <header id="header_history_page">
         <div id="Logo_column_history">
-            <a href="index_eng.html">
-            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+            <a href="index_eng.html" title="Go back to homepage">
+            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt="logo_baratie"></a>
         </div>
         
         <div id="Name_column">
@@ -25,21 +26,20 @@
                 <h1>MENU</h1>
             </div>
             <div class="topnav">
-                <img id="Logo_menu" src="" alt="">
                 <div id="myLinks">
-                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="" onclick="showStripres()">
+                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="logo_menu_hamburguesa" onclick="showStripres()" title="Close the menu">
                     <div id="Contenedor_links">
                         <a href="menu_eng.html">Menu</a>
                         <a href="historia_eng.html">Our story</a>
-                        <a href="pedido_eng.html">Home delivery</a>
+                        <a href="pedido_eng.html" id="pedidos_desde_hamburguesa">Home delivery</a>
                         <a href="reserva_eng.html">Book a table</a>
                         <a href="registro_eng.html">Sign up</a>
                         <a href="informacion_eng.html">More information</a>
                     </div>
                     <div id="Contenedor_redes_mh">
-                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="logo_insta">
+                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="logo_twitter">
+                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="logo_tiktok">
                     </div>
                     <div id="contenedor_texto_contacto_mh">
                         <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac">Privacy<br>policy</a>
@@ -49,19 +49,19 @@
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
-                    <img id="logo_topnav" src="icons/three_stripes.png" alt="">
+                    <img id="logo_topnav" src="icons/three_stripes.png" alt="logo_topnav">
                 </a>
             </div>
         </div>
     </header>
-    
+     <!--botones para cambiar de sección en la carta  -->
     <div id="migas_de_pan">
         <button class="Button_migas" id="Button_entrantes">Appetizers</button>
         <button class="Button_migas" id="Button_principales">Main Courses</button>
         <button class="Button_migas" id="Button_postres">Desserts</button>
-        <button class="Button_migas" id="Button_cocteles">Coctels</button>
+        <button class="Button_migas" id="Button_cocteles">Cocktails</button>
     </div>
-
+    <!-- página de entrantes -->
     <section id="pagina_entrantes">
         <h2>Appetizers</h2>
         <div id="Contenedor_entrantes" class="contenedor_categoria">
@@ -97,12 +97,12 @@
                 </ul>
             </div>   
         </div>
-
+        <!-- botón de para redirecciones -->
         <div class="Contenedor_botones_movimiento">
             <button class="Boton_movimiento" id="Boton_movimiento_to_principales">Go to main courses ↪</button>
         </div>
     </section>
-
+    <!-- página de principales -->
     <section id="pagina_principales">
         <h2>Rice *</h2>
         <div id="Contenedor_arroces" class="contenedor_categoria">
@@ -139,20 +139,20 @@
                 </ul>
             </div>   
         </div>
-
+        <!-- botón de para redirecciones -->
         <div class="Contenedor_botones_movimiento">
             <button class="Boton_movimiento_two_back" id="Boton_movimiento_back_entrantes">↩ Go back to appetizers </button>
             <button class="Boton_movimiento_two_next" id="Boton_movimiento_to_postres">Go to desserts ↪</button>
         </div>
 
     </section>
-
+    <!-- página de postres -->
     <section id="pagina_postres">
         <h2>Desserts</h2>
         <div id="Contenedor_postres" class="contenedor_categoria">
             <div class="comida_menu">
                 <ul>
-                    <li>Homemade pudding with milk caramel</li>
+                    <li>Pudding with milk caramel</li>
                     <li>Lemon pie</li>
                     <li>Rogel pie</li>
                 </ul>
@@ -182,16 +182,16 @@
                 </ul>
             </div>   
         </div>
-
+        <!-- botón de para redirecciones -->
         <div class="Contenedor_botones_movimiento">
             <button class="Boton_movimiento_two_back" id="Boton_movimiento_back_principales">↩ Go back to main courses</button>
-            <button class="Boton_movimiento_two_next" id="Boton_movimiento_to_cocteles">Go to coctels ↪</button>
+            <button class="Boton_movimiento_two_next" id="Boton_movimiento_to_cocteles">Go to cocktails ↪</button>
         </div>
 
     </section>
-
+    <!-- página de cocteles -->
     <section id="pagina_cocteles">
-        <h2>Coctels</h2>
+        <h2>Cocktails</h2>
         <div id="Contenedor_cocteles" class="contenedor_categoria">
             <div class="comida_menu">
                 <ul>
@@ -214,29 +214,31 @@
                 </ul>
             </div>    
         </div>
+        <!-- botón de para redirecciones -->
         <div class="Contenedor_botones_movimiento">
             <button class="Boton_movimiento" id="Boton_movimiento_back_postres">↩ Go to desserts</button>
         </div>
     </section>
-
+    <!-- footer de la página -->
     <footer>
         <div id="contenedor_texto_footer">
             <p>© 2023 Baratie</p>
         </div>
         <div id="contenedor_redes_idioma_footer">
             <div id="contenedor_redes_footer">
-                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="logo_instagram" title="Visit One Piece's official Instagram!">
+                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="logo_tiktok" title="Visit One Piece's official TikTok!">
+                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="logo_crunchyroll" title="Watch One Piece, available now on Crunchyroll">
+                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="logo_twitter" title="Visit One Piece's official X/Twitter!">
+                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="logo_footer" title="Visit One Piece's official YouTube channel!">
             </div>
             <div id="contenedor_idioma_footer">
                 <a href="menu.html">
-                    <img class="Icon_footer_idioma" src="icons/icon_spain.png" alt=""></a>
+                    <img class="Icon_footer_idioma" src="icons/icon_spain.png" alt="bandera" title="Change to Spanish"></a>
             </div>
         </div>
     </footer>
+    <!-- scripts usados -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/migas_pan.js"></script>

@@ -146,6 +146,8 @@ input, #submit, #delete {
     padding: 0;
     width: 60%;
     margin: 0;
+    place-content: center;
+    place-items: center;
 }
 
 /* Parametros de imagen */
@@ -176,18 +178,21 @@ input, #submit, #delete {
 
 
 /* Seccion de breakpoints para la pagina en version movil/tableta */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
     .Restaurant_name h1 {
         font-size: 1.25em;
+    }
+    form, ex {
+        max-width: 950px;
     }
     #registro-container {
         height: 40vh;
         width: 80%;
-        margin-top: 50%;
+        margin-top: 20%;
         padding: 4%;
     }
     input {
-        font-size: 0.5em;
+        font-size: 0.75em;
     }
     #delete, #submit {
         font-size: 0.75em;
@@ -195,11 +200,23 @@ input, #submit, #delete {
     #registro-container h2 {
         font-size: 0.85em;
     }
+    #registro_exito img {
+        width: 50%;
+    }
     .Icon_footer {
         width: 12%;
         height: 24%;
     }
     p {
         font-size: 0.75em;
+    }
+}
+
+@media (max-width: 600px) {
+    #registro-container {
+        height: 40vh;
+        width: 80%;
+        margin-top: 45%;
+        padding: 4%;
     }
 }

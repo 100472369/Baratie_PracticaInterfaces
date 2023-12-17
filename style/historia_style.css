@@ -19,23 +19,22 @@ body{margin: 0;
 #header_history_page{
     position: fixed; /* Fija el encabezado en la posición especificada */
     top: 0;
-    
     display: grid;
     height: 10vh;
     width: 100%;
     grid-template-columns: 1fr 6fr;
 }
-
+/* la columna con nuestros logo */
 #Logo_column_history{
     background-color: rgba(248, 248, 248, 1);
     align-items: center;
 }
-
+/* modificacion del tamaño del logo */
 .Logo_principal{
     height: 10vh;
     width: auto;
 }
-
+/* el display del nombre de la pagina */
 #Name_column{
     display: flex;
     justify-content: center;
@@ -59,7 +58,7 @@ body{margin: 0;
     font-family: Revalia;
 }
 
-#Titulo{
+.Titulo{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     margin-top: 3%;
@@ -68,16 +67,16 @@ body{margin: 0;
     width: 100%;
 }
 
-#Titulo h1{
+.Titulo h1{
     font-size: 6em;
     text-align: center;
     margin-bottom: 10px;
     margin-top: 10px;
     font-family: Karantina;
 }
-
+/* para poner una linea horizontal al lado del titulo */
 .horizontal_line {
-    width: 100%; /* Ajusta el ancho del contenedor según tus necesidades */
+    width: 100%; 
     display: flex;
     text-align: center;
     align-items: center;
@@ -88,16 +87,17 @@ body{margin: 0;
     border-radius: 5% 5% 5% 5% ;
     width: 93%;
 }
-
+/* modifica la longitud de toda la pagina historia */
 #Pagina_nuestra_historia{
     margin-top: 5%;
     height: 70vh;
     width: 100%;
 }
-
+/* argegar un scroll a cuadro con nuestra historia */
 #cuadro_texto_historia1::-webkit-scrollbar {
     display: none; 
 }
+/* cuadro con nuestra historia */
 #cuadro_texto_historia1{
     width: 75%; /* Ancho del 75% de la pantalla */
     margin: 0 auto; /* Centra el div horizontalmente */
@@ -114,7 +114,7 @@ body{margin: 0;
 #cuadro_texto_historia1 p, #Pagina_visitanos p{
     font-size: 1.5em;
 }
-
+/* estos son todos los recuadors con datos sobre nuestro restaurante */
 #Pagina_info_recuadros{
     display: grid;
     height: 40vh;
@@ -143,7 +143,7 @@ body{margin: 0;
 
 
 /*Codigo de la parte VISITANOS*/
-
+/* pagina con nuestras rutas */
 #Pagina_visitanos{
     height: 90vh;
     width: 85%;
@@ -152,13 +152,13 @@ body{margin: 0;
     text-align: center;
 
 }
-
+/* recuadro de nuestras rutas */
 #Recuadro_info_ruta{
     display: grid;
     grid-template-columns: 2fr 1fr;
 
 }
-
+/* contenedor para las imagenes */
 #Contenedor_mapa img{
     height: 40vh;
     width: auto;
@@ -175,10 +175,10 @@ body{margin: 0;
     height: 40vh;
     overflow: hidden;
   }
-  
+  /* animacion  con la ruta seguida */
   #contenedor_ruta ul {
     list-style-type: none;
-    animation: desplazamiento 21s linear infinite; /* Ajusta la duración según tus necesidades */
+    animation: desplazamiento 60s linear infinite; /* Ajusta la duración según tus necesidades */
   }
   
   @keyframes desplazamiento {
@@ -191,7 +191,7 @@ body{margin: 0;
   }
   
   #contenedor_ruta ul li {
-    line-height: 2em; /* Ajusta la altura de línea según tus necesidades */
+    line-height: 2em; 
   }
 
 

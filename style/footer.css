@@ -1,44 +1,64 @@
-/*Codigo del footer*/
-footer{
-    position: fixed;
+/* Estilo del footer */
+footer {
+    position: fixed; /* Footer fijo en la parte inferior de la página */
     left: 0;
     bottom: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: grid; /* Uso de grid para disposición de elementos */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño en el grid */
     height: 97px;
     width: 100%;
     margin-right: 10px;
-    background-color: rgb(229,168,41);
-    z-index: 2;
+    background-color: rgb(229,168,41); /* Color de fondo del footer */
+    z-index: 2; /* Coloca el footer encima de otros elementos en la página */
 }
 
-#contenedor_redes_idioma_footer, #contenedor_texto_footer{
-    display: flex;
+/* Estilo para los contenedores de redes sociales e idioma en el footer */
+#contenedor_redes_idioma_footer, #contenedor_texto_footer {
+    display: flex; /* Uso de flexbox para alinear y distribuir elementos */
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    font-family: Revalia;
-    font-weight: 600;
+    gap: 10px; /* Espacio entre elementos hijos del contenedor */
+    font-family: Revalia, Candara, serif; /* Familia de fuentes */
+    font-weight: 600; /* Peso de la fuente */
 }
 
-#contenedor_redes_idioma_footer{
-    justify-content: right;
-    gap: 25%;
-    margin-right: 3%;
+/* Estilo específico para el contenedor de redes sociales e idioma */
+#contenedor_redes_idioma_footer {
+    justify-content: right; /* Alineación de elementos a la derecha */
+    gap: 25%; /* Espacio entre elementos mayor */
+    margin-right: 3%; /* Margen derecho */
 }
 
-.Icon_footer{
-    height: 45px;
-    width: 45px;
+/* Estilo para los iconos de redes sociales en el footer */
+.Icon_footer, .Icon_footer_idioma {
+    height: 45px; /* Altura de los iconos */
+    width: 45px; /* Ancho de los iconos */
 }
 
-.Icon_footer_idioma{
-    height: 45px;
-    width: 45px;
+/* Estilo para los iconos al pasar el ratón sobre ellos (efecto de escala) */
+.Icon_footer:hover, .Icon_footer_idioma:hover {
+    cursor: pointer; /* Cambio de cursor al pasar el ratón */
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); /* Transición suave */
+    transform: scale(1.1); /* Aumento de escala al pasar el ratón */
 }
 
-.Icon_footer:hover, .Icon_footer_idioma:hover{
-    cursor: pointer;
-    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-    transform: scale(1.1);
+
+@media (max-width: 960px) {
+    footer p {
+        font-size: 1em;
+    }
+    .Icon_footer, .Icon_footer_idioma {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    footer p {
+        font-size: 0.75em;
+    }
+    .Icon_footer, .Icon_footer_idioma {
+        height: 25px;
+        width: 25px;
+    }
 }

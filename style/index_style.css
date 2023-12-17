@@ -213,6 +213,7 @@ body{margin: 0;}
     width: 25%;
     height: 60vh;
     padding-left: 2%;
+    display: block;
 }
 
 .cuadrado_carta:hover{
@@ -244,6 +245,94 @@ body{margin: 0;}
     font-size: 4em;
     text-align: center;
     font-weight: 600;
+}
+
+
+
+@media screen and (max-width: 980px) {
+    .header_main_page {
+        grid-template-columns: 1fr 85%;
+    }
+    .Restaurant_name h1 {
+        font-size: 1.75em;
+    }
+    #texto_baratie {
+        font-size: 1em;
+    }
+    .links_page {
+        display: none;
+    }
+    .Contenedor_pagina_botones p {
+        text-align: center;
+        font-size: 2.5em;
+    }
+    .Contenedor_botones_main {
+        flex-direction: row;
+    }
+    .boton_pagina_botones {
+        width: 25vw;
+        font-size: 1em;
+    }
+    .Logo_principal {
+        width: 20vh;
+        height: 20vh;
+    }
+    .header_main_page.is-sticky .Logo_principal {
+        width: 10vh;
+        height: 10vh;
+    }
+    .cuadrado_carta {
+        width: 90%;
+        text-align: center;
+    }
+    .cuadrado_carta img {
+        width: 70%;
+        height: 70%;
+    }
+    .cuadrado_carta p {
+        font-size: 3em;
+    }
+    #contenedor_elementos_carta {
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
+    }
+    #Pagina_Carta {
+        place-content: center;
+        place-items: center;
+        height: auto;
+        width: 100%;
+
+    }
+    #logo_topnav {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Restaurant_name h1 {
+        font-size: 0.75em;
+    }
+    #texto_baratie {
+        font-size: 0.75em;
+    }
+    .Contenedor_pagina_botones p {
+        font-size: 2em;
+    }
+    .boton_pagina_botones {
+        font-size: 0.75em;
+    }
+    .Logo_principal {
+        width: 8vh;
+        height: 8vh;
+    }
+    .cuadrado_carta p {
+        font-size: 2em;
+    }
+    #Titulo h1 {
+        font-size: 3.5em;
+    }
 }
 
 

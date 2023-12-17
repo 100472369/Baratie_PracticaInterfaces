@@ -13,31 +13,31 @@
 
 </head>
 <body>
+    <!-- header de la página -->
     <header id="header_book_table_page">
         <div id="Logo_column_book_table">
             <a href="index_eng.html">
-                <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+                <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt="logo_baratie" title="Go back to homepage"></a>
         </div>
         <div id="Name_column">
             <div class="page_name">
                 <h1>Book a table</h1>
             </div>
             <div class="topnav">
-                <img id="Logo_menu" src="" alt="">
                 <div id="myLinks">
-                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="" onclick="showStripres()">
+                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="logo_menu_hamburguesa" onclick="showStripres()" title="Close the menu">
                     <div id="Contenedor_links">
                         <a href="menu_eng.html">Menu</a>
                         <a href="historia_eng.html">Our story</a>
-                        <a href="pedido_eng.html">Home delivery</a>
+                        <a href="pedido_eng.html" id="pedidos_desde_hamburguesa">Home delivery</a>
                         <a href="reserva_eng.html">Book a table</a>
                         <a href="registro_eng.html">Sign up</a>
                         <a href="informacion_eng.html">More information</a>
                     </div>
                     <div id="Contenedor_redes_mh">
-                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="logo_insta">
+                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="logo_twitter">
+                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="logo_tiktok">
                     </div>
                     <div id="contenedor_texto_contacto_mh">
                         <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac"
@@ -48,7 +48,7 @@
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
-                    <img id="logo_topnav" src="icons/three_stripes.png" alt="">
+                    <img id="logo_topnav" src="icons/three_stripes.png" alt="logo_topnav">
                 </a>
             </div>
         </div>
@@ -56,52 +56,34 @@
 
 
     <div id="book_table_container">
-        <!-- Formulario de registro -->
+        <!-- Formulario de reserva -->
         <form id="formulario" action="#" method="post">
             <h2>BOOK A TABLE IN OUR SEA ROUTE</h2>
 
             <!-- Campos del formulario -->
             <div class="campos_reserva" >
                 <div class="contendor_info">
+                    <!-- eleccion de ciudad -->
                     <div id="ciudad_elegida">Pick your preferred city</div>
                     <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon ciudad_icon" id="ciudad_down">
                     <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="ciudad_up">
                 </div>
                 <div class="contenido">
+                        <!-- ciudades disponibles -->
                         <div class="campos_reserva ciudades_dropdown">Buenos Aires</div>
                         <div class="campos_reserva ciudades_dropdown">Seville</div>
                         <div class="campos_reserva ciudades_dropdown">Philippines Islands</div>
                 </div>
-                <!--<p id="ciudad_elegida"></p>-->
             </div>
-
-
-            <!-- <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre completo" required> -->
-
-            <!-- Contenedor para alinear teléfono y correo electrónico en la misma fila -->
-    <!--        <div class="flex-container">-->
-                <div class="campos_reserva hola">Date
-                    <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_ico" id="fecha_down">
-                    <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="fecha_up">
-                    <p id="fecha_elegida"></p>
-
-                    <div id="calendar">
-                        <div id="calendar-header">
-                            <span id="month-prev" class="change-month"><</span>
-                            <h1 id="month"></h1>
-                            <span id="month-next" class="change-month">></span>
-                        </div>
-                        <div id="calendar-body">
-                        </div>
-                    </div>
-                </div>
                 <div class="campos_reserva">
+                    <!-- eleccion de mes -->
                     <div class="contendor_info">
                         <div id="mes_elegido">Pick the month</div>
                         <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon mes_icon" id="num_meses_down">
                         <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="num_meses_up">
                     </div>
                     <div class="contenido">
+                        <!-- contenido para los 6 meses siguientes -->
                         <div class="campos_reserva meses_dropdown"></div>
                         <div class="campos_reserva meses_dropdown"></div>
                         <div class="campos_reserva meses_dropdown"></div>
@@ -112,6 +94,7 @@
                 </div>
             <div class="campos_reserva">
                 <div class="contendor_info">
+                    <!-- eleccion de dia -->
                     <div id="dia_elegido">Pick the day</div>
                     <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon dia_icon" id="num_dias_down">
                     <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="num_dias_up">
@@ -119,30 +102,33 @@
                 <div class="contenido contenido_dias">
                 </div>
             </div>
-                <div class="campos_reserva">
-                    <div class="contendor_info">
-                        <div id="hora_elegida">Pick the time</div>
-                        <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon hora_icon" id="hora_down">
-                        <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="hora_up">
-                    </div>
-                    <div class="contenido">
-                        <div class="campos_reserva horas_dropdown">13:00</div>
-                        <div class="campos_reserva horas_dropdown">14:00</div>
-                        <div class="campos_reserva horas_dropdown">15:00</div>
-                        <div class="campos_reserva horas_dropdown">20:00</div>
-                        <div class="campos_reserva horas_dropdown">21:00</div>
-                        <div class="campos_reserva horas_dropdown">22:00</div>
-                    </div>
-                </div>
-    <!--        </div>-->
-
             <div class="campos_reserva">
                 <div class="contendor_info">
+                    <!-- eleccion de hora -->
+                    <div id="hora_elegida">Pick the time</div>
+                    <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon hora_icon" id="hora_down">
+                    <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="hora_up">
+                </div>
+                <div class="contenido">
+                    <!-- horas disponibles -->
+                    <div class="campos_reserva horas_dropdown">13:00</div>
+                    <div class="campos_reserva horas_dropdown">14:00</div>
+                    <div class="campos_reserva horas_dropdown">15:00</div>
+                    <div class="campos_reserva horas_dropdown">20:00</div>
+                    <div class="campos_reserva horas_dropdown">21:00</div>
+                    <div class="campos_reserva horas_dropdown">22:00</div>
+                </div>
+            </div>
+            <div class="campos_reserva">
+                <div class="contendor_info">
+                    <!-- eleccion del numero de personas -->
                     <div id="personas_elegidas">Pick the number of people</div>
                     <img src="icons/dropdown_icon_down.png" alt="" class="dropdown_icon personas_icon" id="num_personas_down">
                     <img src="icons/dropdown_icon_up.png" alt="" class="dropdown_icon_up" id="num_personas_up">
                 </div>
                 <div class="contenido">
+                    <!-- numero de personas disponibles -->
+                    <div class="campos_reserva personas_dropdown">1</div>
                     <div class="campos_reserva personas_dropdown">2</div>
                     <div class="campos_reserva personas_dropdown">3</div>
                     <div class="campos_reserva personas_dropdown">4</div>
@@ -171,15 +157,15 @@
         </div>
         <div id="contenedor_redes_idioma_footer">
             <div id="contenedor_redes_footer">
-                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="logo_instagram" title="Visit One Piece's official Instagram!">
+                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="logo_tiktok" title="Visit One Piece's official TikTok!">
+                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="logo_crunchyroll" title="Watch One Piece, available now on Crunchyroll">
+                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="logo_twitter" title="Visit One Piece's official X/Twitter!">
+                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="logo_footer" title="Visit One Piece's official YouTube channel!">
             </div>
             <div id="contenedor_idioma_footer">
                 <a href="reserva.html">
-                    <img class="Icon_footer_idioma" src="icons/icon_spain.png" alt=""></a>
+                    <img class="Icon_footer_idioma" src="icons/icon_spain.png" alt="bandera" title="Change to Spanish"></a>
             </div>
         </div>
     </footer>

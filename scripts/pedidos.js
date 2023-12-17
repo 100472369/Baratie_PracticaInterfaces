@@ -1,4 +1,6 @@
+// script con la funcionalidad de los pedidos
 $(document).ready(function () {
+    let idioma = $('html').attr('lang');
     const platos = $(".plato");
     const addButtons = $(".add");
     const removeButtons = $(".remove");
@@ -28,12 +30,19 @@ $(document).ready(function () {
     botonFinalizarCompra.click(function() {
         // Verificar si hay datos en el localStorage antes de mostrar la finalización
         if (hayDatosEnLocalStorage()) {
+            // Mostrar aviso para para confirmar el pedido
+            let confirmado;
+            if (idioma === "en") confirmado = confirm("Do you want to confirm your order ('Accept' in order to confirm; otherwise 'cancel')");
+            else confirmado = confirm("¿Desea confirmar su pedido? ('Aceptar' para confirmar, 'cancelar' para volver)");
+            if (confirmado) {
             mostrarFinalizacion();
             // Borrar los datos del localStorage
             limpiarLocalStorage();
+            }
         } else {
             // Mostrar un mensaje de alerta si no hay datos en el carrito
-            alert("Ooops! Parece que has intentado finalizar la compra... pero no tienes nada YOHOHOHOHO")
+            if (idioma === "en") alert("Ooops! Looks like you've tried to confirm your order... without order anything YOHOHOHOHO")
+            else alert("Ooops! Parece que has intentado finalizar la compra... pero no tienes nada YOHOHOHOHO")
         }
     });
     /* Funciones que manejan la cuenta del carrito para cada plato (con su indice individual asociado) */

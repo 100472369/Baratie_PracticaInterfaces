@@ -1,6 +1,8 @@
+// script con la funcionalidad de la reserva
 $(document).ready(function (){
     // Cuando carguemos el documento es importante generar los meses segun la fecha en la que estamos
-    generarDivsProximosMeses();
+    let idioma = $('html').attr('lang');
+    generarDivsProximosMeses(idioma);
     let ciudad_elegida = $("#ciudad_elegida");
     let hora_elegida = $("#hora_elegida");
     let personas_elegidas = $("#personas_elegidas");
@@ -13,11 +15,17 @@ $(document).ready(function (){
     const direccionRegistrada = localStorage.getItem('direccion');
     // El contenido por defecto de los seleccionables de reserva seran o el texto por defecto o lo residente por cookies
     // si ya se ha seleccionado algo previamente que no ha sido confirmado
-    ciudad_elegida.text(localStorage.getItem('ciudad_elegida') || "Elige la ciudad correspondiente");
-    hora_elegida.text(localStorage.getItem('hora_elegida') || "Elige la hora");
-    dia_elegido.text(localStorage.getItem('dia_elegido') || "Elige el día");
-    mes_elegido.text(localStorage.getItem('mes_elegido') || "Elige el mes");
-    personas_elegidas.text(localStorage.getItem('personas_elegidas') || "Elige el número de personas");
+    ciudad_elegida.text(localStorage.getItem('ciudad_elegida') || (default_text(idioma))[0]);
+    mes_elegido.text(localStorage.getItem('mes_elegido') || (default_text(idioma))[1]);
+    // Si no hay ningun valor por defecto, cambio el idioma
+    if (mes_elegido.text() !== (default_text(idioma))[1]) {
+        let numeroMes = obtenerNumeroMes(mes_elegido.text(), idioma);
+        let fechaMes = new Date(numeroMes + " 1, 2023"); // Con esto generamos dias siguientes segun el mes
+        generarDivsProximosDias(fechaMes);
+    }
+    dia_elegido.text(localStorage.getItem('dia_elegido') || (default_text(idioma))[2]);
+    hora_elegida.text(localStorage.getItem('hora_elegida') || (default_text(idioma))[3]);
+    personas_elegidas.text(localStorage.getItem('personas_elegidas') || (default_text(idioma))[4]);
     /* Manejador de clicks en las funciones de subir o bajar displays de los campos de reserva, mediante las funciones
        asociadas fuera del DOM*/
     $(".ciudad_icon").each(function() {
@@ -52,7 +60,6 @@ $(document).ready(function (){
     $(".hora_icon").each(function() {
         $(this).click(function() {
             if (isHorasBajado) {
-                console.log("He de subir")
                 subir_horas();
             } else {
                 bajar_horas();
@@ -80,8 +87,8 @@ $(document).ready(function (){
             subir_ciudades();
         })
     })
-
-    if (mes_elegido.text() === "Elige el mes") {
+    //
+    if (mes_elegido.text() === ("Elige el mes") || mes_elegido.text() === ("Pick the month"))  {
         $("#num_dias_down").css("pointer-events", "none").addClass("not-allowed");
     }
 
@@ -89,7 +96,7 @@ $(document).ready(function (){
         /* Funcion para seleccionar mes */
         $(this).click(function () {
             let nombreMes = $(this).text();
-            let numeroMes = obtenerNumeroMes(nombreMes);
+            let numeroMes = obtenerNumeroMes(nombreMes, idioma);
             let fechaMes = new Date(numeroMes + " 1, 2023"); // Con esto generamos dias siguientes segun el mes
             mes_elegido.text(nombreMes);
             localStorage.setItem('mes_elegido', nombreMes);
@@ -133,45 +140,60 @@ $(document).ready(function (){
     })
     submit.click(function(){
         // Se tiene que asegurar que se ha elegido correctamente un valor (no hay nada por defecto)
-        if (ciudad_elegida.text() !== "Elige la ciudad correspondiente"  && hora_elegida.text() !== "Elige la hora" &&
-            personas_elegidas.text() !== "Elige el número de personas" && mes_elegido.text() !== "Elige el mes" &&
-            $("#dia_elegido").text !== "Elige el día"){
+        if (ciudad_elegida.text() !== (default_text(idioma))[0]  && mes_elegido.text() !== (default_text(idioma))[1] &&
+            dia_elegido.text !== (default_text(idioma))[2] && hora_elegida.text() !== (default_text(idioma))[3] &&
+            personas_elegidas.text() !== (default_text(idioma))[4])
+            {
             // Si el usuario no esta registrado, tiene que registrarse previamente mediante una redireccion
             if (!(nombreRegistrado && telefonoRegistrado && emailRegistrado && direccionRegistrada)) {
-                alert("Ooops, parece que antes hay que registrarse para poder hacer reservas!");
+                 if (idioma === "en") alert("Ooops, it seems like you must be registered in order to make reservations first!");
+                 else alert("Ooops, parece que antes hay que registrarse para poder hacer reservas!");
                 // Ademas, se incluye una fuente especial para poder manejar este evento en especifico
-                window.location.href = 'registro.html?source=pagina_reserva';
+                if (idioma === "en") window.location.href = 'registro_eng.html?source=pagina_reserva';
+                else window.location.href = 'registro.html?source=pagina_reserva';
             }
-            else{
-                // Eliminar datos del localStorage al hacer clic en submit ya que no se usaran para futuras reservas
-                localStorage.removeItem('ciudad_elegida');
-                localStorage.removeItem('hora_elegida');
-                localStorage.removeItem('personas_elegidas');
-                localStorage.removeItem('mes_elegido');
-                localStorage.removeItem('dia_elegido');
-                // Generacion de la pantalla que mestra que la reserva ha sido efectuada con exito
-                $("#formulario").fadeOut(500, function(){
-                    $("#mensaje_reserva").text(`Mesa reservada el próximo ${dia_elegido.text()} de ${mes_elegido.text()} a las ${hora_elegida.text()}.`)
-                    $("#reserva_exito").fadeIn(500);
-                });
+            else {
+                // Mostrar aviso para para confirmar la reserva
+                let confirmado;
+                if (idioma === "en") confirmado = confirm("Do you want to confirm your reservation ('Accept' in order to confirm; otherwise 'cancel')");
+                else confirmado = confirm("¿Desea confirmar su reserva? ('Aceptar' para confirmar; 'cancelar para volver')");
+                if (confirmado) {
+                    // Eliminar datos del localStorage al hacer clic en submit ya que no se usaran para futuras reservas
+                    localStorage.removeItem('ciudad_elegida');
+                    localStorage.removeItem('hora_elegida');
+                    localStorage.removeItem('personas_elegidas');
+                    localStorage.removeItem('mes_elegido');
+                    localStorage.removeItem('dia_elegido');
+                    // Generacion de la pantalla que mestra que la reserva ha sido efectuada con exito
+                    $("#formulario").fadeOut(500, function () {
+                        if (idioma === "en") $("#mensaje_reserva").text(`Booked for next ${mes_elegido.text()}, ${dia_elegido.text()}, at ${hora_elegida.text()}.`)
+                        else $("#mensaje_reserva").text(`Mesa reservada el próximo ${dia_elegido.text()} de ${mes_elegido.text()} a las ${hora_elegida.text()}.`)
+                        $("#reserva_exito").fadeIn(500);
+                        if (idioma === "en") $("#boton_exito").text('Go back to homepage');
+                    });
+                }
             }
         }
     })
 });
 
  /* Funcion que genera los 6 proximos meses de la fecha actual en el div correspondiente de meses_dropdown */
-function generarDivsProximosMeses() {
+function generarDivsProximosMeses(idioma) {
     let currentDate = new Date();
     // Funcion alternativa a la anteriormente definida para obtener el nombre del mes a partir del número del mes
-    function obtenerNombreMes(numeroMes) {
-        const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    function obtenerNombreMes(numeroMes, idioma) {
+        let meses;
+        if (idioma === "en"){
+            meses = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        }
+        else meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
         return meses[numeroMes];
     }
     // Generar divs para los proximos 6 meses desde el actual
     for (let i = 0; i < 6; i++) {
         let nextMonth = new Date(currentDate);
         nextMonth.setMonth(currentDate.getMonth() + i);
-        $(".meses_dropdown").eq(i).text(obtenerNombreMes(nextMonth.getMonth()));
+        $(".meses_dropdown").eq(i).text(obtenerNombreMes(nextMonth.getMonth(), idioma));
     }
 }
 
@@ -216,8 +238,12 @@ function generarDivsProximosDias(fecha) {
 }
 
 /* Funcion para obtener el indice de mes que usaremos para calcular los 6 proximos meses que se van a displayear*/
-function obtenerNumeroMes(nombreMes) {
-    const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+function obtenerNumeroMes(nombreMes, idioma) {
+    let meses;
+    if (idioma === "en"){
+        meses = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    }
+    else meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     return meses.indexOf(nombreMes) + 1;
 }
 
@@ -383,4 +409,13 @@ function subir_personas() {
             isPersonasBajado = false;
         }
     });
+}
+
+function default_text(idioma){
+    let textos;
+    if (idioma === "en") {
+        textos = ["Pick your preferred city", "Pick the month", "Pick the day", "Pick the time", "Pick the number of people"];
+    }
+    else textos = ["Elige la ciudad correspondiente", "Elige el mes", "Elige el día", "Elige la hora", "Elige el número de personas"];
+    return textos;
 }

@@ -1,5 +1,7 @@
 
 $(document).ready(function () {
+    // atributos del registro
+    let idioma = $('html').attr('lang');
     const registroForm = $("#formulario");
     const registroExito = $("#registro_exito");
     const submitButton = $("#submit");
@@ -25,15 +27,31 @@ $(document).ready(function () {
         let direccion = $("#direccion").val();
 
         // Control de errores via REGEX
+        let mensajes = {
+            'es': {
+                nombreInvalido: "Nombre no válido",
+                telefonoInvalido: "Teléfono no válido",
+                emailInvalido: "Correo electrónico no válido",
+                direccionInvalida: "Dirección no válida"
+            },
+            'en': {
+                nombreInvalido: "Invalid name",
+                telefonoInvalido: "Invalid phone number",
+                emailInvalido: "Invalid email address",
+                direccionInvalida: "Invalid address"
+            }
+        };
+
         if (nombre.trim() === '') {
-            alert("Nombre no válido");
+            alert(mensajes[idioma].nombreInvalido);
         } else if (!telefonoValido(telefono)) {
-            alert("Teléfono no válido");
+            alert(mensajes[idioma].telefonoInvalido);
         } else if (!emailValido(email)) {
-            alert("Correo electrónico no válido");
+            alert(mensajes[idioma].emailInvalido);
         } else if (direccion.trim() === '') {
-            alert("Dirección no válida");
-        } else {
+            alert(mensajes[idioma].direccionInvalida);
+        }
+        else {
             /* Los datos son validos, guardar en el Web Storage y mostrar el contenido de exito en registro */
             localStorage.setItem('nombre', nombre);
             localStorage.setItem('telefono', telefono);
@@ -62,20 +80,25 @@ $(document).ready(function () {
     console.log(urlParams);
     // Verificar si venimos desde el enlace de compra/reserva para que una vez registrados podamos continuar con el pedido/reserva
     if (urlActual.includes('source=pagina_pedido')) {
-        botonExito.text('Continuar con el pedido');
+        if (idioma === "en") botonExito.text('Complete your delivery');
+        else botonExito.text('Continuar con el pedido');
         botonExito.click(function () {
-            window.location.href = "pedido.html";
+        if (idioma === "en") window.location.href = "pedido_eng.html";
+        else window.location.href = "pedido.html";
         });
     } else if (urlActual.includes('source=pagina_reserva')) {
-        botonExito.text('Continuar con la reserva');
+        if (idioma === "en") botonExito.text('Complete your reservation');
+        else botonExito.text('Continuar con la reserva')
         botonExito.click(function () {
-            window.location.href = "reserva.html";
+            if (idioma === "en") window.location.href = "reserva_eng.html";
+            else window.location.href = "reserva.html";
         });
     }
     // Si no, tenemos la opcion de volver a la pagina principal
     else {
         botonExito.click(function () {
-            window.location.href = "index.html";
+            if (idioma === "en") window.location.href = "index_eng.html";
+            else window.location.href = "index.html";
         });
     }
     /* Funciones de validacion con REGEX para comprobar que el telefono y el e-mail sean

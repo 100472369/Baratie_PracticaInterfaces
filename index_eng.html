@@ -13,10 +13,13 @@
 </head>
 
 <body>
+    <!-- header de la pagina principal -->
     <header class="header_main_page">
+        <!-- logo de Baratie -->
         <div id="Logo_column">
-            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt="">
+            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt="logo_baratie">
         </div>
+        <!-- links a diferentes páginas -->
         <div id="Name_column">
             <div class="links_page">
                 <ul class="ul_link_page">
@@ -25,10 +28,12 @@
                     <a href="historia_eng.html"><li>- Our story -</li></a>
                 </ul>
             </div>
+            <!-- nombre del restaurante -->
             <div class="Restaurant_name">
-                <a href="informacion_eng.html"><h1>Baratie restaurant</h1></a>
+                <a href="historia_eng.html" title="Read more about us!"><h1>Baratie restaurant</h1></a>
                 <p id="texto_baratie">“At the Baratie, quality is tasted in every dish.”</p>
             </div>
+            <!-- links a diferentes páginas -->
             <div class="links_page">
                 <ul class="ul_link_page">
                     <a href="reserva_eng.html"><li>- Book a table -</li></a>
@@ -36,41 +41,46 @@
                     <a href="registro_eng.html"><li>- Sign up -</li></a>
                 </ul>
             </div>
+            <!-- menu Hamburguesa -->
             <div class="topnav">
-                <img id="Logo_menu" src="" alt="">
                 <div id="myLinks">
-                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="" onclick="showStripres()">
+                    <!-- logo menu hamburguesa -->
+                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="logo_menu_hamburguesa" onclick="showStripres()" title="Close the menu">
+                    <!-- links del menu hamburguesa -->
                     <div id="Contenedor_links">
                         <a href="menu_eng.html">Menu</a>
                         <a href="historia_eng.html">Our story</a>
-                        <a href="pedido_eng.html">Home delivery</a>
+                        <a href="pedido_eng.html" id="pedidos_desde_hamburguesa">Home delivery</a>
                         <a href="reserva_eng.html">Book a table</a>
                         <a href="registro_eng.html">Sign up</a>
                         <a href="informacion_eng.html">More information</a>
                     </div>
+                    <!-- iconos redes -->
                     <div id="Contenedor_redes_mh">
-                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="logo_insta">
+                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="logo_twitter">
+                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="logo_tiktok">
                     </div>
+                    <!-- politica de privacidad y formulario de contacto -->
                     <div id="contenedor_texto_contacto_mh">
                         <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac"
                         target="_blank" rel="noopener noreferrer">Privacy<br>policy</a>
                         <a href="contacto_eng.html">Contact us</a>
                     </div>
+                    <!-- boton de reserva -->
                     <button id="Boton_reserva_mh">BOOK</button>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
-                    <img id="logo_topnav" src="icons/three_stripes.png" alt="">
+                    <img id="logo_topnav" src="icons/three_stripes.png" alt="logo_topnav">
                 </a>
             </div>
         </div>
     </header>
-
+    <!-- sección principal con los botones-->
     <section id="Pagina_Botones">
         <div class="Contenedor_pagina_botones">
-            <p>It's a puto boat ¿What else do you want?</p>
+            <p>It's a boat and a restaurant, what else would you want?</p>
         </div>
         <div class="Contenedor_botones_main">
             <button class="boton_pagina_botones" id="boton_reservar_index">BOOK A TABLE</button>
@@ -78,67 +88,76 @@
             <button class="boton_pagina_botones" id="boton_informacion_index">MORE INFORMATION</button>
         </div>
         <div  class="Contenedor_pagina_botones">
-            <img id="Imagen_logo_OP_grande" src="images/one_piece_logo_big.png" alt="">
+            <img id="Imagen_logo_OP_grande" src="images/one_piece_logo_big.png" alt="logo_onepiece">
         </div>
 
     </section>
-
+    <!-- pagina con la carta -->
     <section id="Pagina_Carta">
         <div id="Titulo">
             <div class="horizontal_line"><hr></div>
             <div><h1>MENU</h1></div>
             <div class="horizontal_line"><hr></div>
         </div>
-
+         <!-- imágen de entrantes -->
         <div id="contenedor_elementos_carta">
             <div class="cuadrado_carta">
-                <a href="menu_eng.html#pagina_entrantes">
-                    <img src="images/pescado_horno.jpg" alt="">
+                <a href="menu_eng.html#pagina_entrantes?source=index_entrantes" title="Check our menu to see all the appetizers">
+                    <img src="images/pescado_horno.jpg" alt="imagen_pescado">
                 </a>
                 <p>APPETIZERS</p>
             </div>
+            <!-- imágen de principales -->
             <div class="cuadrado_carta">
-                <a href="menu_eng.html#pagina_principales">
-                    <img src="images/zamburinas_plancha.jpg" alt="">
+                <a href="menu_eng.html#pagina_principales?source=index_principales" title="Check our menu to see all the main courses" >
+                    <img src="images/zamburinas_plancha.jpg" alt="imagen_zamburiñas">
                 </a>
                 <p>MAIN COURSES</p>
             </div>
+            <!-- imágen de postres -->
             <div class="cuadrado_carta">
-                <a href="menu_eng.html#pagina_postres">
-                    <img src="images/tarta_lima.jpg" alt="">
+                <a href="menu_eng.html#?source=index_postres" title="Check our menu to see all the desserts">
+                    <img src="images/tarta_lima.jpg" alt="imagen_lemonpie">
                 </a>
                 <p>DESSERTS</p>
             </div>
+            <!-- imágen de concteles -->
             <div class="cuadrado_carta">
-                <a href="menu_eng.html#pagina_cocteles">
-                    <img src="images/coctel_main_page.jpg" alt="">
+                <a href="menu_eng.html#?source=index_cocteles" title="Check our menu to see all the cocktails">
+                    <img src="images/coctel_main_page.jpg" alt="imagen_coctel">
                 </a>
                 <p>COCTELS</p>
             </div>
         </div>
     </section>
-
+    <!-- sección de footer en la pagina -->
     <footer>
+        <!-- el nombre con copyright -->
         <div id="contenedor_texto_footer">
             <p>© 2023 Baratie</p>
         </div>
+        <!-- esta seccion contiene los logos de las redes sociales y tambien el icono de la bandera para cambiar idioma entre ingles y español -->
         <div id="contenedor_redes_idioma_footer">
             <div id="contenedor_redes_footer">
-                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+                <!-- redes sociales -->
+                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="logo_instagram" title="Visit One Piece's official Instagram!">
+                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="logo_tiktok" title="Visit One Piece's official TikTok!">
+                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="logo_crunchyroll" title="Watch One Piece, available now on Crunchyroll">
+                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="logo_twitter" title="Visit One Piece's official X/Twitter!">
+                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="logo_footer" title="Visit One Piece's official YouTube channel!">
             </div>
+            <!-- icono de la bandera para cambiar de idiona -->
             <div id="contenedor_idioma_footer">
                 <a href="index.html">
-                <img class="Icon_footer_idioma" src="icons/icon_spain.png" alt=""></a>
+                    <img class="Icon_footer_idioma" src="icons/icon_spain.png" alt="bandera" title="Change to Spanish"></a>
             </div>
         </div>
     </footer>
+    <!-- scripts usados -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/menu_hamburguesa.js"></script>
+    <script src="scripts/index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/registro_principal.js"></script>
 </body>

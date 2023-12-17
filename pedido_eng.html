@@ -15,10 +15,11 @@
 </head>
 
 <body>
+    <!-- header de la pagina -->
     <header id="header_page">
         <div id="Logo_column">
             <a href="index_eng.html">
-            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt=""></a>
+            <img class="Logo_principal" src="images/logo_baratie_main.jpg" alt="logo_baratie" title="Go back to homepage"></a>
         </div>
 
         <div id="Name_column">
@@ -32,21 +33,20 @@
                 <img id="logo_carrito_header" src="icons/icon_cart.png" alt="Carrito">
             </div>
             <div class="topnav">
-                <img id="Logo_menu" src="" alt="">
                 <div id="myLinks">
-                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="" onclick="showStripres()">
+                    <img id="logo_m_h" src="images/hamburguer_menu_logo.png" alt="logo_menu_hamburguesa" onclick="showStripres()" title="Close the menu">
                     <div id="Contenedor_links">
                         <a href="menu_eng.html">Menu</a>
                         <a href="historia_eng.html">Our story</a>
-                        <a href="pedido_eng.html">Home delivery</a>
+                        <a href="pedido_eng.html" id="pedidos_desde_hamburguesa">Home delivery</a>
                         <a href="reserva_eng.html">Book a table</a>
                         <a href="registro_eng.html">Sign up</a>
                         <a href="informacion_eng.html">More information</a>
                     </div>
                     <div id="Contenedor_redes_mh">
-                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="">
-                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="">
+                        <img class="redes_mh" src="icons/icon_insta_mh.png" alt="logo_insta">
+                        <img class="redes_mh" src="icons/icon_twitter_mh.png" alt="logo_twitter">
+                        <img class="redes_mh" src="icons/icon_tiktok_mh.png" alt="logo_tiktok">
                     </div>
                     <div id="contenedor_texto_contacto_mh">
                         <a href="https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac">Privacy<br>policy</a>
@@ -56,12 +56,12 @@
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
-                    <img id="logo_topnav" src="icons/three_stripes.png" alt="">
+                    <img id="logo_topnav" src="icons/three_stripes.png" alt="logo_topnav">
                 </a>
             </div>
         </div>
     </header>
-
+    <!-- pagina de la carta -->
     <section id="Pagina_carta">
         <div class="container-carta">
             <!--Informacion de entrantes, principales y postres:
@@ -73,7 +73,7 @@
                 <div class="titulo_seccion_platos"><h2>Appetizers</h2></div>
                 <div class="platos-container">
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/zamburinas_plancha.jpg">
+                        <img class="Foto_comida" alt="foto_zamburiñas" src="images/zamburinas_plancha.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 OVEN-BAKED QUEEN SCALLOPS
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/almejas.jpeg">
+                        <img class="Foto_comida" alt="foto_almejas" src="images/almejas.jpeg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 SAILOR-STYLE CLAMS
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/gambas.jpg">
+                        <img class="Foto_comida" alt="foto_gambas" src="images/gambas.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 GRILLED WHITE SHRIMPS
@@ -136,7 +136,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/ensalada_mixta.jpeg">
+                        <img class="Foto_comida" alt="foto_ensalada_mixta" src="images/ensalada_mixta.jpeg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 SPECIAL MIXED SALAD
@@ -157,7 +157,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/ensalada_burrata.jpg">
+                        <img class="Foto_comida" alt="foto_ensalada_burrata" src="images/ensalada_burrata.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 BURRATA AND PESTO SALAD
@@ -178,7 +178,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/ensalada_cesar.jpg">
+                        <img class="Foto_comida" alt="foto_ensalada_cesar" src="images/ensalada_cesar.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 CAESAR SALAD
@@ -200,12 +200,12 @@
                     </div>
                 </div>
             </div>
-
+            <!-- los platos principales -->
             <div class="principales">
                 <div class="titulo_seccion_platos"><h2>Main courses</h2></div>
                 <div class="platos-container">
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/paella.jpg">
+                        <img class="Foto_comida" alt="foto_paella" src="images/paella.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 VALENCIAN PAELLA
@@ -226,7 +226,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/arroz-caldoso-de-bogavante.jpeg">
+                        <img class="Foto_comida" alt="foto_arroz_bogavante" src="images/arroz-caldoso-de-bogavante.jpeg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 RICE WITH LOBSTER
@@ -247,7 +247,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/arroz-negroo.jpg">
+                        <img class="Foto_comida" alt="foto_arroz_negro" src="images/arroz-negroo.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 BLACK RICE
@@ -268,7 +268,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/lubina-al-horno-con-patatas.jpg">
+                        <img class="Foto_comida" alt="foto_lubina" src="images/lubina-al-horno-con-patatas.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 CANTABRIC SEA BASS
@@ -289,7 +289,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/dorada.jpg">
+                        <img class="Foto_comida" alt="foto_dorada" src="images/dorada.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 CÁDIZ GILTHEAD BREAM
@@ -310,7 +310,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/besugo.jpg">
+                        <img class="Foto_comida" alt="foto_besugo" src="images/besugo.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 GRILLED PORGY
@@ -332,12 +332,12 @@
                     </div>
                 </div>
             </div>
-
+            <!-- los postres -->
             <div class="postres">
                 <div class="titulo_seccion_platos"><h2>Desserts</h2></div>
                 <div class="platos-container">
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/flan.jpg">
+                        <img class="Foto_comida" alt="foto_flan" src="images/flan.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 PUDDING WITH MILK CARAMEL
@@ -358,7 +358,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/easy-lemon-pie-recipe-8.jpg">
+                        <img class="Foto_comida" alt="foto_lemonpie" src="images/easy-lemon-pie-recipe-8.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 LEMON PIE
@@ -379,7 +379,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/torta.jpeg">
+                        <img class="Foto_comida" alt="foto_tarta_rogel" src="images/torta.jpeg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 ROGEL PIE
@@ -400,7 +400,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/cafe.jpg">
+                        <img class="Foto_comida" alt="foto_cafe" src="images/cafe.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 AMERICAN COFFEE
@@ -421,7 +421,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/te.png">
+                        <img class="Foto_comida" alt="foto_te" src="images/te.png">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 RED BERRIES TEA
@@ -442,7 +442,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/mate.jpg">
+                        <img class="Foto_comida" alt="foto_mate" src="images/mate.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 BREWED MATE
@@ -464,12 +464,12 @@
                     </div>
                 </div>
             </div>
-
+            <!-- los cocteles -->
             <div class="cocteles">
                 <div class="titulo_seccion_platos"><h2>Coctels</h2></div>
                 <div class="platos-container">
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/gin-tonic-receta.jpg">
+                        <img class="Foto_comida" alt="foto_gintonic" src="images/gin-tonic-receta.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 GIN TONIC
@@ -490,7 +490,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/mojito.jpg">
+                        <img class="Foto_comida" alt="foto_mojito" src="images/mojito.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 MOJITO
@@ -511,7 +511,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/margarita.jpg">
+                        <img class="Foto_comida" alt="foto_margarita" src="images/margarita.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 MARGARITA
@@ -532,7 +532,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/daiquiri.jpg">
+                        <img class="Foto_comida" alt="foto_daiquiri" src="images/daiquiri.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 DAIQUIRI
@@ -553,7 +553,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/caipi.jpg">
+                        <img class="Foto_comida" alt="foto_caipirinha" src="images/caipi.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 CAIPIRINHA
@@ -574,7 +574,7 @@
                         </div>
                     </div>
                     <div class="plato">
-                        <img class="Foto_comida" alt="foto_zmaburiñas" src="images/piña_colada.jpg">
+                        <img class="Foto_comida" alt="foto_piña_colada" src="images/piña_colada.jpg">
                         <div class="texto_plato">
                             <div class="nombre_plato">
                                 PIÑA COLADA
@@ -597,6 +597,7 @@
                 </div>
             </div>
         </div>
+        <!-- boton para pasar al carrito -->
         <div class="continuar_pedido">
             <button class="boton-carrito"> <b>GO TO CART</b> </button>
         </div>
@@ -606,19 +607,22 @@
     <section id="Pagina_carrito">
         <div id="Contenedor_carrito_main">
             <div id="Contenedor_video">
+                <!-- contenedor con un video que se pone de fondo -->
                 <img src="images/thousand_sunny.gif" alt="GIF de un barco en el mar" loop>
             </div>
-
+            <!-- el contenedor que tiene el resumen del pago -->
             <div id="Contenedor_resumen">
                 <div id = "titulo_resumen">
                     <div class="horizontal_line_2"><hr></div>
                     <div><h2>ORDER SUMMARY</h2></div>
                     <div class="horizontal_line_2"><hr></div>
                 </div>
+                <!-- aqui esta el contenedor con los platos pedidos. Se rellena mediante javascript -->
                 <div id="contenedor_articulos">
                     <div id="nombre_articulo"></div>
                     <div id="precio_articulo"></div>
                 </div>
+                <!-- aqui se muestra el precio de cada plato y tambien el total. Se calcula con javascript-->
                 <div id="precio">
                     <div class="horizontal_line_3"><hr></div>
                     <div id="columnas_precio">
@@ -626,6 +630,7 @@
                         <div><h3 id="precio_total"></h3></div>
                     </div>
                 </div>
+                <!-- dos botones. Uno para finalizar pedido y otro para modificar pedido -->
                 <div id="Contenedor_botones_carrito">
                     <button id="Boton_modificar_pedido">↩ Modify order</button>
                     <button id="Boton_finalizar_pedido">Finish ordering ↪</button>
@@ -633,31 +638,32 @@
             </div>
         </div>
     </section>
-
+    
+    <!-- pagina que se carga cuando se realiza exitosamente el pedido. Contiene una imagen y un boton para volver a la pagina principal -->
     <section id="Pagina_pedido_realizado">
         <div id="Contenedor_pedido_realizado">
-            <h2>¡Your order has been correctly processed!</h2>
+            <h2>Your order has been successfully processed!</h2>
             <img src="images/luffy_happy.png" alt="Imagen de Luffy super contento">
             <a href="index_eng.html"><button id="Boton_volver_main_page">Go back to home page</button></a>
         </div>
     </section>
 
-
+    <!-- footer de nuestra pagina -->
     <footer>
         <div id="contenedor_texto_footer">
             <p>© 2023 Baratie</p>
         </div>
         <div id="contenedor_redes_idioma_footer">
             <div id="contenedor_redes_footer">
-                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="">
-                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="">
+                <img class="Icon_footer" src="icons/icon_instagram_footer.png" alt="logo_instagram" title="Visit One Piece's official Instagram!">
+                <img class="Icon_footer" src="icons/icon_tiktok_footer.png" alt="logo_tiktok" title="Visit One Piece's official TikTok!">
+                <img class="Icon_footer" src="icons/icon_crunchy_footer.png" alt="logo_crunchyroll" title="Watch One Piece, available now on Crunchyroll">
+                <img class="Icon_footer" src="icons/icon_twitter_footer.png" alt="logo_twitter" title="Visit One Piece's official X/Twitter!">
+                <img class="Icon_footer" src="icons/icon_yt_footer.png" alt="logo_footer" title="Visit One Piece's official YouTube channel!">
             </div>
             <div id="contenedor_idioma_footer">
                 <a href="pedido.html">
-                    <img class="Icon_footer_idioma" src="icons/icon_spain.png" alt=""></a>
+                    <img class="Icon_footer_idioma" src="icons/icon_spain.png" alt="bandera" title="Change to Spanish"></a>
             </div>
         </div>
     </footer>

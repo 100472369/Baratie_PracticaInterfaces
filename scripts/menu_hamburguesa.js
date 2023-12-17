@@ -1,32 +1,28 @@
-$(document).ready(function () {
-    const header = $(".header_main_page")[0];
-    const toggleClass = "is-sticky";
-    $(window).scroll(function(){
-        const currentScroll = window.scrollY;
-        if (currentScroll > 150) {
-            header.classList.add(toggleClass);
-            $(".ul_link_page").hide();
-            $("#texto_baratie").hide();
-            $(".header_main_page").css("animation", ""); 
-          } else {
-            header.classList.remove(toggleClass);
-            $(".ul_link_page").show();
-            $("#texto_baratie").show();
-            
-            $(".header_main_page").css("animation", "slideUp 0.5s ease-out"); 
-          }  
+$(document).ready(function() {
+    // atributos utilizados
+    let idioma = $('html').attr('lang');
+    const toCompra = $("#pedidos_desde_hamburguesa");
+    const nombreRegistrado = localStorage.getItem('nombre');
+    const telefonoRegistrado = localStorage.getItem('telefono');
+    const emailRegistrado = localStorage.getItem('email');
+    const direccionRegistrada = localStorage.getItem('direccion');
+    toCompra.click(function() {
+        // Si venimos desde el menu de compra y aun no disponemos de cookies, vamos a redirigir a la pagina de registro
+        if (!(nombreRegistrado && telefonoRegistrado && emailRegistrado && direccionRegistrada)) {
+            if (idioma === "es") toCompra.attr('href','registro.html?source=pagina_pedido');
+            else toCompra.attr('href','registro_eng.html?source=pagina_pedido');
+        }
     });
-    
-    })
-
+});
+// funcion para desplegar el menu hamburguesa
 function myFunction() {
-    var x = $("#myLinks");
+    let x = $("#myLinks");
     let logo = $("#logo_topnav");
     logo.slideUp();
     x.slideDown();
 
 }
-
+// funcion para cerrar el menu hamurguesa
 function showStripres(){
     let x = $("#myLinks");
     let logo = $("#logo_topnav");
