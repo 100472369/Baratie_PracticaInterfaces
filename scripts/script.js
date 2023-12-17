@@ -28,6 +28,9 @@ $(document).ready(function() {
         $(this).wrap(enlace); // Envolver la imagen con el enlace
     });
 
+    //Links de los botones de index:
+    
+
     let idiomaActual = $('html').attr('lang');
 
     // Si el idioma actual es español
@@ -37,6 +40,18 @@ $(document).ready(function() {
 
         let linkPolitica = $('<a>', { href: 'https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac', target: '_self' });
         $('#Link_politica').wrap(linkPolitica);
+
+        $("#boton_reservar_index").click(function(){
+            window.location.href = 'reserva.html';
+        });
+
+        $("#boton_pedido_index").click(function(){
+            window.location.href = 'pedido.html';
+        });
+
+        $("#boton_informacion_index").click(function(){
+            window.location.href = 'informacion.html';
+        });
     }
     // Si el idioma actual es inglés
     else if (idiomaActual === 'en') {
@@ -45,6 +60,17 @@ $(document).ready(function() {
 
         let linkPolitica = $('<a>', { href: 'https://www.privacypolicies.com/live/6cc6bb19-5b51-4de4-a028-86e7dd0290ac', target: '_self:' });
         $('#Link_politica').wrap(linkPolitica);
-    }
 
+        $("#boton_reservar_index").click(function(){
+            window.location.href = 'reserva_eng.html';
+        });
+
+        $("#boton_pedido_index").click(function(){
+            window.location.href = 'pedido_eng.html';
+        });
+
+        $("#boton_informacion_index").click(function(){
+            window.location.href = 'informacion_eng.html';
+        });
+    }
 });
